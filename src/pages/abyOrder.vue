@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="order-container">
     <div class="order-main">
       <order-header></order-header>
@@ -88,10 +89,23 @@
           }
         }
       }
+=======
+    <div>
+        <header class="header">
+          <i class="iconfont icon-houtui1"></i>
+        </header>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "abyOrder"
+>>>>>>> c1ccc0866c99d95a479d1b4b5f159fcfa1249731
     }
 </script>
 
 <style scoped lang="scss" type="text/scss">
+<<<<<<< HEAD
   @mixin border-bottom{
     border-bottom:1px solid #e6e6e6;
   }
@@ -240,6 +254,14 @@
     font-weight: 900;
     position: relative;
     left: -.25rem;
+=======
+  .header{
+    width: 100%;
+    height: .75rem;
+  }
+  .icon-houtui1{
+    font-size: .22rem;
+>>>>>>> c1ccc0866c99d95a479d1b4b5f159fcfa1249731
   }
   .order-child-component{
     position: fixed;
