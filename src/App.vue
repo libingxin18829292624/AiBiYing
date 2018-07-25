@@ -25,27 +25,11 @@ html{
   font-size: 26.67vw;
 }
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-ul, ol {
+ul, ol ,li{
   list-style: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {
-  color: #42b983;
   text-decoration: none;
 }
 </style>

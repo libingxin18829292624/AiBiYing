@@ -1,0 +1,21 @@
+一、src（项目目录）
+   |- assets
+      |- img(图片命名:前面加上自己姓的第一个字母)
+      |- font（小图标放在阿里【毕业项目】项目中）
+   |- components
+      |- common（公共组件）
+      |- index（主页的小组件）
+   |- pages
+      |- index（主页【页面级组件】）
+   |- json
+      |- index.json（主页模拟数据）
+   |- router
+      |- index.js（主页路由）
+      |- personal.js（个人中心页面路由）
+   |- App.vue
+   |- main.js
+   |- server.js（服务器）
+   注： 没加文件类型后缀的都是文件夹
+
+二、命名采用“层级驼峰命名法”，例如：abyIndexFooter
+三、！！！公共文件修改前请通知其他组员。

@@ -4,6 +4,10 @@ import router from './router/index'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
+
+
+
+
 const store = new Vuex.Store({
   state:{
 
