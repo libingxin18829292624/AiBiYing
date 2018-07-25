@@ -1,9 +1,7 @@
 <template>
   <div class="order-container">
     <div class="order-main">
-      <header class="header">
-        <i class="iconfont icon-houtui1"></i>
-      </header>
+      <order-header></order-header>
       <section class="main-info">
         <h2 class="days">{{address}}{{days}}晚</h2>
         <p class="has">{{rooms}}间卧室 · {{bathrooms}}间卫生间</p>
@@ -42,11 +40,13 @@
       <order-li @click="attach(index)" v-for="(n,index) in finallyStep" :key="n.left" :data="n"></order-li>
     </div>
     <div class="btn">您还差4步</div>
+    <router-view class="order-child-component"></router-view>
   </div>
 </template>
 
 <script>
-    import orderLi from '../components/order/orderLi'
+  import orderLi from '../components/order/orderLi'
+  import orderHeader from '../components/order/orderHeader'
     export default {
       name: "abyOrder",
       data(){
@@ -78,7 +78,8 @@
         }
       },
       components:{
-        orderLi
+        orderLi,
+        orderHeader
       },
       methods:{
         attach(n){
@@ -103,16 +104,6 @@
   }
   .order-main{
     width: 100%;
-  }
-  .header{
-    width: 100%;
-    height: .75rem;
-    overflow: hidden;
-  }
-  .icon-houtui1{
-    font-size: .22rem;
-    display: block;
-    margin-top: .4rem;
   }
   .main-info{
     width: 100%;
@@ -249,5 +240,12 @@
     font-weight: 900;
     position: relative;
     left: -.25rem;
+  }
+  .order-child-component{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
   }
 </style>
