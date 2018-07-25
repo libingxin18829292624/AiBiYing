@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import abyIndex from '../pages/abyIndex'
 import abySerach from "../pages/abySerach"
 import abyOrder from '../pages/abyOrder'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,8 +15,7 @@ const routes = [
     path:'/serach',
     component:abySerach
   },
-  {
-    path:'/order',
+   { path:'/order',
     component:abyOrder
   }
 ]
