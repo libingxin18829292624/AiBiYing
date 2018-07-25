@@ -1,6 +1,6 @@
 <template>
     <div class="order-agree-li">
-      {{agreeLi}}
+      {{data}}
     </div>
 </template>
 

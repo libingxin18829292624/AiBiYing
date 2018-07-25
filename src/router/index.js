@@ -3,11 +3,8 @@ import VueRouter from 'vue-router'
 import abyIndex from '../pages/abyIndex'
 import abySerach from "../pages/abySerach"
 import abyOrder from '../pages/abyOrder'
-<<<<<<< HEAD
 import orderAgree from '../components/order/orderAgree'
-=======
 
->>>>>>> c1ccc0866c99d95a479d1b4b5f159fcfa1249731
 Vue.use(VueRouter)
 
 const routes = [
@@ -19,20 +16,18 @@ const routes = [
     path:'/serach',
     component:abySerach
   },
-<<<<<<< HEAD
   {
-    path:'/order',
-    component:abyOrder,
-    children:[
+    path: '/order',
+    component: abyOrder,
+    children: [
       {
-        path:'agree',
-        component:orderAgree
+        path: 'agree',
+        component: orderAgree
       }
     ]
-=======
+  },
    { path:'/order',
     component:abyOrder
->>>>>>> c1ccc0866c99d95a479d1b4b5f159fcfa1249731
   }
 ]
 

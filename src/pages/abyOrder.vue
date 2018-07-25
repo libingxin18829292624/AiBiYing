@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div class="order-container">
     <div class="order-main">
       <order-header></order-header>
@@ -38,7 +37,7 @@
       </section>
       <order-li :data="youHuiQuan"></order-li>
       <p class="finally-title">完成预定的步骤</p>
-      <order-li @click="attach(index)" v-for="(n,index) in finallyStep" :key="n.left" :data="n"></order-li>
+      <order-li @click.native="attach(index)" v-for="(n,index) in finallyStep" :key="n.left" :data="n"></order-li>
     </div>
     <div class="btn">您还差4步</div>
     <router-view class="order-child-component"></router-view>
@@ -50,62 +49,46 @@
   import orderHeader from '../components/order/orderHeader'
     export default {
       name: "abyOrder",
-      data(){
+      data() {
         return {
-          "address":"Xi\'an",
-          "days":"4",
-          "rooms":"1",
-          "bathrooms":"1",
-          "ownerWords":"「双囍和八两」♡旅行已经很累了，那就睡个好觉吧！",
-          "ownerName":"榕",
-          "startDay":"周日",
-          "startDate":"8月5日",
-          "endDay":"周四",
-          "endDate":"8月9日",
-          "liveInfo":[
-            {"left":"住宿晚数","right":"4"},
-            {"left":"房客","right":"1位"}
+          "address": "Xi\'an",
+          "days": "4",
+          "rooms": "1",
+          "bathrooms": "1",
+          "ownerWords": "「双囍和八两」♡旅行已经很累了，那就睡个好觉吧！",
+          "ownerName": "榕",
+          "startDay": "周日",
+          "startDate": "8月5日",
+          "endDay": "周四",
+          "endDate": "8月9日",
+          "liveInfo": [
+            {"left": "住宿晚数", "right": "4"},
+            {"left": "房客", "right": "1位"}
           ],
-          "totalMoney":"752.45",
-          "duiDingZhengCe":"中等",
-          "mes":"距离入住日期至少5天按时取消预订可获全额退款（服务费除外）。距离入住日期不足5天时取消预订，首晚房费将不可退还，但剩余晚数可获50%退款。尚未入住、且在预定确认后48小时内取消的预定，将退还服务费。",
-          "youHuiQuan":{"left":"礼金券","right":"添加"},
-          "finallyStep":[
-            {"left":"1.付款","right":"添加"},
-            {"left":"2.给房东发消息","right":"添加"},
-            {"left":"3.房屋守则","right":"同意"},
-            {"left":"4.房客信息","right":"添加"}
+          "totalMoney": "752.45",
+          "duiDingZhengCe": "中等",
+          "mes": "距离入住日期至少5天按时取消预订可获全额退款（服务费除外）。距离入住日期不足5天时取消预订，首晚房费将不可退还，但剩余晚数可获50%退款。尚未入住、且在预定确认后48小时内取消的预定，将退还服务费。",
+          "youHuiQuan": {"left": "礼金券", "right": "添加"},
+          "finallyStep": [
+            {"left": "1.付款", "right": "添加"},
+            {"left": "2.给房东发消息", "right": "添加"},
+            {"left": "3.房屋守则", "right": "同意"},
+            {"left": "4.房客信息", "right": "添加"}
           ]
         }
       },
-      components:{
+      components: {
         orderLi,
         orderHeader
       },
-      methods:{
-        attach(n){
-          if(n == 2){
-
+      methods: {
+        attach(n) {
+          console.log(n)
           }
-        }
       }
-=======
-    <div>
-        <header class="header">
-          <i class="iconfont icon-houtui1"></i>
-        </header>
-    </div>
-</template>
-
-<script>
-    export default {
-        name: "abyOrder"
->>>>>>> c1ccc0866c99d95a479d1b4b5f159fcfa1249731
     }
 </script>
-
 <style scoped lang="scss" type="text/scss">
-<<<<<<< HEAD
   @mixin border-bottom{
     border-bottom:1px solid #e6e6e6;
   }
@@ -254,14 +237,6 @@
     font-weight: 900;
     position: relative;
     left: -.25rem;
-=======
-  .header{
-    width: 100%;
-    height: .75rem;
-  }
-  .icon-houtui1{
-    font-size: .22rem;
->>>>>>> c1ccc0866c99d95a479d1b4b5f159fcfa1249731
   }
   .order-child-component{
     position: fixed;
