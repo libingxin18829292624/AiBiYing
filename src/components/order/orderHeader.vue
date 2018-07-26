@@ -1,12 +1,17 @@
 <template>
   <header class="header">
-    <i class="iconfont icon-houtui1"></i>
+    <i class="iconfont icon-houtui1" @click="goBack"></i>
   </header>
 </template>
 
 <script>
     export default {
-        name: "orderHeader"
+        name: "orderHeader",
+      methods:{
+          goBack(){
+            window.history.back();
+          }
+      }
     }
 </script>
 

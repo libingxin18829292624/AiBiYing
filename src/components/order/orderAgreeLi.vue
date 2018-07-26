@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: "orderAgreeLi",
+      name: "orderAgreeLi",
       props:['data']
     }
 </script>
@@ -17,7 +17,7 @@
     font-size: .13rem;
     color: #343434;
     line-height: .2rem;
-    padding: 0 .24rem;
     border-bottom: 1px solid #e6e6e6;
+    padding: .24rem 0;
   }
 </style>
