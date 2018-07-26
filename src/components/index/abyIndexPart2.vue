@@ -5,6 +5,7 @@
             <h2>诚意推出爱彼迎Plus</h2>
             <p>品质和舒适性经过验证的精选房源</p>
         <div class="liulan">
+            <div class="plusfont"></div>
             <a href="#">浏览 Plus 房源  ></a>
         </div>
     </div>
@@ -12,70 +13,25 @@
         <h2>全球房源</h2>
         <div class="fangyuanBox">
             <ul>
-                <li>
+                <li  v-for="(m,n) in fydata" >
                    <div class="Fcontop">
-                         <i class="iconfont icon-xihuan2"></i>
+                       <img :src="m.img" alt="">
+                         <i  class="iconfont icon-xihuan2"></i>
+                         
                    </div>
-                    <p>整套公寓.哥本哈根</p>
-                    <h4>penthouse, 4-5 rooms + 5 balconies</h4>
-                    <h3>￥1586每晚.免费取消预订</h3>
+                    <p>{{m.pcont}}</p>
+                    <h4>{{m.h4cont}}</h4>
+                    <h3>{{m.h3cont}}</h3>
                     <div class="starsBox">
                             <i class="iconfont icon-star"></i>
                             <i class="iconfont icon-star"></i>
                             <i class="iconfont icon-star"></i>
                             <i class="iconfont icon-star"></i>
                             <i class="iconfont icon-xingxingbange"></i>
-                            <span>347</span>
+                            <span>{{m.spancot}}</span>
                     </div>
                 </li> 
-                <li>
-                        <div class="Fcontop">
-                              <i class="iconfont icon-xihuan2"></i>
-                        </div>
-                         <p>整套公寓.哥本哈根</p>
-                         <h4>penthouse, 4-5 rooms + 5 balconies</h4>
-                         <h3>￥1586每晚.免费取消预订</h3>
-                         <div class="starsBox">
-                                 <i class="iconfont icon-star"></i>
-                                 <i class="iconfont icon-star"></i>
-                                 <i class="iconfont icon-star"></i>
-                                 <i class="iconfont icon-star"></i>
-                                 <i class="iconfont icon-xingxingbange"></i>
-                                 <span>347</span>
-                         </div>
-                     </li> 
-                     <li>
-                            <div class="Fcontop">
-                                  <i class="iconfont icon-xihuan2"></i>
-                            </div>
-                             <p>整套公寓.哥本哈根</p>
-                             <h4>penthouse, 4-5 rooms + 5 balconies</h4>
-                             <h3>￥1586每晚.免费取消预订</h3>
-                             <div class="starsBox">
-                                     <i class="iconfont icon-star"></i>
-                                     <i class="iconfont icon-star"></i>
-                                     <i class="iconfont icon-star"></i>
-                                     <i class="iconfont icon-star"></i>
-                                     <i class="iconfont icon-xingxingbange"></i>
-                                     <span>347</span>
-                             </div>
-                         </li> 
-                         <li>
-                                <div class="Fcontop">
-                                      <i class="iconfont icon-xihuan2"></i>
-                                </div>
-                                 <p>整套公寓.哥本哈根</p>
-                                 <h4>penthouse, 4-5 rooms + 5 balconies</h4>
-                                 <h3>￥1586每晚.免费取消预订</h3>
-                                 <div class="starsBox">
-                                         <i class="iconfont icon-star"></i>
-                                         <i class="iconfont icon-star"></i>
-                                         <i class="iconfont icon-star"></i>
-                                         <i class="iconfont icon-star"></i>
-                                         <i class="iconfont icon-xingxingbange"></i>
-                                         <span>347</span>
-                                 </div>
-                             </li> 
+                
             </ul>
 
 
@@ -97,17 +53,34 @@
 </template>
 
 <script>
+ import $ from "jquery"
 export default {
     name:"abyIndexPart2",
     data(){
         return{
+          
+            fydata:[
+                {"img":"/src/assets/img/IndexFY1.jpg","pcont":"绳索下降 · 圣乔治","h4cont":"Private East Zion Slot Canyon Tour","h3cont":"每人￥971","spancot":"73" },
+                {"img":"/src/assets/img/IndexFY2.jpg","pcont":"看野生动物 · 克萨达(Quesada)","h4cont":"Experiencia con el Oso Perezoso","h3cont":"每人￥123","spancot":"123" },
+                {"img":"/src/assets/img/IndexFY3.jpg","pcont":"一日游 · 迪拜","h4cont":"Red Dunes Safari and Al Khayma Camp","h3cont":"每人￥286","spancot":"68" },
+                {"img":"/src/assets/img/IndexFY4.jpg","pcont":"邂逅动物 · 西雅图","h4cont":"Wolf Encounter","h3cont":"每人￥1225","spancot":"1054" }
+              
 
+            ]
         }
+    },
+ 
+    mounted(){
+    $(".Fcontop").find("i").hover(function(){
+            $(this).removeClass("icon-xihuan2").addClass("icon-hongxin")
+        })
+   
     }
 }
 </script>
 
 <style>
+
 .fangyuan{
     width: calc(100% - 0.5rem);
     padding: 0 0.25rem;
@@ -134,7 +107,8 @@ export default {
 .liulan{
     width: 100%;
     height: 2.58rem;
-    background: gray;
+    background:url(/src/assets/img/plusFYbg.jpg)no-repeat;
+    background-size: cover;
     font-size: 0.11rem;
     position: relative;
     text-align: center;
@@ -147,6 +121,16 @@ export default {
     position: absolute;
     bottom: 0.39rem;
     left: 0.85rem;
+    background: #fff;
+}
+.plusfont{
+    width: 2.1rem;
+    height: 1.15rem;
+    position: absolute;
+    background: url(/src/assets/img/plusFont.png)no-repeat;
+    background-size:50% 50%;
+    bottom: 0.6rem;
+    left:1rem;
 }
 
 .globfangyuan{
@@ -169,23 +153,44 @@ export default {
     height: 2.5rem;
     margin-right: 0.074rem;
     float: left;
+    
 }
+
+
+
 .Fcontop{
     width: 1.55rem;
     height: 1.04rem;
-    background: yellow;
+    
     position: relative;
     margin-bottom: 0.13rem;
     border-radius: 5px;
+    overflow: hidden;
 }
+.Fcontop img{
+    width: 1.55rem;
+    height: 1.04rem;
+}
+
 .Fcontop .icon-xihuan2{
     font-size: 0.21rem;
     color: #fff;
     position: absolute;
     top: 0.13rem;
     right: 0.12rem;
-    
+   
 }
+.Fcontop .icon-hongxin{
+    font-size: 0.21rem;
+    color: red;
+    position: absolute;
+    top: 0.13rem;
+    right: 0.12rem;
+  
+}
+
+
+
 .fangyuanBox ul li p{
     font-size: 0.1rem;
     color: #afafaf;
