@@ -4,12 +4,13 @@ import abyIndex from '../pages/abyIndex'
 import abySerach from "../pages/abySerach"
 import abyOrder from '../pages/abyOrder'
 import orderAgree from '../components/order/orderAgree'
+import abyHouselist from"../pages/abyHouselist"
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path:'/index',
+    path:'/',
     component:abyIndex
   },
   {
@@ -28,6 +29,9 @@ const routes = [
   },
    { path:'/order',
     component:abyOrder
+  },
+  { path:'/houselist',
+    component:abyHouselist
   }
 ]
 

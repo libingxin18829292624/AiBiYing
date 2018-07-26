@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    
   </div>
 </template>
 
@@ -12,6 +13,9 @@ export default {
     return {
 
     }
+  },
+  components:{
+     
   }
 
 }
@@ -23,9 +27,15 @@ blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr
   padding: 0;
 }
 
-html{
-  font-size: 26.67vw;
-}
+ html {
+    font-size: 26.67vw;
+    height: 100%;
+ }
+  
+  body{
+    height: 100%;
+  }
+  
 
 ul, ol ,li{
   list-style: none;
