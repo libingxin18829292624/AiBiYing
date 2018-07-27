@@ -4,15 +4,19 @@ import abyIndex from '../pages/abyIndex'
 import abySerach from "../pages/abySerach"
 import abyOrder from '../pages/abyOrder'
 import orderAgree from '../components/order/orderAgree'
+import orderSendToOwner from '../components/order/orderSendToOwner'
+import orderAddPayMethod from '../components/order/orderAddPayMethod'
+import orderAddPersons from '../components/order/orderAddPersons'
 import abyHouselist from"../pages/abyHouselist"
 import abyMy from"../pages/abyMy"
 
+import abyWish from "../pages/abyWish"
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path:'/',
+    path:'/index',
     component:abyIndex
   },
   {
@@ -21,16 +25,23 @@ const routes = [
   },
   {
     path: '/order',
-    component: abyOrder,
-    children: [
-      {
-        path: 'agree',
-        component: orderAgree
-      }
-    ]
+    component: abyOrder
   },
-   { path:'/order',
-    component:abyOrder
+  {
+    path: '/agree',
+    component: orderAgree
+  },
+  {
+    path: '/sendToOwner',
+    component: orderSendToOwner
+  },
+  {
+    path: '/addPayMethod',
+    component: orderAddPayMethod
+  },
+  {
+    path: '/addPersons',
+    component: orderAddPersons
   },
   { path:'/houselist',
     component:abyHouselist
@@ -39,6 +50,10 @@ const routes = [
     component:abyMy
   },
 
+  {
+    path:'/abyWish',
+    component:abyWish
+  }
 ]
 
 const router = new VueRouter({
