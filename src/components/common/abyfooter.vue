@@ -18,7 +18,7 @@
                        <p>收件箱</p>
                    </a>
                    <a href="#">
-                        <i class="iconfont icon-people"></i>
+                        <i class="iconfont icon-wode"></i>
                            <p>我的</p>
                        </a>
 
@@ -56,6 +56,7 @@ export default {
     background: #fff;
     position: fixed;
     padding-top: 0.1rem;
+    z-index:999;
 }
 .footer a{
     width: 20%;
@@ -78,4 +79,5 @@ export default {
 .active {
     color: red!important;
 }
+
 </style>

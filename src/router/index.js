@@ -5,6 +5,8 @@ import abySerach from "../pages/abySerach"
 import abyOrder from '../pages/abyOrder'
 import orderAgree from '../components/order/orderAgree'
 import abyHouselist from"../pages/abyHouselist"
+import abyMy from"../pages/abyMy"
+
 
 Vue.use(VueRouter)
 
@@ -32,7 +34,11 @@ const routes = [
   },
   { path:'/houselist',
     component:abyHouselist
-  }
+  },
+  { path:'/my',
+    component:abyMy
+  },
+
 ]
 
 const router = new VueRouter({
