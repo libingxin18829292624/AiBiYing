@@ -7,29 +7,22 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state:{
-    "isAgree":"false",
-    "isSend":"false",
-    "isAddPayMethod":"false",
+    "isAgree":false,
+    "isSend":false,
+    "isAddPayMethod":false,
+    "isAddPersonInfo":false,
+    "toOwnerWords":"",
     "payMethod":"",
-    "finallyStepNums":"4",
+    "finallyStepNums":4,
     "ownerName":"榕",
     "ownerImg":"/src/assets/img/l1.png",
+    "members":{"person":1,"children":0,"kid":0,"pets":false},
   },
   mutations:{
-    changeAgree(state){
-      state.isAgree = true;
-    },
-    initOrderData(state){
-      state.finallyStepNums = 4;
-    }
+
   },
   actions:{
-    toChangeAgree(store){
-      store.commit('changeAgree');
-    },
-    toInitOrderData(store){
-      store.commit('initOrderData');
-    }
+
   },
   getters:{
 

@@ -11,8 +11,7 @@
       props:['data'],
       data(){
           return {
-            leftContent:'住宿晚数',
-            rightContent:'4'
+
           }
       }
     }

@@ -1,13 +1,14 @@
 <template>
   <div>
-  <!--<housedetail-header></housedetail-header>-->
-  <!--<housedetail-content></housedetail-content>-->
-    <!--<housedetail-evaluate></housedetail-evaluate>-->
-    <!--<housedetail-option></housedetail-option>-->
-    <!--<housedetail-resource></housedetail-resource>-->
-    <!--<housedetail-footer></housedetail-footer>-->
+  <housedetail-header></housedetail-header>
+  <housedetail-content></housedetail-content>
+    <housedetail-evaluate></housedetail-evaluate>
+    <housedetail-option></housedetail-option>
+    <housedetail-resource></housedetail-resource>
+    <housedetail-footer></housedetail-footer>
     <!--<housedetail-ziye></housedetail-ziye>-->
-    <housedetail-jubao></housedetail-jubao>
+    <!--<housedetail-jubao></housedetail-jubao>-->
+    <!--<housedetail-bianlisheshi></housedetail-bianlisheshi>-->
   </div>
 </template>
 
@@ -20,6 +21,7 @@
   import housedetailFooter from "../components/Housedetail/housedetailFooter"
   import housedetailZiye from "../components/Housedetail/housedetailZiye"
   import housedetailJubao from "../components/Housedetail/housedetailJubao"
+  import housedetailBianlisheshi from "../components/Housedetail/housedetailBianlisheshi"
   export default {
         name: "abyHousedetail",
         components:{
@@ -30,7 +32,8 @@
           housedetailResource,
           housedetailFooter,
           housedetailZiye,
-          housedetailJubao
+          housedetailJubao,
+          housedetailBianlisheshi
 
         }
     }

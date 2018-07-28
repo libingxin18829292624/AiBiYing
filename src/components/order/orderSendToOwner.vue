@@ -12,24 +12,30 @@
           </div>
           <img class="ownerImg" :src="this.$store.state.ownerImg" alt="">
         </article>
-        <textarea autofocus ref="userInput" class="userWords" name="" id="" cols="30" rows="10"></textarea>
+        <textarea ref="userInput" class="userWords" rows="20"></textarea>
       </section>
     </div>
 </template>
 
 <script>
+  import $ from "jquery"
     export default {
         name: "orderSendToOwner",
       methods:{
         sendOver(){
           if(this.$refs.userInput.value !== ""){
-            this.$store.state.isSend = "true";
+            this.$store.state.isSend = true;
+            this.$store.state.toOwnerWords = this.$refs.userInput.value;
+            this.back();
           }
-          this.back();
         },
         back(){
           window.history.back();
         }
+      },
+      mounted(){
+        $('.userWords').focus();
+        this.$refs.userInput.value = this.$store.state.toOwnerWords;
       }
     }
 </script>
@@ -97,10 +103,11 @@
     border: 0;
     resize: none;
     outline: 0;
-    margin-top: .2rem;
     font-size: .13rem;
     font-family: "微软雅黑";
     color: #343434;
     width: 100%;
+    margin-top: .2rem;
+    letter-spacing: .01rem;
   }
 </style>

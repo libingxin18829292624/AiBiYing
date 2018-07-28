@@ -11,7 +11,7 @@
       </article>
       <article class="owner-info">
         <p class="owner-name">房东：{{ownerName}}</p>
-        <img src="/src/assets/img/l1.png" alt="">
+        <img :src="this.$store.state.ownerImg" alt="">
       </article>
       <section class="live-info">
         <div class="start-end">
@@ -25,9 +25,9 @@
             <span>{{endDate}}</span>
           </div>
         </div>
-        <order-li v-for="n in liveInfo" :key="n.left" :data="n"></order-li>
+        <order-li @click.native="writeLiveInfo(index)" v-for="(n,index) in liveInfo" :key="index" :data="n"></order-li>
         <div class="totalMoney">
-          <p><span class="money">¥{{totalMoney}}</span><span class="money-danwei"> CNY</span></p>
+          <p><span class="money" ref="money">¥{{totalMoney}}</span><span class="money-danwei"> CNY</span></p>
           <a href="#">查看价格明细</a>
         </div>
         <article class="mes">
@@ -39,7 +39,7 @@
       <p class="finally-title">完成预定的步骤</p>
       <order-li @click.native="attach(index)" v-for="(n,index) in finallyStep" :key="n.left" :data="n"></order-li>
     </div>
-    <div class="btn">您还差4步</div>
+    <div class="btn" ref="btn" @click="toPay">您还差{{this.$store.state.finallyStepNums}}步</div>
     <router-view class="order-child-component"></router-view>
   </div>
 </template>
@@ -62,19 +62,25 @@
           "endDay": "周四",
           "endDate": "8月9日",
           "liveInfo": [
-            {"left": "住宿晚数", "right": "4"},
-            {"left": "房客", "right": "1位"}
+            {"left": "住宿晚数", "right": 4},
+            {"left": "房客", "right": this.members}
           ],
           "totalMoney": "752.45",
           "duiDingZhengCe": "中等",
           "mes": "距离入住日期至少5天按时取消预订可获全额退款（服务费除外）。距离入住日期不足5天时取消预订，首晚房费将不可退还，但剩余晚数可获50%退款。尚未入住、且在预定确认后48小时内取消的预定，将退还服务费。",
-          "youHuiQuan": {"left": "礼金券", "right": "添加"},
+          "youHuiQuan": {"left": "礼金券", "right": "无"},
           "finallyStep": [
             {"left": "1.付款", "right": "添加"},
             {"left": "2.给房东发消息", "right": "添加"},
             {"left": "3.房屋守则", "right": "同意"},
             {"left": "4.房客信息", "right": "添加"}
-          ]
+          ],
+          "members":""
+        }
+      },
+      watch:{
+        members(){
+          this.liveInfo[1].right = this.members;
         }
       },
       components: {
@@ -83,9 +89,56 @@
       },
       methods: {
         attach(n) {
-          console.log(n)
+          switch(n){
+            case 0:this.$router.push('/addPayMethod');break;
+            case 1:this.$router.push('/sendToOwner');break;
+            case 2:this.$router.push('/agree');break;
+            case 3:this.$router.push('/addPersonInfo');break;
           }
+        },
+        writeLiveInfo(index){
+          if(index === 1){
+            this.$router.push('/addPersons');
+          }else{
+            this.$router.push('/order');
+          }
+        },
+        initData(){
+          this.$store.state.finallyStepNums = 4;
+          if(this.$store.state.isAddPayMethod){
+            this.finallyStep[0].right = this.$store.state.payMethod;
+            this.$store.state.finallyStepNums--;
+          }
+          if(this.$store.state.isSend){
+            this.finallyStep[1].right = "完成";
+            this.$store.state.finallyStepNums--;
+          }
+          if(this.$store.state.isAgree){
+            this.finallyStep[2].right = "已同意";
+            this.$store.state.finallyStepNums--;
+          }
+          if(this.$store.state.isAddPersonInfo){
+            this.finallyStep[3].right = "完成";
+            this.$store.state.finallyStepNums--;
+          }
+
+          if(this.$store.state.members.kid !== 0){
+            this.members = (this.$store.state.members.person + this.$store.state.members.children) + "位，" + this.$store.state.members.kid + "名婴幼儿";
+          }else{
+            this.members = (this.$store.state.members.person + this.$store.state.members.children) + "位";
+          }
+          if(this.$store.state.finallyStepNums === 0){
+            this.$refs.btn.innerHTML = this.$refs.money.innerHTML + "·确认预定"
+          }
+        },
+        toPay(){
+          console.log("即将前往支付页面!");
+        }
+      },
+      mounted(){
+        this.initData();
       }
+
     }
 </script>
 <style scoped lang="scss" type="text/scss">
@@ -178,6 +231,7 @@
     flex-direction: column;
     position: relative;
     p{
+      height: 0;
       display: inline-block;
       position: absolute;
       top: -.5rem;

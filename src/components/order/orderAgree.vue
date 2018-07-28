@@ -35,7 +35,7 @@
       methods:{
         agree(){
           this.$router.push('/order');
-          this.$store.dispatch('toChangeAgree');
+          this.$store.state.isAgree = true;
         }
       },
       components:{

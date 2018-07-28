@@ -33,7 +33,7 @@
           },
         chooseOK(){
             if(this.isChoose){
-              this.$store.state.isAddPayMethod = "true";
+              this.$store.state.isAddPayMethod = true;
               this.$store.state.payMethod = this.$refs.method[0].innerHTML;
               window.history.back();
             }

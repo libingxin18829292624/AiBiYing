@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express();
-const indexData = require('./json/index')
+const Data = require('./json/index')
 
 app.use('/',(req,res)=>{
   res.header('Access-Control-Allow-Origin','*');
   res.header('Access-Control-Allow-Headers','Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
   res.header('Access-Control-Allow-Methods','PUT, POST, GET, DELETE, OPTIONS');
-  res.json(indexData)
+  res.json(Data)
 });
 
 app.listen(3000,()=>{

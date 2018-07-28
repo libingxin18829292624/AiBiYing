@@ -8,7 +8,7 @@
       props:['data'],
       data(){
           return {
-            "text":"同意"
+
           }
       }
     }

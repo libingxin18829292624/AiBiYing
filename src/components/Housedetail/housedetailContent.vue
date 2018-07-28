@@ -27,12 +27,13 @@
   </div>
   <div class="content_4">
       <span class="bianli">便利设施</span>
-    <i class="iconfont icon-wifi"></i>
-    <i class="iconfont icon-maojin"></i>
-    <i class="iconfont icon-kafei"></i>
-    <i class="iconfont icon-yigui"></i>
-    <i class="iconfont icon-thermometer_icon"></i>
-    <span class="jiaer">+2</span>
+    <ul>
+      <li>
+        <i v-for="n in viewArr" :class="icon(n)" class="iconfont"></i>
+        <span class="jiaer">+2</span>
+      </li>
+    </ul>
+
   </div>
   <img class="daditu" src="../../assets/img/s_ditu.png" alt="">
   <div class="content_5">
@@ -48,6 +49,10 @@
         name: "housedetailContent",
       data(){
           return{
+
+            kafei:true,
+            wifi:true,
+            thermometer_icon:true,
             xinxi:[
               {img:require("../../assets/img/s_renshu.png"),name:"最多住2人"},
               {img:require("../../assets/img/s_woshi.png"),name:"1间卧室"},
@@ -61,8 +66,20 @@
               { "date":"退房时间",
                 "time":"13:00"
               }
+            ],
+            viewArr:[
+              "wifi",
+              "maojin",
+              "kafei",
+              "yigui",
+              "thermometer_icon",
             ]
           }
+      },
+      methods:{
+        icon :  function (id){
+          return "icon-"+id
+        }
       }
     }
 </script>
