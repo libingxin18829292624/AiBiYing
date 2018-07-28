@@ -1,47 +1,49 @@
 <template>
-  <div class="order-container">
-    <div class="order-main">
-      <order-header></order-header>
-      <section class="main-info">
-        <h2 class="days">{{address}}{{days}}晚</h2>
-        <p class="has">{{rooms}}间卧室 · {{bathrooms}}间卫生间</p>
-      </section>
-      <article class="owner-words">
-        <p>{{ownerWords}}</p>
-      </article>
-      <article class="owner-info">
-        <p class="owner-name">房东：{{ownerName}}</p>
-        <img :src="this.$store.state.ownerImg" alt="">
-      </article>
-      <section class="live-info">
-        <div class="start-end">
-          <div class="start">
-            <span>{{startDay}}</span>
-            <span>{{startDate}}</span>
-          </div>
-          <img src="/src/assets/img/l2.png" alt="">
-          <div class="end">
-            <span>{{endDay}}</span>
-            <span>{{endDate}}</span>
-          </div>
-        </div>
-        <order-li @click.native="writeLiveInfo(index)" v-for="(n,index) in liveInfo" :key="index" :data="n"></order-li>
-        <div class="totalMoney">
-          <p><span class="money" ref="money">¥{{totalMoney}}</span><span class="money-danwei"> CNY</span></p>
-          <a href="#">查看价格明细</a>
-        </div>
-        <article class="mes">
-          <h3 class="mes-title">退订政策：{{duiDingZhengCe}}</h3>
-          <p class="mes-content">{{mes}}</p>
+    <div class="order-container">
+      <div class="order-main">
+        <header class="header">
+          <i class="iconfont icon-houtui1" @click=""></i>
+        </header>
+        <section class="main-info">
+          <h2 class="days">{{address}}{{days}}晚</h2>
+          <p class="has">{{rooms}}间卧室 · {{bathrooms}}间卫生间</p>
+        </section>
+        <article class="owner-words">
+          <p>{{ownerWords}}</p>
         </article>
-      </section>
-      <order-li :data="youHuiQuan"></order-li>
-      <p class="finally-title">完成预定的步骤</p>
-      <order-li @click.native="attach(index)" v-for="(n,index) in finallyStep" :key="n.left" :data="n"></order-li>
+        <article class="owner-info">
+          <p class="owner-name">房东：{{ownerName}}</p>
+          <img :src="this.$store.state.ownerImg" alt="">
+        </article>
+        <section class="live-info">
+          <div class="start-end">
+            <div class="start">
+              <span>{{startDay}}</span>
+              <span>{{startDate}}</span>
+            </div>
+            <img src="/src/assets/img/l2.png" alt="">
+            <div class="end">
+              <span>{{endDay}}</span>
+              <span>{{endDate}}</span>
+            </div>
+          </div>
+          <order-li @click.native="writeLiveInfo(index)" v-for="(n,index) in liveInfo" :key="index" :data="n"></order-li>
+          <div class="totalMoney">
+            <p><span class="money" ref="money">¥{{totalMoney}}</span><span class="money-danwei"> CNY</span></p>
+            <a href="#">查看价格明细</a>
+          </div>
+          <article class="mes">
+            <h3 class="mes-title">退订政策：{{duiDingZhengCe}}</h3>
+            <p class="mes-content">{{mes}}</p>
+          </article>
+        </section>
+        <order-li :data="youHuiQuan"></order-li>
+        <p class="finally-title">完成预定的步骤</p>
+        <order-li @click.native="attach(index)" v-for="(n,index) in finallyStep" :key="n.left" :data="n"></order-li>
+        <p v-if="this.$store.state.finallyStepNums === 0" class="sure">点击确认预定即代表您同意支付所示的总价格（此价格已包含服务费，点“价格”即可查看服务费明细），并同意服务条款、灵活退订政策及房客退款政策。</p>
+      </div>
+      <div class="btn" ref="btn" @click="toPay">您还差{{this.$store.state.finallyStepNums}}步</div>
     </div>
-    <div class="btn" ref="btn" @click="toPay">您还差{{this.$store.state.finallyStepNums}}步</div>
-    <router-view class="order-child-component"></router-view>
-  </div>
 </template>
 
 <script>
@@ -142,8 +144,19 @@
     }
 </script>
 <style scoped lang="scss" type="text/scss">
+
   @mixin border-bottom{
     border-bottom:1px solid #e6e6e6;
+  }
+  .header{
+    width: 100%;
+    height: .75rem;
+    overflow: hidden;
+  }
+  .icon-houtui1{
+    font-size: .22rem;
+    display: block;
+    margin-top: .4rem;
   }
   .order-container{
     width: 100%;
@@ -151,6 +164,7 @@
     color: #343434;
     box-sizing: border-box;
     letter-spacing: .01rem;
+    background-color: #fff;
   }
   .order-main{
     width: 100%;
@@ -172,7 +186,6 @@
     }
   }
   .owner-words{
-    width: 82%;
     height: .88rem;
     font-size: .14rem;
     padding-top: .24rem;
@@ -279,8 +292,13 @@
     box-sizing: border-box;
     padding-top: .2rem;
   }
+  .sure{
+    font-size: .12rem;
+    line-height: .16rem;
+    padding: .2rem 0;
+  }
   .btn{
-    width: 3.75rem;
+    width: 100%;
     height: .58rem;
     background-color: #ff5a5f;
     display: flex;
@@ -289,8 +307,8 @@
     font-size: .15rem;
     color: #fff;
     font-weight: 900;
-    position: relative;
-    left: -.25rem;
+    padding: 0 .25rem;
+    margin-left: -.25rem;
   }
   .order-child-component{
     position: fixed;

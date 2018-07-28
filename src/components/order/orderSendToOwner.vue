@@ -1,4 +1,5 @@
 <template>
+  <aby-transtion-to-top-fast>
     <div class="container">
       <header class="header">
         <i class="iconfont icon-houtui1" @click="back"></i>
@@ -8,16 +9,18 @@
         <article class="toOwner">
           <div class="content">
             <p>自我介绍</p>
-            <p>向{{}}简单地介绍一下您自己和您的旅程。</p>
+            <p>向{{this.$store.state.ownerName}}简单地介绍一下您自己和您的旅程。</p>
           </div>
           <img class="ownerImg" :src="this.$store.state.ownerImg" alt="">
         </article>
         <textarea ref="userInput" class="userWords" rows="20"></textarea>
       </section>
     </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
+  import abyTranstionToTopFast from '../common/abyTranstionToTopFast'
   import $ from "jquery"
     export default {
         name: "orderSendToOwner",
@@ -33,6 +36,9 @@
           window.history.back();
         }
       },
+      components:{
+        abyTranstionToTopFast
+      },
       mounted(){
         $('.userWords').focus();
         this.$refs.userInput.value = this.$store.state.toOwnerWords;
@@ -44,6 +50,7 @@
   .container{
     letter-spacing: .01rem;
     color: #343434;
+    background-color: #fff;
   }
   .header{
     width: 100%;

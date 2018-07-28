@@ -13,6 +13,9 @@ import abyHousedetail from"../pages/abyHousedetail"
 import abyWish from "../pages/abyWish"
 import abyMy from"../pages/abyMy"
 import abyIndexRili from "../components/index/abyIndexRili"
+import housedetailBianlisheshi from "../components/Housedetail/housedetailBianlisheshi"
+import housedetailZiye from "../components/Housedetail/housedetailJubao"
+import housedetailJubao from "../components/Housedetail/housedetailZiye"
 
 Vue.use(VueRouter)
 
@@ -60,12 +63,26 @@ const routes = [
     path:'/addPersonInfo',
     component:orderAddPersonInfo
   },
-  { path:'/my',
+  {
+    path:'/my',
     component:abyMy
   },
-  { path:'/Rili',
+  {
+    path:'/Rili',
     component:abyIndexRili
-  }
+  },
+  {
+    path:'/housedetailBianlisheshi',
+    component:housedetailBianlisheshi
+  },
+  {
+    path:'/housedetailJubao',
+    component:housedetailJubao
+  },
+  {
+    path:'/housedetailZiye',
+    component:housedetailZiye
+  },
 
 ]
 

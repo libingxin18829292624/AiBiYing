@@ -25,8 +25,8 @@
     </div>
     <span class="zuishao">最少1晚</span>
   </div>
-  <div class="content_4">
-      <span class="bianli">便利设施</span>
+  <div  class="content_4">
+    <span class="bianli"><router-link to="/housedetailBianlisheshi">便利设施</router-link></span>
     <ul>
       <li>
         <i v-for="n in viewArr" :class="icon(n)" class="iconfont"></i>

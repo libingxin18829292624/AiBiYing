@@ -1,24 +1,27 @@
 <template>
- 
+
     <div class="header">
   <div class="serchBox">
     <i class="iconfont icon-search3"></i>
     <input type="text" placeholder="搜索'瓦伦西亚海岸试试(Coast de Valencia)'试试">
      </div>  
     <div class="yincang">
-      <a href="#">日期</a><a href="#">1位访客</a>
+      <router-link to="/Rili" id="myRili" href="#">日期</router-link><a href="#">1位访客</a>
   </div>
 </div>
-   
+  
+  
 </template>
 
 <script>
 import $ from 'jquery'
+
 export default {
     name:"abyIndexHeader",
     methods:{
 
     },
+
     mounted(){
         $(window).scroll(function(){
             var topp=$(document).scrollTop();
@@ -34,6 +37,13 @@ export default {
                 },20)
             }
         })
+        
+    },
+    methods:{
+       
+    },
+    components:{
+       
     }
 }
 </script>
@@ -86,4 +96,5 @@ export default {
     border-radius: 5px;
     margin-right: 0.075rem;
 }
+
 </style>

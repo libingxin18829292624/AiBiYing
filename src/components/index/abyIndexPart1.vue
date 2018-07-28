@@ -5,8 +5,8 @@
     <div class="tansuoNav">
         <ul>
             <li><a href="#"><img src="/src/assets/img/1.jpg" alt=""><p>房源</p></a></li>
-            <li><a href="#"><img src="/src/assets/img/2.jpg" alt=""><p>房源</p></a></li>
-            <li><a href="#"><img src="/src/assets/img/3.jpg" alt=""><p>房源</p></a></li>
+            <li><a href="#"><img src="/src/assets/img/2.jpg" alt=""><p>餐馆</p></a></li>
+            <li><a href="#"><img src="/src/assets/img/3.jpg" alt=""><p>体验</p></a></li>
      
         </ul>
     </div>

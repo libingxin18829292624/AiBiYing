@@ -1,11 +1,11 @@
 <template>
   <div>
-  <housedetail-header></housedetail-header>
-  <housedetail-content></housedetail-content>
-    <housedetail-evaluate></housedetail-evaluate>
-    <housedetail-option></housedetail-option>
-    <housedetail-resource></housedetail-resource>
-    <housedetail-footer></housedetail-footer>
+    <housedetail-header></housedetail-header>
+    <housedetail-content></housedetail-content>
+      <housedetail-evaluate></housedetail-evaluate>
+      <housedetail-option></housedetail-option>
+      <housedetail-resource></housedetail-resource>
+      <housedetail-footer></housedetail-footer>
     <!--<housedetail-ziye></housedetail-ziye>-->
     <!--<housedetail-jubao></housedetail-jubao>-->
     <!--<housedetail-bianlisheshi></housedetail-bianlisheshi>-->

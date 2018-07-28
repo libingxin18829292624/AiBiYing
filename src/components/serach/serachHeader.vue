@@ -62,19 +62,15 @@ header{
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-    /* WebKit browsers */ 
    color: #c7c5c5; 
    } 
-input:-moz-placeholder, textarea:-moz-placeholder { 
-   /* Mozilla Firefox 4 to 18 */ 
+input:-moz-placeholder, textarea:-moz-placeholder {   
    color: #c7c5c5; 
    } 
-input::-moz-placeholder, textarea::-moz-placeholder { 
-    /* Mozilla Firefox 19+ */ 
+input::-moz-placeholder, textarea::-moz-placeholder {    
    color: #c7c5c5; 
    } 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
-    /* Internet Explorer 10+ */ 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {   
    color: #c7c5c5; 
    } 
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <aby-transtion-to-top-fast>
     <div class="container">
       <header class="header">
         <i class="iconfont icon-guanbi" @click="back"></i>
@@ -14,9 +15,11 @@
         <div class="store" @click="chooseOK">保存<i class="iconfont icon-jiantouyou"></i></div>
       </div>
     </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
+  import abyTranstionToTopFast from '../common/abyTranstionToTopFast'
   import $ from 'jquery'
     export default {
         name: "orderAddPayMethod",
@@ -25,6 +28,9 @@
             "payMethods":["支付宝"],
             "isChoose":"false"
           }
+      },
+      components:{
+        abyTranstionToTopFast
       },
       methods:{
           choose(index){
@@ -53,10 +59,7 @@
   .container{
     width: 100%;
     height: 100%;
-    position: fixed;
-    background-image: url("/src/assets/img/l3.png");
-    -webkit-background-size: cover;
-    background-size: cover;
+    background-color: #008489;
     padding: 0 .25rem;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -81,6 +84,7 @@
     color: $color;
     height: .42rem;
     line-height: .42rem;
+    margin-top: .3rem;
     margin-bottom: .25rem;
   }
   .pasMethods{
@@ -95,12 +99,13 @@
   .footer{
     width: 100%;
     height: .78rem;
-    position: fixed;
+    position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: .2rem;
     padding: 0 .25rem;
-    box-sizing:border-box;
-    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   .addMore{
     display: block;

@@ -1,4 +1,5 @@
 <template>
+  <aby-transtion-to-top>
     <div class="addPersons">
       <header class="header">
         <i class="iconfont icon-guanbi" @click="back"></i>
@@ -34,11 +35,13 @@
         <span class="close" @click="close">关闭</span>
       </div>
     </div>
+  </aby-transtion-to-top>
 </template>
 
 <script>
   import $ from "jquery"
   import orderButton from './orderButton'
+  import abyTranstionToTop from '../common/abyTranstionToTop'
     export default {
         name: "orderPersons",
       data(){
@@ -56,7 +59,8 @@
           }
       },
       components:{
-        orderButton
+        orderButton,
+        abyTranstionToTop
       },
       methods:{
         animate(){
@@ -76,7 +80,8 @@
           }
         },
         back(){
-          this.$router.push('/order');
+          // this.$router.push('/order');
+          window.history.back();
         },
         sub(index){
           if(this.persons[index].num > this.persons[index].min){
@@ -118,17 +123,9 @@
         },
         store(){
           this.$store.state.members = {"person":this.persons[0].num,"children":this.persons[1].num,"kid":this.persons[2].num,"pets":this.pets};
-          this.$router.push('/order');
+          window.history.back();
+          // this.$router.back();
         }
-      },
-      computed:{
-
-      },
-      mounted(){
-
-      },
-      updated(){
-
       }
     }
 </script>
@@ -137,6 +134,7 @@
   .addPersons{
     width: 100%;
     color: #343434;
+    background-color: #fff;
   }
   .header {
     width: 100%;
@@ -217,13 +215,13 @@
   }
   .sub span{
     position: relative;
-    left: .1rem;
-    top: -.07rem;
+    left: .11rem;
+    top: -.06rem;
   }
   .add span{
     position: relative;
-    left: .05rem;
-    top: -.07rem;
+    left: .06rem;
+    top: -.06rem;
   }
   .num{
     width: .5rem;
@@ -237,14 +235,12 @@
   }
   .footer{
     width: 100%;
-    height: 1.23rem;
+    height: 1rem;
     display: flex;
     align-items: center;
     padding: 0 .25rem;
     box-sizing:border-box;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    margin-top: 1rem;
     border-top: 1px solid #e6e6e6;
   }
   .mes{

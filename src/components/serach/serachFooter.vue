@@ -4,23 +4,25 @@
             <div class="moren-top">
 
                 <div class="moren-top-top">
+                    <div class="top-li">
                     <a href="#">全部</a>
                     <a href="#">房源</a>
                     <a href="#">体验</a>
+                    </div>
                 </div>
 
                 <ul>
-                    <li><i class="iconfont icon-dizhi"></i>附近</li>
-                    <li><i class="iconfont icon-dizhi"></i>任何地方</li>
+                    <li><div><i class="iconfont icon-dizhi"></i>附近</div></li>
+                    <li><div><i class="iconfont icon-dizhi"></i>任何地方</div></li>
                 </ul>
 
             </div>
             <div class="moren-bottom">
                 <p>最近的搜索</p>
                 <ul>
-                    <li><i class="iconfont icon-shijianlishijilujishizhongbiaomianxing"></i>曼谷·任何时间，1位</li>
-                    <li><i class="iconfont icon-shijianlishijilujishizhongbiaomianxing"></i>西安·任何时间，1位</li>
-                    <li><i class="iconfont icon-shijianlishijilujishizhongbiaomianxing"></i>深圳·任何时间，1位</li>
+                    <li><div><i class="iconfont icon-shijianlishijilujishizhongbiaomianxing"></i>曼谷·任何时间，1位</div></li>
+                    <li><div><i class="iconfont icon-shijianlishijilujishizhongbiaomianxing"></i>西安·任何时间，1位</div></li>
+                    <li><div><i class="iconfont icon-shijianlishijilujishizhongbiaomianxing"></i>深圳·任何时间，1位</div></li>
                 </ul>
             </div>
         </div>
@@ -70,11 +72,14 @@ footer{
     width:100%;
 }
 .moren-top-top{
-    width: 3.25rem;
-    border-bottom:2px solid #eaeaea;
-    margin:0 auto;
+    padding-left:0.25rem;
+    padding-right: 0.25rem;
+    box-sizing: border-box;
+}
+.top-li{
+  border-bottom:2px solid #eaeaea;
     display:-webkit-flex;
-    padding-top:0.07rem;
+     padding-top:0.07rem;
     padding-bottom: 0.29rem;
 }
 .moren-top-top a{
@@ -95,11 +100,16 @@ footer{
 .moren-top ul li{
     color:#2e2e2e;
     display: block;
-    width:3.25rem;
-    margin:0 auto;
+  
+    padding-left:0.25rem;
+    padding-right:0.25rem;
+    box-sizing: border-box;
+   
     font-size: 0.12rem;
-    border-bottom:2px solid #eaeaea;
     line-height: 0.66rem;
+}
+.moren-top ul li div{
+    border-bottom:2px solid #eaeaea;
 }
 .moren-top ul li .icon-dizhi{
     font-size: 0.14rem;
@@ -122,11 +132,14 @@ footer{
 .moren-bottom ul li{
     color:#2e2e2e;
     display: block;
-    width:3.25rem;
-    margin:0 auto;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
     font-size: 0.12rem;
-    border-bottom:2px solid #eaeaea;
+    box-sizing: border-box;
     line-height: 0.66rem;
+}
+.moren-bottom ul li div{
+    border-bottom:2px solid #eaeaea;
 }
 .moren-bottom ul li .icon-shijianlishijilujishizhongbiaomianxing{
     font-size: 0.14rem;

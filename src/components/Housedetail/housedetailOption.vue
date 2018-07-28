@@ -2,7 +2,7 @@
 <div class="option">
   <div class="content_5">
     <ul>
-      <li v-for="i in shijian"><span>{{i.condition}}</span><span class="yanse">{{i.degree}}</span></li>
+      <li @click="sh(index)" v-for="(i,index) in shijian"><span>{{i.condition}}</span><span class="yanse">{{i.degree}}</span></li>
     </ul>
   </div>
 </div>
@@ -35,7 +35,15 @@
             }
           ]
         }
-      }
+      },
+      methods:{
+        sh(n){
+          switch(n){
+            case 4:this.$router.push('/housedetailJubao');break;
+            case 5:this.$router.push('/housedetailZiye')
+          }
+        },
+      },
     }
 </script>
 

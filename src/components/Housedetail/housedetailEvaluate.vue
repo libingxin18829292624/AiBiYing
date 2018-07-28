@@ -25,7 +25,7 @@
   </div>
   <div class="pinglun2">
     <span>榕是位超赞的房东.超赞房东经验丰富、评分很高，他们致力于为访客提供优质的住宿体验</span>
-    <img src="../../assets/img/s_huizhang.png" alt="">
+    <div class="imgs"><img src="../../assets/img/s_huizhang.png" alt=""></div>
   </div>
 </div>
 </template>
@@ -129,6 +129,7 @@
     height:1.06rem ;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 0 0.25rem;
     border-bottom: 1px solid #e6e6e6;
 
@@ -136,10 +137,17 @@
   .pinglun2 span{
     font-size: 0.14rem;
     line-height:0.2rem;
-    padding-right: 0.20rem;
+    flex-shrink: 1;
   }
   .pinglun2 img{
     width: 0.3rem;
     height: 0.51rem;
+    display: block;
+    flex-shrink: 1;
+  }
+  .imgs{
+    width: 0.3rem;
+    height: 0.51rem;
+
   }
 </style>

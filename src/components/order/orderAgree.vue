@@ -1,21 +1,24 @@
 <template>
-  <div class="order-agree">
-    <order-header></order-header>
-    <div class="title">
-      <h1>查阅{{ownerName}}的房屋守则</h1>
-      <p>这里是在{{ownerName}}的房屋中要遵守的守则，以及您需要了解的其他信息。</p>
+  <aby-transtion-to-top-fast>
+    <div class="order-agree">
+      <order-header></order-header>
+      <div class="title">
+        <h1>查阅{{ownerName}}的房屋守则</h1>
+        <p>这里是在{{ownerName}}的房屋中要遵守的守则，以及您需要了解的其他信息。</p>
+      </div>
+      <order-agree-li v-for="n in agreeLis" :key="n" :data="n"></order-agree-li>
+      <div class="footer">
+        <order-button @click.native="agree" :data="'同意'"></order-button>
+      </div>
     </div>
-    <order-agree-li v-for="n in agreeLis" :key="n" :data="n"></order-agree-li>
-    <div class="footer">
-      <order-button @click.native="agree" :data="'同意'"></order-button>
-    </div>
-  </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
   import orderHeader from './orderHeader'
   import orderAgreeLi from './orderAgreeLi'
   import orderButton from './orderButton'
+  import abyTranstionToTopFast from '../common/abyTranstionToTopFast'
     export default {
       name: "orderAgree",
       data(){
@@ -34,14 +37,15 @@
       },
       methods:{
         agree(){
-          this.$router.push('/order');
           this.$store.state.isAgree = true;
+          window.history.back();
         }
       },
       components:{
         orderHeader,
         orderAgreeLi,
-        orderButton
+        orderButton,
+        abyTranstionToTopFast
       }
     }
 </script>
@@ -52,7 +56,7 @@
     padding: 0 .25rem;
     box-sizing: border-box;
     letter-spacing: .01rem;
-    padding-bottom: .83rem;
+    background-color: #fff;
   }
   .title{
     h1{
@@ -69,14 +73,7 @@
   }
   .footer{
     width: 100%;
-    padding: 0 .25rem;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     height: .85rem;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     display: flex;
     align-items: center;
     background-color: #fff;

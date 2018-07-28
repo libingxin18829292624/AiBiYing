@@ -69,6 +69,7 @@
   .tuijian{
     font-size: 0.15rem;
     color: #191919;
+    float: left;
   }
   .footer_2{
     width: 40%;
@@ -86,5 +87,6 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    float: right;
   }
 </style>

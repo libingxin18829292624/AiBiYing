@@ -1,4 +1,5 @@
 <template>
+  <aby-transtion-to-top-fast>
     <div class="container">
       <header class="header">
         <i class="iconfont icon-guanbi" @click="back"></i>
@@ -11,11 +12,13 @@
           <li v-for="(n,index) in info" :key="index" @click="over">{{n.name}}&nbsp;{{n.id}}</li>
         </ul>
       </section>
-      <p class="tip">爱彼迎中国不会将您所填写的信息与房东共享。房客信息将由爱彼迎中国妥善保管，以便下次预定时使用。<a href="#" class="more">了解更多</a></p>
+      <p class="tip">爱彼迎中国不会将您所填写的信息与房东共享。房客信息将由爱彼迎中国妥善保管，以便下次预定时使用。<a class="more">了解更多</a></p>
     </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
+  import abyTranstionToTopFast from '../common/abyTranstionToTopFast'
     export default {
         name: "addPersonInfo",
       data(){
@@ -33,11 +36,17 @@
           this.$store.state.isAddPersonInfo = true;
           window.history.back();
         }
+      },
+      components:{
+        abyTranstionToTopFast
       }
     }
 </script>
 
 <style scoped lang="scss" type="text/scss">
+  .container{
+    background-color: #fff;
+  }
   .header {
     width: 100%;
     height: .8rem;
@@ -81,14 +90,14 @@
     }
   }
   .tip{
-    position: fixed;
-    left: 0;
-    bottom: .25rem;
+    margin-top: 3rem;
     padding: 0 .25rem;
-    box-sizing:border-box;
     width: 100%;
     line-height: .16rem;
     font-size: .11rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     .more{
       color: #309b9f;
       font-size: .11rem;
