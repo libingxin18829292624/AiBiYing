@@ -1,8 +1,7 @@
 <template>
-<div class="bodybox">
+<div>
       <houselist-header></houselist-header>
       <houselist-body></houselist-body>
-      <abyfooter></abyfooter>
 </div>
   
     
@@ -11,23 +10,15 @@
 <script>
 import houselistHeader from "../components/houselist/houselistHeader"
 import houselistBody from "../components/houselist/houselistBody"
-import abyfooter from "../components/common/abyfooter"
 export default {
     name:"abyHouselist",
     components:{
         houselistHeader,
-        houselistBody,
-        abyfooter
+        houselistBody
     }
 }
 </script>
 
 <style>
-
-.bodybox{
-    padding-bottom: 0.8rem;
-    padding-top: 1.27rem;
-}
-
 
 </style>
