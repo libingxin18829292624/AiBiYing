@@ -6,7 +6,10 @@
             <div></div>
             <div></div>
             <div></div>
+<<<<<<< HEAD
             <div></div>
+=======
+>>>>>>> 5d65e18ecc497cefecf585566eb95ae515be3405
         </div>
         <p>我们要求每一位爱彼迎用户在侣行或出租之前提供一些具体信息，现在就先来完成这一步吧</p>
     </div>  
@@ -33,12 +36,20 @@ export default {
     margin-top: 0.19rem;
 }
 .fangkuai div{
+<<<<<<< HEAD
     width:20%;
+=======
+    width:0.6rem;
+>>>>>>> 5d65e18ecc497cefecf585566eb95ae515be3405
     height:0.42rem;
     background: #f2f2f2;
     border-right: 3px solid #ebebeb;
 }
+<<<<<<< HEAD
 .fangkuai div:nth-child(5){
+=======
+.fangkuai div:nth-child(4){
+>>>>>>> 5d65e18ecc497cefecf585566eb95ae515be3405
     border:none;
     border-radius: 0 3px 3px 0;
 }

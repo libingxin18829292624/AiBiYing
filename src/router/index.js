@@ -9,7 +9,12 @@ import orderAddPayMethod from '../components/order/orderAddPayMethod'
 import orderAddPersons from '../components/order/orderAddPersons'
 import orderAddPersonInfo from '../components/order/orderAddPersonInfo'
 import abyHouselist from"../pages/abyHouselist"
+<<<<<<< HEAD
 import abyHousedetail from"../pages/abyHousedetail"
+=======
+import abyMy from"../pages/abyMy"
+
+>>>>>>> 5d65e18ecc497cefecf585566eb95ae515be3405
 import abyWish from "../pages/abyWish"
 import abyMy from"../pages/abyMy"
 import abyIndexRili from "../components/index/abyIndexRili"
@@ -48,6 +53,10 @@ const routes = [
   { path:'/houselist',
     component:abyHouselist
   },
+  { path:'/my',
+    component:abyMy
+  },
+
   {
     path:'/abyWish',
     component:abyWish
