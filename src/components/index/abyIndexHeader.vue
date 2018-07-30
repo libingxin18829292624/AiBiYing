@@ -6,7 +6,7 @@
     <input type="text" placeholder="搜索'瓦伦西亚海岸试试(Coast de Valencia)'试试">
      </div>  
     <div class="yincang">
-      <router-link to="/Rili" id="myRili" href="#">日期</router-link><a href="#">1位访客</a>
+      <router-link to="/Rili" id="myRili" href="#">{{this.$store.state.xdriqi}}</router-link><router-link to="/fangke">{{this.$store.state.num}}位访客</router-link>
   </div>
 </div>
   
@@ -25,7 +25,7 @@ export default {
     mounted(){
         $(window).scroll(function(){
             var topp=$(document).scrollTop();
-            if(topp>40){
+            if(topp>50){
                 $(".yincang").slideUp("20")
                 $(".header").animate({
                     "height": "80"
@@ -87,10 +87,12 @@ export default {
 .yincang{
     font-size: 0.12rem;
     margin-left: 0.25rem;
-    padding-top: 0.11rem;
+    padding-top: 0.05rem;
+    width: 100%;
+    height: 0.3rem;
 }
 .yincang a{
-    padding: 0.1rem;
+    padding: 0.05rem;
     color: #3c3c3c;
     border: 1px solid #d3d3d4;
     border-radius: 5px;

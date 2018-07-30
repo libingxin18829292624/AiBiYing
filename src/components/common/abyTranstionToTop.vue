@@ -20,6 +20,6 @@
     top: 0;
   }
   .v-enter-active,.v-leave-active{
-    transition: all .4s;
+    transition: all .35s;
   }
 </style>

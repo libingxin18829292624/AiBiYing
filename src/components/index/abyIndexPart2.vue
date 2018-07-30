@@ -54,11 +54,12 @@
 
 <script>
  import $ from "jquery"
+ import BScroll from 'better-scroll'
 export default {
     name:"abyIndexPart2",
     data(){
         return{
-          
+           
             fydata:[
                 {"img":"/src/assets/img/IndexFY1.jpg","pcont":"绳索下降 · 圣乔治","h4cont":"Private East Zion Slot Canyon Tour","h3cont":"每人￥971","spancot":"73" },
                 {"img":"/src/assets/img/IndexFY2.jpg","pcont":"看野生动物 · 克萨达(Quesada)","h4cont":"Experiencia con el Oso Perezoso","h3cont":"每人￥123","spancot":"123" },
@@ -71,8 +72,21 @@ export default {
     },
  
     mounted(){
-    $(".Fcontop").find("i").hover(function(){
-            $(this).removeClass("icon-xihuan2").addClass("icon-hongxin")
+        var a = 0
+    $(".Fcontop").find("i").click(function(){
+        
+        a++
+        if(a%2 ==!0){
+            $(this).addClass("icon-hongxin").css({
+                "animation":"hongxinchange 0.5s 1"
+            })
+        }else if(a%2== 0){
+             $(this).removeClass("icon-hongxin").css({
+                   "animation":"hongxinchange2 0.5s 1"
+             })
+             
+        }
+       
         })
    
     }
@@ -80,11 +94,60 @@ export default {
 </script>
 
 <style>
+@keyframes hongxinchange{
+    0%{
+        transform:scale(1);
+    }
+    10%{
+        transform:scale(0.2);
+    }
+    20%{
+        transform:scale(0.5);
+    }
+    30%{
+        transform:scale(1);
+    }
+    40%{
+        transform:scale(1.2);
+    }
+    50%{
+        transform:scale(1.4);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+@keyframes hongxinchange2{
+    0%{
+        transform:scale(1);
+    }
+    10%{
+        transform:scale(0.7);
+    }
+    20%{
+        transform:scale(0.5);
+    }
+    30%{
+        transform:scale(1);
+    }
+    40%{
+        transform:scale(1.2);
+    }
+    50%{
+        transform:scale(1.4);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+
+
 
 .fangyuan{
     width: calc(100% - 0.5rem);
     padding: 0 0.25rem;
-   
+    
     overflow: hidden;
 }
 
@@ -229,6 +292,8 @@ export default {
     line-height: 0.48rem;
     border-radius: 5px;
     font-weight: 700;
+     margin-bottom: 0.6rem;
+     box-sizing: border-box;
 }
 .showall a{
     color: #27888c;

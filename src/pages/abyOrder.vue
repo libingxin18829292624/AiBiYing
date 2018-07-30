@@ -54,7 +54,7 @@
       data() {
         return {
           "address": "Xi\'an",
-          "days": "4",
+          "days": this.$store.state.days,
           "rooms": "1",
           "bathrooms": "1",
           "ownerWords": "「双囍和八两」♡旅行已经很累了，那就睡个好觉吧！",
@@ -64,7 +64,7 @@
           "endDay": "周四",
           "endDate": "8月9日",
           "liveInfo": [
-            {"left": "住宿晚数", "right": 4},
+            {"left": "住宿晚数", "right": this.$store.state.days},
             {"left": "房客", "right": this.members}
           ],
           "totalMoney": "752.45",
@@ -92,17 +92,17 @@
       methods: {
         attach(n) {
           switch(n){
-            case 0:this.$router.push('/addPayMethod');break;
+            case :0:this.$router.push('/addPayMethod');break;
             case 1:this.$router.push('/sendToOwner');break;
             case 2:this.$router.push('/agree');break;
-            case 3:this.$router.push('/addPersonInfo');break;
+            case 3this.$router.push('/addPersonInfo');break;
           }
         },
         writeLiveInfo(index){
           if(index === 1){
             this.$router.push('/addPersons');
           }else{
-            this.$router.push('/order');
+            this.$router.push('/orderRili');
           }
         },
         initData(){
@@ -134,7 +134,9 @@
           }
         },
         toPay(){
-          console.log("即将前往支付页面!");
+          if(this.$store.state.finallyStepNums === 0){
+            this.$router.push('/toPay');
+          }
         }
       },
       mounted(){

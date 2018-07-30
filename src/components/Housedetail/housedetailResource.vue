@@ -100,6 +100,7 @@ margin-bottom: 0.91rem;
   ul{
     width: 14rem;
     float: left;
+    padding-right: 0.25rem;
   }
   li{
     float: left;

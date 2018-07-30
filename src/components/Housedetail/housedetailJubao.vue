@@ -1,6 +1,7 @@
 <template>
+  <aby-transtion>
 <div class="header">
-  <i class="iconfont icon-houtui1"></i>
+  <i @click="goBack" class="iconfont icon-houtui1"></i>
   <h1>您为何举报该房源？</h1>
   <p class="tongzhi">不会通知该房东</p>
   <ul>
@@ -10,11 +11,16 @@
   </ul>
   <p class="up">下一步<i class="iconfont .icon-jiantouyou"></i></p>
 </div>
+    </aby-transtion>
 </template>
 
 <script>
+  import abyTranstionToTopfast from '../common/abyTranstionToTopFast'
+  import AbyTranstion from "../common/abyTranstionToLeft";
     export default {
         name: "housedetailJubao",
+      components: {AbyTranstion},
+      abyTranstionToTopfast,
       data(){
           return{
             liebiao:[
@@ -47,12 +53,18 @@
       methods:{
         updataCount(index){
           this.tutu = index;
+        },
+        goBack:function (){
+          window.history.back()
         }
       }
     }
 </script>
 
 <style scoped>
+  body{
+    background: #fff;
+  }
   .header{
     width: 100%;
     display: flex;

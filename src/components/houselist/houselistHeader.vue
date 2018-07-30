@@ -5,8 +5,8 @@
             <input type="text" value="西安">
         </div>
         <div class="header-bottom">
-            <a href="#">日期</a>
-            <a href="#">1位房客</a>
+            <router-link to="/toriqi" style="transition:all 1s">{{this.$store.state.xdriqi}}</router-link>
+            <router-link to="/persons">{{this.$store.state.num}}位房客</router-link>
             <a href="#">筛选条件</a>
         </div>
     </header>
@@ -25,9 +25,9 @@ export default {
         $(window).scroll(function(){
             var topp=$(document).scrollTop();
             if(topp>40){
-                $(".header-bottom").slideUp("20")
+                $(".header-bottom").slideUp("10")
             }else{
-                 $(".header-bottom").slideDown("20") 
+                 $(".header-bottom").slideDown("10") 
             }
         })
     }

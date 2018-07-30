@@ -6,7 +6,7 @@
   <aby-index-part2></aby-index-part2>
   </div>
   <abyfooter></abyfooter>
-  
+
  </div>
 </template>
 
@@ -15,13 +15,11 @@ import abyIndexHeader from '../components/index/abyIndexHeader'
 import abyIndexPart1 from '../components/index/abyIndexPart1'
 import abyIndexPart2 from '../components/index/abyIndexPart2'
 import abyfooter from '../components/common/abyfooter'
-
-
     export default {
         name: "index",
         data(){
             return{
-                recemsg:''
+                recemsg:'',
             }
         },
         components:{
@@ -29,7 +27,7 @@ import abyfooter from '../components/common/abyfooter'
             abyIndexPart1,
             abyIndexPart2,
             abyfooter,
-         
+
         },
         methods:{
             receive(){
@@ -46,9 +44,9 @@ import abyfooter from '../components/common/abyfooter'
     flex-direction: column
 }
 
-   .contentmid { 
+   .contentmid {
     overflow-y: scroll;
-    flex: 1; 
+    flex: 1;
     padding: 0.7rem 0;
   }
 </style>

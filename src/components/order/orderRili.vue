@@ -32,7 +32,6 @@
        </ul>
      </div>
     <div class="NotFooter">
-      <div class="choosed"></div>
       <div class="store" @click="store">保存</div>
     </div>
      </div>
@@ -106,7 +105,6 @@
      },
      initUI(){
        for(let i = 0; i < 6; i++){
-         console.log($('.days')[i]);
          $('.days')[i].firstChild.style.marginLeft = (this.startWeekday[i] * 14.3) + "%";
        }
      },
@@ -146,26 +144,15 @@
            }
          }
        }
+
      },
      store(){
-        if($(".start-date").html()!="入住日期" && $(".end-date").html()!="退房日期"){
-          this.$store.state.xdriqi=$(".start-date span:last-child").html()+"-"+$(".end-date span:last-child").html()
-        }else if($(".end-date").html()=="退房日期" && $(".start-date").html()!="入住日期"){
-            this.$store.state.xdriqi="入住时间:"+$(".start-date span:last-child").html()
-        }else {
-          this.$store.state.xdriqi="日期"
-        }
-        
-
+       this.$store.state.days = this.endIndex - this.startIndex;
        window.history.back();
      }
    },
     created(){
       this.initData();
-      console.log(this.months);
-      console.log(this.days);
-      console.log(this.startWeekday);
-      console.log(this.riliData);
     },
    mounted(){
      this.initUI();
@@ -329,5 +316,4 @@
   align-items: center;
   color: #fff;
 }
-
  </style>

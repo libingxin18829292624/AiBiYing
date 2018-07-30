@@ -38,6 +38,7 @@ export default {
     width: calc(100% - 0.3rem);
     height: 2.3rem;
     padding-left: 0.3rem;
+    margin-top: 1.3rem;
 }
 .tansuo h2{
     font-size: 0.2rem;

@@ -148,15 +148,6 @@
        }
      },
      store(){
-        if($(".start-date").html()!="入住日期" && $(".end-date").html()!="退房日期"){
-          this.$store.state.xdriqi=$(".start-date span:last-child").html()+"-"+$(".end-date span:last-child").html()
-        }else if($(".end-date").html()=="退房日期" && $(".start-date").html()!="入住日期"){
-            this.$store.state.xdriqi="入住时间:"+$(".start-date span:last-child").html()
-        }else {
-          this.$store.state.xdriqi="日期"
-        }
-        
-
        window.history.back();
      }
    },

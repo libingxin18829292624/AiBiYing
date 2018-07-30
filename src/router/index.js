@@ -8,6 +8,9 @@ import orderSendToOwner from '../components/order/orderSendToOwner'
 import orderAddPayMethod from '../components/order/orderAddPayMethod'
 import orderAddPersons from '../components/order/orderAddPersons'
 import orderAddPersonInfo from '../components/order/orderAddPersonInfo'
+import orderRili from '../components/order/orderRili'
+import abyToPay from '../pages/abyToPay'
+import abyPayFinished from '../pages/abyPayFinished'
 import abyHouselist from"../pages/abyHouselist"
 import abyHousedetail from"../pages/abyHousedetail"
 import abyWish from "../pages/abyWish"
@@ -16,6 +19,8 @@ import abyIndexRili from "../components/index/abyIndexRili"
 import housedetailBianlisheshi from "../components/Housedetail/housedetailBianlisheshi"
 import housedetailZiye from "../components/Housedetail/housedetailJubao"
 import housedetailJubao from "../components/Housedetail/housedetailZiye"
+import houseAddPersons from "../components/houselist/houseAddPersons"
+import houselistRili from "../components/houselist/houselistRili"
 
 Vue.use(VueRouter)
 
@@ -83,7 +88,26 @@ const routes = [
     path:'/housedetailZiye',
     component:housedetailZiye
   },
-
+  {
+    path:'/toPay',
+    component:abyToPay
+  },
+  {
+    path:'/payFinished',
+    component:abyPayFinished
+  },
+  {
+    path:'/orderRili',
+    component:orderRili
+  },
+  {
+    path:'/fangke',
+    component:houseAddPersons
+  },
+  {
+    path:'/toriqi',
+    component:houselistRili
+  },
 ]
 
 const router = new VueRouter({

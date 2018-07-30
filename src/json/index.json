@@ -2,36 +2,41 @@
   "Xian":[
     {
       "id":"0",
-      "houseTitle":"",
+      "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
       "type":"独立房间",
       "desc":"公寓型住宅里的独立房间",
-      "imgs":[],
+      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"中国",
         "province":"陕西",
-        "city":"西安"
+        "city":"西安",
+        "qu":""
       },
-      "addressImg":"",
+      "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"榕",
-      "ownerImg":"",
+      "ownerImg":"/src/assets/img/l1.png",
+      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
       "rooms":{
         "bedroom":1,
         "bathroom":1,
         "bed":1
       },
-      "price":156,
+      "price":142,
       "stars":5,
-      "rateNum":206,
+      "rateNum":146,
       "limit":{
-        "persons":2,
-        "days":1
+        "maxPersons":2,
+        "minDays":1
       },
       "commandPercent":"92%",
-      "role":"中等",
-      "inTime":{
-        "start":"14:00",
-        "end":"23:00"
+      "rate":{
+        "img":"/src/assets/img/s_touxiang1.png",
+        "name":"亚荣",
+        "time":"2018年7月",
+        "content":"小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错哦，姐姐家离市里景区都不愿，很方便"
       },
+      "role":"中等",
+      "inTime":"14:00 - 23:00",
       "outTime":"13:00",
       "has":[
         {"title":"无线网络","desc":"在房源内可持续使用"},
@@ -56,12 +61,351 @@
       "notHas":[
         "厨房","吹风机","电视","一氧化碳报警器","烟雾报警器"
       ],
+      "more":2,
+      "iconClass":[
+        "wifi","maojin","kafei","yigui","thermometer_icon"
+      ]
+    },
+    {
+      "id":"1",
+      "houseTitle":"{素心禅隐}市中心地铁旁，10分钟内到达南门城墙/钟楼/回民街",
+      "type":"独立房间",
+      "desc":"公寓型住宅里的独立房间",
+      "imgs":["/src/assets/img/hll-house2.1.jpg","/src/assets/img/hll-house2.2.jpg","/src/assets/img/hll-house2.3.jpg","/src/assets/img/hll-house2.4.jpg","/src/assets/img/hll-house2.5.jpg"],
+      "address":{
+        "country":"中国",
+        "province":"陕西",
+        "city":"西安",
+        "qu":"莲湖"
+      },
+      "addressImg":"/src/asstes/img/s_ditu.png",
+      "ownerName":"Li",
+      "ownerImg":"/src/assets/img/hll-housetx.jpg",
+      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
+      "rooms":{
+        "bedroom":1,
+        "bathroom":1,
+        "bed":2
+      },
+      "price":170,
+      "stars":5,
+      "rateNum":102,
+      "limit":{
+        "maxPersons":3,
+        "minDays":1
+      },
+      "commandPercent":"90%",
+      "rate":{
+        "img":"/src/assets/img/hll-housetx.jpg",
+        "name":"南",
+        "time":"2018年7月",
+        "content":"房源的位置很好，步行到钟鼓楼和回民街都很方便，而且很靠近地铁站，为出行提供很大的便利！房间干净整洁，设备齐全。"
+      },
+      "role":"中等",
+      "inTime":"14:00后",
+      "outTime":"12:00",
+      "has":[
+        {"title":"无线网络","desc":"在房源内可持续使用"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
+        {"title":"有线电视","desc":""},
+        {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
+        {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
+        {"title":"洗衣机","desc":"在建筑物内（免费或收费）"},
+        {"title":"电视","desc":""},
+        {"title":"空调","desc":""},
+        {"title":"热水","desc":""},
+        {"title":"热水浴缸","desc":""},
+        {"title":"电梯","desc":""},
+        {"title":"附近停车","desc":""},
+        {"title":"大楼员工","desc":"全天24小时有人为房客开门"},
+        {"title":"洗发水","desc":""},
+        {"title":"吹风机","desc":""},
+        {"title":"衣架","desc":""}
+      ],
+      "notHas":[
+        "厨房","独立入口","一氧化碳报警器","烟雾报警器"
+      ],
+      "more":8,
+      "iconClass":[
+        "wifi","maojin","kafei","yigui","thermometer_icon"
+      ]
+    },
+    {
+      "id":"2",
+      "houseTitle":"【One·night1】美式轻奢大床/市中心地铁口/钟楼回民街/超大私人影院/品质乳胶床垫",
+      "type":"整套房子",
+      "desc":"整套房子",
+      "imgs":["/src/assets/img/hll-house3.1.jpg","/src/assets/img/hll-house3.2.jpg","/src/assets/img/hll-house3.3.jpg","/src/assets/img/hll-house3.4.jpg","/src/assets/img/hll-house3.5.jpg"],
+      "address":{
+        "country":"中国",
+        "province":"陕西",
+        "city":"西安"
+      },
+      "addressImg":"/src/asstes/img/s_ditu.png",
+      "ownerName":"火锅小姐姐",
+      "ownerImg":"/src/assets/img/l1.png",
+      "rooms":{
+        "bedroom":1,
+        "bathroom":1,
+        "bed":1
+      },
+      "price":238,
+      "stars":5,
+      "rateNum":53,
+      "limit":{
+        "maxPersons":2,
+        "minDays":1
+      },
+      "commandPercent":"98%",
+      "role":"严格（宽限期）",
+      "rate":{
+        "img":"/src/assets/img/hll-housetx.jpg",
+        "name":"Xiaoxiao",
+        "time":"2018年7月",
+        "content":"首先地理位置真的很好 小姐姐很贴心 给发图片告诉你咋走 但是我还是走错了 感觉离地铁口也就50m 不到200m 真真真的就在商场上面"
+      },
+      "inTime":"14:00后",
+      "outTime":"12:00",
+      "has":[
+        {"title":"无线网络","desc":"在房源内可持续使用"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
+        {"title":"室内壁炉","desc":""},
+        {"title":"有线电视","desc":""},
+        {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
+        {"title":"熨斗","desc":""},
+        {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
+        {"title":"电视","desc":""},
+        {"title":"空调","desc":""},
+        {"title":"网络连接","desc":""},
+        {"title":"热水","desc":""},
+        {"title":"遮光窗帘","desc":""},
+        {"title":"免费停车位","desc":""},
+        {"title":"电梯","desc":""},
+        {"title":"电动汽车（EV）充电设备","desc":""},
+        {"title":"附近停车","desc":""},
+        {"title":"付费停车场","desc":""},
+        {"title":"平房","desc":"房屋内没有楼梯"},
+        {"title":"厨房","desc":"房客可自行烹饪的空间"},
+        {"title":"盘子和餐具","desc":""},
+        {"title":"冰箱","desc":""},
+        {"title":"密码锁","desc":"使用大门密码入住房源"},
+        {"title":"可预订长期住宿","desc":"可以连续住宿28天或以上"},
+        {"title":"洗发水","desc":""},
+        {"title":"吹风机","desc":""},
+        {"title":"衣架","desc":""},
+        {"title":"床单","desc":""},
+        {"title":"额外的枕头和毛毯","desc":""},
+        {"title":"露台或阳台","desc":""},
+        {"title":"花园或后院","desc":""},
+        {"title":"急救包","desc":""}
+      ],
+      "notHas":[
+        "洗衣机","独立入口","一氧化碳报警器","烟雾报警器"
+      ],
+      "more":14,
       "iconClass":[
         "wifi","maojin","kafei","yigui","thermometer_icon"
       ]
     }
   ],
   "Bangkok":[
-
+    {
+      "id":"0",
+      "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
+      "type":"独立房间",
+      "desc":"公寓型住宅里的独立房间",
+      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "address":{
+        "country":"中国",
+        "province":"陕西",
+        "city":"西安",
+        "qu":""
+      },
+      "addressImg":"/src/asstes/img/s_ditu.png",
+      "ownerName":"榕",
+      "ownerImg":"/src/assets/img/l1.png",
+      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
+      "rooms":{
+        "bedroom":1,
+        "bathroom":1,
+        "bed":1
+      },
+      "price":142,
+      "stars":5,
+      "rateNum":146,
+      "limit":{
+        "maxPersons":2,
+        "minDays":1
+      },
+      "commandPercent":"92%",
+      "rate":{
+        "img":"/src/assets/img/s_touxiang1.png",
+        "name":"亚荣",
+        "time":"2018年7月",
+        "content":"小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错哦，姐姐家离市里景区都不愿，很方便"
+      },
+      "role":"中等",
+      "inTime":"14:00 - 23:00",
+      "outTime":"13:00",
+      "has":[
+        {"title":"无线网络","desc":"在房源内可持续使用"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
+        {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
+        {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
+        {"title":"洗衣机","desc":"在建筑物内（免费或收费）"},
+        {"title":"空调","desc":""},
+        {"title":"电梯","desc":""},
+        {"title":"路边免费停车","desc":""},
+        {"title":"付费停车场","desc":""},
+        {"title":"房东将会迎接您","desc":""},
+        {"title":"独立入口","desc":"独立的街道或建筑物入口"},
+        {"title":"可以存放行李","desc":"为方便提前抵达或延迟退房的房客"},
+        {"title":"可预订长期住宿","desc":"可以连续住宿28天或以上"},
+        {"title":"洗发水","desc":""},
+        {"title":"衣架","desc":""},
+        {"title":"带锁的卧室","desc":"出于安全和隐私的考虑，独立房间可以上锁"},
+        {"title":"灭火器","desc":""},
+        {"title":"急救包","desc":""}
+      ],
+      "notHas":[
+        "厨房","吹风机","电视","一氧化碳报警器","烟雾报警器"
+      ],
+      "more":2,
+      "iconClass":[
+        "wifi","maojin","kafei","yigui","thermometer_icon"
+      ]
+    },
+    {
+      "id":"1",
+      "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
+      "type":"独立房间",
+      "desc":"公寓型住宅里的独立房间",
+      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "address":{
+        "country":"中国",
+        "province":"陕西",
+        "city":"西安",
+        "qu":""
+      },
+      "addressImg":"/src/asstes/img/s_ditu.png",
+      "ownerName":"榕",
+      "ownerImg":"/src/assets/img/l1.png",
+      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
+      "rooms":{
+        "bedroom":1,
+        "bathroom":1,
+        "bed":1
+      },
+      "price":142,
+      "stars":5,
+      "rateNum":146,
+      "limit":{
+        "maxPersons":2,
+        "minDays":1
+      },
+      "commandPercent":"92%",
+      "rate":{
+        "img":"/src/assets/img/s_touxiang1.png",
+        "name":"亚荣",
+        "time":"2018年7月",
+        "content":"小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错哦，姐姐家离市里景区都不愿，很方便"
+      },
+      "role":"中等",
+      "inTime":"14:00 - 23:00",
+      "outTime":"13:00",
+      "has":[
+        {"title":"无线网络","desc":"在房源内可持续使用"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
+        {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
+        {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
+        {"title":"洗衣机","desc":"在建筑物内（免费或收费）"},
+        {"title":"空调","desc":""},
+        {"title":"电梯","desc":""},
+        {"title":"路边免费停车","desc":""},
+        {"title":"付费停车场","desc":""},
+        {"title":"房东将会迎接您","desc":""},
+        {"title":"独立入口","desc":"独立的街道或建筑物入口"},
+        {"title":"可以存放行李","desc":"为方便提前抵达或延迟退房的房客"},
+        {"title":"可预订长期住宿","desc":"可以连续住宿28天或以上"},
+        {"title":"洗发水","desc":""},
+        {"title":"衣架","desc":""},
+        {"title":"带锁的卧室","desc":"出于安全和隐私的考虑，独立房间可以上锁"},
+        {"title":"灭火器","desc":""},
+        {"title":"急救包","desc":""}
+      ],
+      "notHas":[
+        "厨房","吹风机","电视","一氧化碳报警器","烟雾报警器"
+      ],
+      "more":2,
+      "iconClass":[
+        "wifi","maojin","kafei","yigui","thermometer_icon"
+      ]
+    },
+    {
+      "id":"2",
+      "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
+      "type":"独立房间",
+      "desc":"公寓型住宅里的独立房间",
+      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "address":{
+        "country":"中国",
+        "province":"陕西",
+        "city":"西安",
+        "qu":""
+      },
+      "addressImg":"/src/asstes/img/s_ditu.png",
+      "ownerName":"榕",
+      "ownerImg":"/src/assets/img/l1.png",
+      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
+      "rooms":{
+        "bedroom":1,
+        "bathroom":1,
+        "bed":1
+      },
+      "price":142,
+      "stars":5,
+      "rateNum":146,
+      "limit":{
+        "maxPersons":2,
+        "minDays":1
+      },
+      "commandPercent":"92%",
+      "rate":{
+        "img":"/src/assets/img/s_touxiang1.png",
+        "name":"亚荣",
+        "time":"2018年7月",
+        "content":"小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错哦，姐姐家离市里景区都不愿，很方便"
+      },
+      "role":"中等",
+      "inTime":"14:00 - 23:00",
+      "outTime":"13:00",
+      "has":[
+        {"title":"无线网络","desc":"在房源内可持续使用"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
+        {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
+        {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
+        {"title":"洗衣机","desc":"在建筑物内（免费或收费）"},
+        {"title":"空调","desc":""},
+        {"title":"电梯","desc":""},
+        {"title":"路边免费停车","desc":""},
+        {"title":"付费停车场","desc":""},
+        {"title":"房东将会迎接您","desc":""},
+        {"title":"独立入口","desc":"独立的街道或建筑物入口"},
+        {"title":"可以存放行李","desc":"为方便提前抵达或延迟退房的房客"},
+        {"title":"可预订长期住宿","desc":"可以连续住宿28天或以上"},
+        {"title":"洗发水","desc":""},
+        {"title":"衣架","desc":""},
+        {"title":"带锁的卧室","desc":"出于安全和隐私的考虑，独立房间可以上锁"},
+        {"title":"灭火器","desc":""},
+        {"title":"急救包","desc":""}
+      ],
+      "notHas":[
+        "厨房","吹风机","电视","一氧化碳报警器","烟雾报警器"
+      ],
+      "more":2,
+      "iconClass":[
+        "wifi","maojin","kafei","yigui","thermometer_icon"
+      ]
+    }
   ]
 }

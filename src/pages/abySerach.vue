@@ -1,19 +1,15 @@
 <template>
-<div>
-    <serach-header></serach-header>
-    <serach-footer></serach-footer>
-</div>
-    
+
+    <serachall></serachall>
 </template>
 
 <script>
-import serachHeader from "../components/serach/serachHeader"
-import serachFooter from "../components/serach/serachFooter"
+import serachall from "../components/serach/serachall"
 export default {
     name:"abySerach",
     components:{
-        serachHeader,
-        serachFooter
+        serachall,
+        
         }
 }
 </script>

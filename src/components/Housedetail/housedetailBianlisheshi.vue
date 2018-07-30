@@ -1,7 +1,8 @@
 <template>
+  <aby-transtion>
 <div class="bianli">
   <div class="header">
-    <i class="iconfont icon-chacha"></i>
+    <i @click="goBack" class="iconfont icon-chacha"></i>
     <h1>便利设施</h1>
   </div>
   <div class="content">
@@ -21,11 +22,16 @@
     </ul>
   </div>
 </div>
+  </aby-transtion>
 </template>
 
 <script>
+  import abyTranstionToTopfast from '../common/abyTranstionToTopFast'
+  import AbyTranstion from "../common/abyTranstionToLeft";
     export default {
         name: "housedetailBianlisheshi",
+      components: {AbyTranstion},
+      abyTranstionToTopfast,
       data(){
           return{
             one:[
@@ -84,6 +90,11 @@
 
             ]
           }
+      },
+      methods:{
+        goBack:function (){
+          window.history.back()
+        }
       }
     }
 </script>

@@ -1,4 +1,5 @@
 <template>
+  <aby-transtion>
 <div class="option">
   <div class="content_5">
     <ul>
@@ -6,11 +7,16 @@
     </ul>
   </div>
 </div>
+  </aby-transtion>
 </template>
 
 <script>
+  import abyTranstionToTopfast from "../common/abyTranstionToTopFast"
+  import AbyTranstion from "../common/abyTranstionToLeft";
     export default {
         name: "housedetailOption",
+      components: {AbyTranstion},
+      abyTranstionToTopfast,
       data(){
         return{
 

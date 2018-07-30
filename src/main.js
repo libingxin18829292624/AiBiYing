@@ -17,6 +17,10 @@ const store = new Vuex.Store({
     "ownerName":"榕",
     "ownerImg":"/src/assets/img/l1.png",
     "members":{"person":1,"children":0,"kid":0,"pets":false},
+    "days":0,
+    "price":"",
+    "xdriqi":"日期",
+    "num":1,
   },
   mutations:{
 

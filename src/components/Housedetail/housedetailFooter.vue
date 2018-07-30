@@ -1,7 +1,7 @@
 <template>
 <div class="footer">
-  <div class="footer_1">
-    <p class="jiage">每晚￥<span class="jiage1">142元</span></p>
+  <div class="footer_1" v-for="n in close">
+    <p class="jiage">每晚￥<span class="jiage1">{{n.money}}</span></p>
     <i class="iconfont icon-star"></i>
     <i class="iconfont icon-star"></i>
     <i class="iconfont icon-star"></i>
@@ -19,7 +19,14 @@
 
 <script>
     export default {
-        name: "housedetailFooter"
+      name: "housedetailFooter",
+      data() {
+        return {
+          close: [
+            {money: "142"}
+          ]
+        }
+      }
     }
 </script>
 
@@ -36,6 +43,7 @@
   position: fixed;
   border-top: 1px solid #f4f4f4;
   bottom: 0;
+  z-index: 1000;
 }
 .footer_1{
   margin-left: 0.25rem;

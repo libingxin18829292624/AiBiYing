@@ -26,7 +26,7 @@
          <li class="month-box" v-for="(n,index) in riliData" :key="index">
            <h3 class="month">{{n.month}}</h3>
            <div class="days">
-             <span class="day" v-for="(m,Mindex) in n.days" @click="choose(index,$event)">{{Mindex + 1}}<span style="display:none">{{n.year}}/{{n.numberMonths}}/{{Mindex+1}}</span></span>
+             <span class="day" v-for="(m,Mindex) in n.days" @click="choose(index,$event)" :key="m.mindex">{{Mindex + 1}}<span style="display:none">{{n.year}}/{{n.numberMonths}}/{{Mindex+1}}</span></span>
            </div>
          </li>
        </ul>
@@ -148,15 +148,16 @@
        }
      },
      store(){
-        if($(".start-date").html()!="入住日期" && $(".end-date").html()!="退房日期"){
-          this.$store.state.xdriqi=$(".start-date span:last-child").html()+"-"+$(".end-date span:last-child").html()
-        }else if($(".end-date").html()=="退房日期" && $(".start-date").html()!="入住日期"){
-            this.$store.state.xdriqi="入住时间:"+$(".start-date span:last-child").html()
-        }else {
-          this.$store.state.xdriqi="日期"
-        }
-        
-
+       
+       if($(".start-date").html()!="入住日期"&&$(".end-date").html()!="退房日期"){
+         this.$store.state.xdriqi=$(".start-date span:last-child").html()+"-"+$(".end-date span:last-child").html()
+       }else if($(".end-date").html()=="退房日期"&&$(".start-date").html()!="入住日期"){
+          this.$store.state.xdriqi="入住时间："+$(".start-date span:last-child").html()
+       }else{
+         this.$store.state.xdriqi= "日期"
+         
+         }
+       
        window.history.back();
      }
    },

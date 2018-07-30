@@ -31,8 +31,9 @@
 </template>
 
 <script>
+
     export default {
-        name: "housedetailEvaluate"
+        name: "housedetailEvaluate",
     }
 </script>
 
