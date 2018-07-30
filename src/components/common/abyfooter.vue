@@ -1,5 +1,5 @@
 <template>
-    
+
         <div class="footer">
     <a href="#">
      <i class="iconfont icon-search3"></i>
@@ -18,7 +18,7 @@
                        <p>收件箱</p>
                    </a>
                    <a href="#">
-                        <i class="iconfont icon-people"></i>
+                        <i class="iconfont icon-wode"></i>
                            <p>我的</p>
                        </a>
 
@@ -27,7 +27,7 @@
 
 
 </div>
-   
+
 </template>
 
 <script>
@@ -35,15 +35,15 @@ import $ from 'jquery'
 export default {
     name:"abyfooter",
     methods:{
-       
+
     },
     mounted(){
         $('.footer').find("a").click(function(){
             $(this).addClass("active").siblings().removeClass("active")
-               
+
         })
     }
-    
+
 }
 </script>
 
@@ -56,6 +56,7 @@ export default {
     background: #fff;
     position: fixed;
     padding-top: 0.1rem;
+    z-index:1000;
 }
 .footer a{
     width: 20%;
@@ -68,12 +69,12 @@ export default {
 }
 .footer a p{
     font-size: 0.1rem;
-   
+
 }
 
 .footer a i{
     font-size: 0.25rem;
-    
+
 }
 .active {
     color: red!important;
