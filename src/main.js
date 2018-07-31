@@ -2,11 +2,16 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
 import Vuex from 'vuex'
+import allData from "./json/index"
+
+import ElementUI from "element-ui"
 
 Vue.use(Vuex)
+Vue.use(ElementUI)
 
 const store = new Vuex.Store({
   state:{
+    "allData":allData,
     "isAgree":false,
     "isSend":false,
     "isAddPayMethod":false,
@@ -20,7 +25,7 @@ const store = new Vuex.Store({
     "days":0,
     "price":"",
     "xdriqi":"日期",
-    "num":1,
+    "num":1
   },
   mutations:{
 

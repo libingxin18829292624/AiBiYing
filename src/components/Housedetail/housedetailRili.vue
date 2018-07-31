@@ -43,7 +43,7 @@
    import $ from 'jquery'
    import abyTranstionToTop from '../common/abyTranstionToTop'
  export default {
-     name:"abyIndexRili",
+     name:"housedetailRili",
      data(){
         return {
           "ppac":false,
@@ -111,12 +111,18 @@
        }
      },
      choose(index,$event){
+       $event.stopPropagation();
        if($event.target !== this.target){
          this.count = (this.count + 1) % 2;
          this.target = $event.target;
          if(this.count === 1){
            $('.day').removeClass('active active-start active-end active-middle');
-           $($event.target).addClass('active');
+           if($(".money").index($event.target) < 0){
+             console.log(11111)
+             $($event.target).addClass('active');
+           }else{
+             $($event.target).parent().addClass('active');
+           }
            this.startDate = $event.target.firstElementChild.innerHTML;
            this.startIndex = $('.day').index($event.target);
            this.endIndex = "";
@@ -128,7 +134,12 @@
            if(new Date(endDate[0],endDate[1],endDate[2]) - new Date(startDate[0],startDate[1],startDate[2]) < 0){
              this.count++;
              $('.day').removeClass('active active-start active-end active-middle');
-             $($event.target).addClass('active');
+             if($(".money").index($event.target) < 0){
+               console.log(11111)
+               $($event.target).addClass('active');
+             }else{
+               $($event.target).parent().addClass('active');
+             }
              this.startDate = $event.target.firstElementChild.innerHTML;
              this.startIndex = $('.day').index($event.target);
              this.endIndex = "";
@@ -252,10 +263,12 @@
    float: left;
    font-size: .13rem;
    text-align: center;
-   margin: .05rem 0;
+   margin: .1rem 0;
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: column;
+   z-index: 100;
  }
 
 .Rili{
@@ -320,5 +333,4 @@
   align-items: center;
   color: #fff;
 }
-
  </style>

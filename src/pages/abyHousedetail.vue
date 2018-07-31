@@ -9,6 +9,8 @@
     <!--<housedetail-ziye></housedetail-ziye>-->
     <!--<housedetail-jubao></housedetail-jubao>-->
     <!--<housedetail-bianlisheshi></housedetail-bianlisheshi>-->
+    <!--<housedetail-rili></housedetail-rili>-->
+
   </div>
 </template>
 
@@ -22,6 +24,7 @@
   import housedetailZiye from "../components/Housedetail/housedetailZiye"
   import housedetailJubao from "../components/Housedetail/housedetailJubao"
   import housedetailBianlisheshi from "../components/Housedetail/housedetailBianlisheshi"
+  import housedetailRili from "../components/Housedetail/housedetailRili"
   export default {
         name: "abyHousedetail",
         components:{
@@ -33,7 +36,8 @@
           housedetailFooter,
           housedetailZiye,
           housedetailJubao,
-          housedetailBianlisheshi
+          housedetailBianlisheshi,
+          housedetailRili
 
         }
     }

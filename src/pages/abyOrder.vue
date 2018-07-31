@@ -53,7 +53,8 @@
       name: "abyOrder",
       data() {
         return {
-          "address": "Xi\'an",
+          "allData":this.$store.state.allData,
+          "address": "Xian",
           "days": this.$store.state.days,
           "rooms": "1",
           "bathrooms": "1",
@@ -92,10 +93,10 @@
       methods: {
         attach(n) {
           switch(n){
-            case :0:this.$router.push('/addPayMethod');break;
+            case 0:this.$router.push('/addPayMethod');break;
             case 1:this.$router.push('/sendToOwner');break;
             case 2:this.$router.push('/agree');break;
-            case 3this.$router.push('/addPersonInfo');break;
+            case 3:this.$router.push('/addPersonInfo');break;
           }
         },
         writeLiveInfo(index){
@@ -139,8 +140,20 @@
           }
         }
       },
+      created(){
+        // fetch("http://localhost:3000/api").
+        //   then(response=>{
+        //     if(response.ok){
+        //       response.json().then(data=>{
+        //         this.orderData = data;
+        //         console.log(this.orderData);
+        //       })
+        //     }
+        // })
+      },
       mounted(){
         this.initData();
+        console.log(this.allData);
       }
 
     }

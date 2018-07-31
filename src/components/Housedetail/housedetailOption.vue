@@ -45,8 +45,9 @@
       methods:{
         sh(n){
           switch(n){
+            case 3:this.$router.push('/housedetailRili');break;
             case 4:this.$router.push('/housedetailJubao');break;
-            case 5:this.$router.push('/housedetailZiye')
+            case 5:this.$router.push('/housedetailZiye');break;
           }
         },
       },

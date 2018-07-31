@@ -12,6 +12,8 @@ import orderRili from '../components/order/orderRili'
 import abyToPay from '../pages/abyToPay'
 import abyPayFinished from '../pages/abyPayFinished'
 import abyHouselist from"../pages/abyHouselist"
+import abyBack from"../pages/abyBack"
+import abyBackBody from"../pages/abyBackBody"
 import abyHousedetail from"../pages/abyHousedetail"
 import abyWish from "../pages/abyWish"
 import abyMy from"../pages/abyMy"
@@ -21,6 +23,8 @@ import housedetailZiye from "../components/Housedetail/housedetailJubao"
 import housedetailJubao from "../components/Housedetail/housedetailZiye"
 import houseAddPersons from "../components/houselist/houseAddPersons"
 import houselistRili from "../components/houselist/houselistRili"
+import abyInbox from "../pages/abyInbox"
+import abyStorys from "../pages/abyStorys"
 
 Vue.use(VueRouter)
 
@@ -28,6 +32,17 @@ const routes = [
   {
     path:'/index',
     component:abyIndex
+  },
+  {
+    path:'/back',
+    component:abyBack,
+    children:[
+      {
+        path:'body',
+        alias:"/back",
+        component:abyBackBody
+      }
+    ]
   },
   {
     path:'/serach',
@@ -107,6 +122,14 @@ const routes = [
   {
     path:'/toriqi',
     component:houselistRili
+  },
+  {
+    path:'/abyInbox',
+    component: abyInbox
+  },
+  {
+    path:"/storys",
+    component:abyStorys
   },
 ]
 

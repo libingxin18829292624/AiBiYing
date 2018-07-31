@@ -1,5 +1,5 @@
 <template>
-  <aby-transtion>
+  <aby-transtion-to-top-fast>
 <div class="ziji">
   <div class="ziji_1">
     <i @click="goBack" class="iconfont icon-houtui"></i>
@@ -22,20 +22,19 @@
   </div>
   <div class="footer">
     <p class="yiwen">仍有疑问？</p>
-    <p class="anniu">给榕发消息</p>
+    <p @click="skip" class="anniu">给榕发消息</p>
   </div>
 </div>
-  </aby-transtion>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
-  import abyTranstionToTopfast from '../common/abyTranstionToTopFast'
+  import abyTranstionToTopFast from '../common/abyTranstionToTopFast'
   import $ from "jquery"
-  import AbyTranstion from "../common/abyTranstionToLeft";
     export default {
       name: "housedetailZiye",
-      components: {AbyTranstion},
-        abyTranstionToTopfast,
+      components:{abyTranstionToTopFast},
+
       data() {
         return {
             zilei:[
@@ -63,6 +62,9 @@
                $(".xiao1").css("height","100%");
               })
       },
+        skip:function(){
+          this.$router.push("/sendToOwner")
+        },
       goBack:function (){
           window.history.back()
         }

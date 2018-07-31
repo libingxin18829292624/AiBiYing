@@ -9,10 +9,10 @@
             <i class="iconfont icon-xin"></i>
                <p>心愿单</p>
            </a>
-           <a href="#">
+           <router-link to="/storys"  >
                 <i class="iconfont icon-xiaoshumiao"></i>
                    <p>故事</p>
-               </a>
+               </router-link>
                <a href="#">
                     <i class="iconfont icon-icon-test"></i>
                        <p>收件箱</p>
@@ -42,7 +42,8 @@ export default {
             $(this).addClass("active").siblings().removeClass("active")
 
         })
-    }
+    },
+   
 
 }
 </script>

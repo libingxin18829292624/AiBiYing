@@ -98,8 +98,9 @@ margin-bottom: 0.91rem;
     float: left;
   }
   ul{
-    width: 14rem;
+    width: 8.9rem;
     float: left;
+
     padding-right: 0.25rem;
   }
   li{

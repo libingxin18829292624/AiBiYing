@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="kuai-body"> 
     <div class="kuai"  v-for="n in houselist" :key='n.pic'>
         <div class="kuai-top">
             <div class="swiper-container">
@@ -118,11 +118,23 @@ export default {
         if(a%2 ==!0){
             $(this).addClass("icon-hongxin") 
             $(this).css({animation:"hongxinchange 0.5s 1"})
+            $(".kuai-body").append("<b>向xi'an添加一个房子</b>")
         }else if(a%2== 0){
-             $(this).removeClass("icon-hongxin")
+            $(this).removeClass("icon-hongxin")
             $(this).css({animation:"hongxinchange2 0.5s 1"})
+             $(".kuai-body").find("b").replaceWith("<b>从xi'an移除一个房子</b>")
         }
-       
+        
+
+         $(".kuai-body").find("b").animate({
+             
+            lineHeight: "0.24rem",
+            
+         },1000,function(){
+             setTimeout(function(){
+                 $(".kuai-body").find("b").css({display:"none"})
+             },1000)
+         })
         })
    
 
@@ -132,6 +144,21 @@ export default {
 </script>
 
 <style>
+
+.kuai-body b{
+display: block;
+position:fixed;
+bottom:0.6rem;
+left:0rem;
+font-size: 0.13rem;
+color:black;
+font-weight: 100;
+z-index: 999;
+background: #c8c8ca;
+text-align: center;
+width:100%;
+line-height: 0.24rem;
+}
 .kuai{
     padding-top: 0.27rem;
     padding-left:0.25rem;

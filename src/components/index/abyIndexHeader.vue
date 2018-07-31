@@ -1,12 +1,12 @@
 <template>
 
     <div class="header">
-  <div class="serchBox">
+  <div @click="goHouse" class="serchBox">
     <i class="iconfont icon-search3"></i>
     <input type="text" placeholder="搜索'瓦伦西亚海岸试试(Coast de Valencia)'试试">
      </div>  
     <div class="yincang">
-      <router-link to="/Rili" id="myRili" href="#">{{this.$store.state.xdriqi}}</router-link><router-link to="/fangke">{{this.$store.state.num}}位访客</router-link>
+      <router-link to="/Rili"  id="myRili">{{this.$store.state.xdriqi}}</router-link><router-link to="/fangke">{{this.$store.state.num}}位访客</router-link>
   </div>
 </div>
   
@@ -25,25 +25,24 @@ export default {
     mounted(){
         $(window).scroll(function(){
             var topp=$(document).scrollTop();
-            if(topp>50){
-                $(".yincang").slideUp("20")
-                $(".header").animate({
-                    "height": "80"
-                },20)
-            }else{
-                 $(".yincang").slideDown("20") 
-                 $(".header").animate({
-                    "height": "125"
-                },20)
-            }
-        })
-        
-    },
+
+            if(topp>40){
+                $(".yincang").slideUp("10")
+              } else{
+                 $(".yincang").slideDown("10") 
+                }
+
+         })
+
+
+
+        },   
+
     methods:{
-       
-    },
-    components:{
-       
+       goHouse(){
+           this.$router.push('/houselist')
+       },
+      
     }
 }
 </script>
@@ -51,7 +50,6 @@ export default {
 <style>
 .header{
     width: 100%;
-    height: 1.25rem;
     border-bottom: 2px solid #ecedf0;
     position: fixed;
     top: 0;
@@ -62,10 +60,10 @@ export default {
     width: 3.25rem;
     height: 0.5rem;
     display: flex;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 1px 1px 1px 1px #ccc;
     border-radius: 5px;
     z-index: 10;
-    margin: 0.15rem auto;
+    margin: 0.1rem auto;
     overflow: hidden;
 }
 .serchBox .icon-search3{
@@ -87,11 +85,13 @@ export default {
 .yincang{
     font-size: 0.12rem;
     margin-left: 0.25rem;
-    padding-top: 0.05rem;
     width: 100%;
-    height: 0.3rem;
+    display: flex;
+    margin-bottom: 0.1rem;
 }
+
 .yincang a{
+    display: block;
     padding: 0.05rem;
     color: #3c3c3c;
     border: 1px solid #d3d3d4;

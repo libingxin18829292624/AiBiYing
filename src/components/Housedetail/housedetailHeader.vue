@@ -79,12 +79,12 @@
     width: 100%;
     height: 2.2rem;
     background-size:100%;
+display: flex;
 
   }
   .header_2{
     width: 100%;
     height: 0.7rem;
-    margin-right: 0.25rem;
     display: flex;
     align-items: center;
     position: fixed;
@@ -137,6 +137,8 @@
     color: #008186;
     z-index: 900;
     transition:all .4ms;
+
+    padding-right: 0.25rem;
   }
 
 </style>

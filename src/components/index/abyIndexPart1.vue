@@ -39,6 +39,8 @@ export default {
     height: 2.3rem;
     padding-left: 0.3rem;
     margin-top: 1.3rem;
+     box-sizing: border-box;
+
 }
 .tansuo h2{
     font-size: 0.2rem;

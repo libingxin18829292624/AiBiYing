@@ -1,31 +1,34 @@
 <template>
 <div class="content_1">
+  <div class="content1"  v-for="(n,index) in xiangqing" :key="index">
   <span class="biaoti">整套独户房间和独立房间</span>
-  <h1 class="mingcheng">「双囍和八两」♡旅行<br>已经很累了，那就睡个好觉吧！</h1>
-  <span class="dizhi">西安，陕西，中国</span>
+  <h1 class="mingcheng">{{n.mingcheng}}</h1>
+  <span class="dizhi">{{n.dizhi}}</span>
   <br>
-  <span class="fangdong">房东：榕</span>
-  <img class="touxiang" src="../../assets/img/s_touxiang.png" alt="">
+  <span class="fangdong">{{n.fangdong}}</span>
+  <img class="touxiang" :src="n.img" alt="">
   <div class="content_2">
       <div v-for="n in xinxi" class="content_2_1">
         <img class="tu" :src="n.img" alt="">
         <span class="renshu">{{n.name}}</span>
       </div>
-    <div class="jieshao">
-      <span class="jieshao_1">点我头像进去还有另外两套房源</span>
-      <span class="jieshao_2">我的房源位于西安老城区，又或者说我们位于所有景点的中间位置，公交直达各个景点楼...<a>阅读更多</a></span>
+  </div>
+    <div class="jieshao" v-for="n in pinglun">
+      <span class="jieshao_1">{{n.jieshao_1}}</span>
+      <span class="jieshao_2">{{n.jieshao_2}}<a>阅读更多</a></span>
     </div>
   </div>
   <div class="content_3">
     <span class="chuangxing">床型信息</span>
-    <div class="xiangxixinxi">
-      <img class="xiangxichuang" src="../../assets/img/s_xiangxichuang.png" alt="">
-      <span class="woshi1">卧室1</span>
-      <span class="shuangrenchuang">1张双人床</span>
+    <div v-for="n in chuangwei" class="xiangxixinxi">
+      <img class="xiangxichuang" :src="n.img" alt="">
+      <span class="woshi1">{{n.woshi}}</span>
+      <span class="shuangrenchuang">{{n.chuang1}}</span>
     </div>
     <span class="zuishao">最少1晚</span>
   </div>
-  <router-link to="/housedetailBianlisheshi"><div  class="content_4">
+  <router-link to="/housedetailBianlisheshi" class="Link">
+    <div  class="content_4">
     <span class="bianli">便利设施</span>
     <ul>
       <li>
@@ -35,7 +38,7 @@
     </ul>
 
   </div></router-link>
-  <img class="daditu" src="../../assets/img/s_ditu.png" alt="">
+  <img v-for="n in imgs" class="daditu" :src="n.img" alt="">
   <div class="content_5">
     <ul>
       <li v-for="i in shijian"><span>{{i.date}}</span><span>{{i.time}}</span></li>
@@ -67,13 +70,38 @@
                 "time":"13:00"
               }
             ],
+            chuangwei:[
+              {
+                img:require("../../assets/img/s_xiangxichuang.png"),
+                woshi:"卧室1",
+                chuang1:"1张双人床"
+              }
+            ],
+            imgs:[
+              {img:require("../../assets/img/s_ditu.png")}
+            ],
             viewArr:[
               "wifi",
               "maojin",
               "kafei",
               "yigui",
               "thermometer_icon",
-            ]
+            ],
+            xiangqing:[
+              {
+                biaoti:"整套独户房间和独立房间",
+                mingcheng:"「双囍和八两」♡旅行已经很累了，那就睡个好觉吧！",
+                dizhi:"西安，陕西，中国",
+                fangdong:"榕",
+                img:require("../../assets/img/s_touxiang.png")
+              },
+              ],
+            pinglun:[
+              {
+                jieshao_1:"点我头像进去还有另外两套房源",
+                jieshao_2:"我的房源位于西安老城区，又或者说我们位于所有景点的中间位置，公交直达各个景点楼.."
+              }
+            ],
           }
       },
       methods:{
@@ -85,7 +113,16 @@
 </script>
 
 <style scoped>
+body{
+  background: #fff;
+}
+  .content1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 
+  }
   .content_1{
     width: 100%;
     display: flex;
@@ -204,6 +241,9 @@
     padding-left: 0.16rem;
     padding-top: 0.175rem;
   }
+  .Link{
+    width: 100%;
+  }
 .woshi1{
   font-size: 0.13rem;
   color: #2b2b2b;
@@ -232,8 +272,9 @@
   .content_4{
     width: 100%;
     display:flex;
-    padding-left: 0.25rem;
+    box-sizing: border-box;
     padding-right: 0.25rem;
+    padding-left: 0.25rem;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 0.36rem;

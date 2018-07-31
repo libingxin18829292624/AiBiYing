@@ -214,7 +214,7 @@ export default {
 .fangyuanBox ul li{
     width: 1.55rem;
     height: 2.5rem;
-    margin-right: 0.074rem;
+    margin: 0.037rem;
     float: left;
     
 }
@@ -292,7 +292,7 @@ export default {
     line-height: 0.48rem;
     border-radius: 5px;
     font-weight: 700;
-     margin-bottom: 0.6rem;
+     margin-bottom: 0.2rem;
      box-sizing: border-box;
 }
 .showall a{

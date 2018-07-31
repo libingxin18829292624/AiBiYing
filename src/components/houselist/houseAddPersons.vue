@@ -1,4 +1,5 @@
 <template>
+<aby-transtion-to-top>
     <div class="addPersons">
       <header class="header">
         <i class="iconfont icon-guanbi" @click="back"></i>
@@ -13,23 +14,23 @@
               <div class="add" @click="add(index)"><span>+</span></div>
             </div>
           </div>
-          
         </div>
-       
       </section>
       <footer class="footer">
         <div @click="store" style="width:100%"><order-button :data="'保存'" ></order-button></div>
       </footer>
     </div>
+</aby-transtion-to-top>
 </template>
 
 <script>
+  import abyTranstionToTop from"../common/abyTranstionToTop"
   import orderButton from '../order/orderButton'
     export default {
         name: "orderPersons",
       data(){
           return{
-            
+
             "persons":[
               {"person":"成人","detail":"","num":1,"max":21,"min":1},
               {"person":"儿童","detail":"2到12岁","num":0,"max":5,"min":0},
@@ -38,7 +39,8 @@
           }
       },
       components:{
-        orderButton
+        orderButton,
+        abyTranstionToTop,
       },
       methods:{
         sub(index){
@@ -68,7 +70,7 @@
 
       },
       mounted(){
-        
+
       },
     }
 </script>
@@ -77,6 +79,7 @@
   .addPersons{
     width: 100%;
     color: #343434;
+    background-color: #fff;
   }
   .header {
     width: 100%;
@@ -96,7 +99,6 @@
     width: 100%;
     padding: 0 .25rem;
     box-sizing:border-box;
-    padding-top: 0.8rem;
   }
   .persons{
     width: 100%;

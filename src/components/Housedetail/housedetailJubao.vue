@@ -9,7 +9,7 @@
     <div  class="kuang"><img class="asd" @click="updataCount(index)"  :class="{tu:tutu == index}" src="../../assets/img/s_kuang.png" alt=""></div>
     </li>
   </ul>
-  <p class="up">下一步<i class="iconfont .icon-jiantouyou"></i></p>
+  <p class="up" @click="goBack">确定</p>
 </div>
     </aby-transtion>
 </template>
@@ -67,14 +67,15 @@
   }
   .header{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
   }
   .iconfont{
     font-size: 0.15rem;
     padding-left: 0.25rem;
     padding-top: 0.28rem;
     display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
   }
   .header h1{
@@ -93,6 +94,10 @@
     width: 100%;
     padding-top: 0.6rem;
     padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   li{
     font-size: 0.15rem;
@@ -130,8 +135,8 @@
     line-height: 0.47rem;
     text-align: center;
     border-radius: 0.045rem;
-    position: absolute;
-    bottom: 0.225rem;
-    right: 0.225rem;
+    margin-top: 0.2rem;
+    float: right;
+    margin-right: 0.225rem;
   }
 </style>

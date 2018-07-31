@@ -3,15 +3,17 @@
   <div class="pingjia1">
    <span class="ping">评价</span>
   </div>
-  <div class="pingjia-xinxi">
-    <img src="../../assets/img/s_touxiang1.png" alt="">
-  </div>
-  <div class="jieshao">
-    <span class="xingming">亚荣</span>
-    <span class="time">2018年7月</span>
-  </div>
-  <div class="pinglun">
-    <span class="pinglun1"><a>翻译</a> 小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错的哦，姐姐家离市里景区都不远，很方便</span>
+  <div class="pingjia_1">
+    <div class="pingjia-xinxi">
+      <img src="../../assets/img/s_touxiang1.png" alt="">
+    </div>
+    <div class="jieshao">
+      <span class="xingming">亚荣</span>
+      <span class="time">2018年7月</span>
+    </div>
+    <div class="pinglun">
+      <span class="pinglun1"><a>翻译</a> 小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错的哦，姐姐家离市里景区都不远，很方便</span>
+    </div>
   </div>
   <div class="gengduopingjia">
     <span>阅读全部146条评价</span>
@@ -23,8 +25,8 @@
     <i class="iconfont icon-star"></i>
     </div>
   </div>
-  <div class="pinglun2">
-    <span>榕是位超赞的房东.超赞房东经验丰富、评分很高，他们致力于为访客提供优质的住宿体验</span>
+  <div class="pinglun2" v-for="n in fangdong">
+    <span>{{n.person}}是位超赞的房东.超赞房东经验丰富、评分很高，他们致力于为访客提供优质的住宿体验</span>
     <div class="imgs"><img src="../../assets/img/s_huizhang.png" alt=""></div>
   </div>
 </div>
@@ -34,6 +36,13 @@
 
     export default {
         name: "housedetailEvaluate",
+      data(){
+          return{
+            fangdong:[
+              {person:"榕"}
+            ]
+          }
+      }
     }
 </script>
 
@@ -89,8 +98,6 @@
   }
   .pinglun{
     width: 100%;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
     display: flex;
   }
   .pinglun1{
@@ -99,6 +106,9 @@
     line-height: 0.27rem;
     padding-top: 0.19rem;
     padding-bottom: 0.38rem;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    box-sizing: border-box;
   }
   a{
     color: #008085;

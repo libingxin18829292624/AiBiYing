@@ -44,6 +44,7 @@
   border-top: 1px solid #f4f4f4;
   bottom: 0;
   z-index: 1000;
+  box-sizing: border-box;
 }
 .footer_1{
   margin-left: 0.25rem;

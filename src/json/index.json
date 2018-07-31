@@ -2,6 +2,7 @@
   "Xian":[
     {
       "id":"0",
+      "cityName":"xi'an",
       "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
       "type":"独立房间",
       "desc":"公寓型住宅里的独立房间",
@@ -68,6 +69,7 @@
     },
     {
       "id":"1",
+      "cityName":"xi'an",
       "houseTitle":"{素心禅隐}市中心地铁旁，10分钟内到达南门城墙/钟楼/回民街",
       "type":"独立房间",
       "desc":"公寓型住宅里的独立房间",
@@ -132,6 +134,7 @@
     },
     {
       "id":"2",
+      "cityName":"xi'an",
       "houseTitle":"【One·night1】美式轻奢大床/市中心地铁口/钟楼回民街/超大私人影院/品质乳胶床垫",
       "type":"整套房子",
       "desc":"整套房子",
@@ -211,160 +214,166 @@
   "Bangkok":[
     {
       "id":"0",
-      "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
+      "cityName":"Pathuwan",
+      "houseTitle":"地理位置便利，1分钟可达BTS空铁，提供WIFI",
       "type":"独立房间",
-      "desc":"公寓型住宅里的独立房间",
+      "desc":"普通公寓里的独立房间",
       "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
-        "country":"中国",
-        "province":"陕西",
-        "city":"西安",
+        "country":"泰国",
+        "province":"曼谷",
+        "city":"帕特万",
         "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
-      "ownerName":"榕",
+      "ownerName":"Yanyong",
       "ownerImg":"/src/assets/img/l1.png",
-      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
+      "ownerWords":"地理位置便利，1分钟可达BTS空铁，提供WIFI",
       "rooms":{
         "bedroom":1,
         "bathroom":1,
         "bed":1
       },
-      "price":142,
+      "price":320,
       "stars":5,
-      "rateNum":146,
+      "rateNum":231,
       "limit":{
         "maxPersons":2,
         "minDays":1
       },
-      "commandPercent":"92%",
+      "commandPercent":"94%",
       "rate":{
         "img":"/src/assets/img/s_touxiang1.png",
-        "name":"亚荣",
+        "name":"Fang",
         "time":"2018年7月",
-        "content":"小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错哦，姐姐家离市里景区都不愿，很方便"
+        "content":"房间不大，但很干净，床品舒适，就是床太高了，喜欢他的装修风格，也很方便，出门就是城际轨道，就是离大皇宫有些远，但是去商场很方便"
       },
-      "role":"中等",
-      "inTime":"14:00 - 23:00",
-      "outTime":"13:00",
+      "role":"灵活",
+      "inTime":"14:00后",
+      "outTime":"12:00",
       "has":[
         {"title":"无线网络","desc":"在房源内可持续使用"},
-        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
+        {"title":"室内壁炉","desc":""},
         {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
         {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
         {"title":"洗衣机","desc":"在建筑物内（免费或收费）"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
         {"title":"空调","desc":""},
+        {"title":"电视","desc":""},
         {"title":"电梯","desc":""},
-        {"title":"路边免费停车","desc":""},
-        {"title":"付费停车场","desc":""},
-        {"title":"房东将会迎接您","desc":""},
-        {"title":"独立入口","desc":"独立的街道或建筑物入口"},
-        {"title":"可以存放行李","desc":"为方便提前抵达或延迟退房的房客"},
-        {"title":"可预订长期住宿","desc":"可以连续住宿28天或以上"},
+        {"title":"热水浴缸","desc":""},
+        {"title":"免费停车位","desc":""},
+        {"title":"健身房","desc":"位于建筑物内或附近的免费健身房"},
+        {"title":"游泳池","desc":"私人或公用"},
+        {"title":"微波炉","desc":""},
+        {"title":"密码钥匙盒","desc":""},
         {"title":"洗发水","desc":""},
-        {"title":"衣架","desc":""},
-        {"title":"带锁的卧室","desc":"出于安全和隐私的考虑，独立房间可以上锁"},
-        {"title":"灭火器","desc":""},
-        {"title":"急救包","desc":""}
+        {"title":"吹风机","desc":""},
+        {"title":"衣架","desc":""}
       ],
       "notHas":[
-        "厨房","吹风机","电视","一氧化碳报警器","烟雾报警器"
+        "厨房","独立入口","一氧化碳报警器","烟雾报警器"
       ],
-      "more":2,
+      "more":12,
       "iconClass":[
         "wifi","maojin","kafei","yigui","thermometer_icon"
       ]
     },
     {
       "id":"1",
-      "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
-      "type":"独立房间",
-      "desc":"公寓型住宅里的独立房间",
+      "cityName":"Pathuwan",
+      "houseTitle":"42平方米的游泳池，靠近BTS&河边",
+      "type":"整套公寓",
+      "desc":"整套公寓",
       "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
-        "country":"中国",
-        "province":"陕西",
-        "city":"西安",
+        "country":"泰国",
+        "province":"",
+        "city":"曼谷",
         "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
-      "ownerName":"榕",
+      "ownerName":"Ann",
       "ownerImg":"/src/assets/img/l1.png",
-      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
+      "ownerWords":"42平方米的游泳池，靠近BTS&河边",
       "rooms":{
         "bedroom":1,
         "bathroom":1,
-        "bed":1
+        "bed":2
       },
-      "price":142,
-      "stars":5,
-      "rateNum":146,
+      "price":286,
+      "stars":4.5,
+      "rateNum":391,
       "limit":{
-        "maxPersons":2,
+        "maxPersons":3,
         "minDays":1
       },
       "commandPercent":"92%",
       "rate":{
         "img":"/src/assets/img/s_touxiang1.png",
-        "name":"亚荣",
+        "name":"韵儿",
         "time":"2018年7月",
-        "content":"小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错哦，姐姐家离市里景区都不愿，很方便"
+        "content":"挺棒的公寓哦"
       },
-      "role":"中等",
-      "inTime":"14:00 - 23:00",
-      "outTime":"13:00",
+      "role":"严格（宽限期）",
+      "inTime":"14:00后",
+      "outTime":"12:00",
       "has":[
         {"title":"无线网络","desc":"在房源内可持续使用"},
-        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
-        {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
+        {"title":"熨斗","desc":""},
+        {"title":"有线电视","desc":""},
         {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
+        {"title":"烘干机","desc":"在建筑物内（免费或收费）"},
         {"title":"洗衣机","desc":"在建筑物内（免费或收费）"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
         {"title":"空调","desc":""},
+        {"title":"电视","desc":""},
+        {"title":"热水","desc":""},
         {"title":"电梯","desc":""},
-        {"title":"路边免费停车","desc":""},
-        {"title":"付费停车场","desc":""},
-        {"title":"房东将会迎接您","desc":""},
-        {"title":"独立入口","desc":"独立的街道或建筑物入口"},
-        {"title":"可以存放行李","desc":"为方便提前抵达或延迟退房的房客"},
+        {"title":"健身房","desc":"位于建筑物内或附近的免费健身房"},
+        {"title":"游泳池","desc":"私人或公用"},
+        {"title":"厨房","desc":"房客可自行烹饪的空间"},
         {"title":"可预订长期住宿","desc":"可以连续住宿28天或以上"},
+        {"title":"吹风机","desc":""},
         {"title":"洗发水","desc":""},
         {"title":"衣架","desc":""},
-        {"title":"带锁的卧室","desc":"出于安全和隐私的考虑，独立房间可以上锁"},
         {"title":"灭火器","desc":""},
-        {"title":"急救包","desc":""}
+        {"title":"一氧化碳报警器","desc":""},
+        {"title":"烟雾报警器","desc":""}
       ],
       "notHas":[
-        "厨房","吹风机","电视","一氧化碳报警器","烟雾报警器"
+        "暖气","独立入口"
       ],
-      "more":2,
+      "more":14,
       "iconClass":[
         "wifi","maojin","kafei","yigui","thermometer_icon"
       ]
     },
     {
       "id":"2",
-      "houseTitle":"[双囍和八两]♡♡♡旅行已经很累了，那就睡个好觉吧！",
-      "type":"独立房间",
-      "desc":"公寓型住宅里的独立房间",
+      "cityName":"Bangkok",
+      "houseTitle":"慕斯唐尼禄酒店/7号 斑马之歌",
+      "type":"酒店房间",
+      "desc":"酒店内的房间",
       "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
-        "country":"中国",
-        "province":"陕西",
-        "city":"西安",
+        "country":"泰国",
+        "province":"曼谷直辖市",
+        "city":"曼谷",
         "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
-      "ownerName":"榕",
+      "ownerName":"Themustang",
       "ownerImg":"/src/assets/img/l1.png",
-      "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
+      "ownerWords":"42平方米的游泳池，靠近BTS&河边",
       "rooms":{
         "bedroom":1,
         "bathroom":1,
-        "bed":1
+        "bed":2
       },
-      "price":142,
+      "price":511,
       "stars":5,
-      "rateNum":146,
+      "rateNum":302,
       "limit":{
         "maxPersons":2,
         "minDays":1
@@ -372,37 +381,35 @@
       "commandPercent":"92%",
       "rate":{
         "img":"/src/assets/img/s_touxiang1.png",
-        "name":"亚荣",
+        "name":"智敏",
         "time":"2018年7月",
-        "content":"小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错哦，姐姐家离市里景区都不愿，很方便"
+        "content":"整体好评，唯一一点就是隔音有点差。还有最近楼上仿佛在装修，白天有点吵。"
       },
-      "role":"中等",
-      "inTime":"14:00 - 23:00",
-      "outTime":"13:00",
+      "role":"严格（宽限期）",
+      "inTime":"14:00 - 20:00",
+      "outTime":"12:00",
       "has":[
         {"title":"无线网络","desc":"在房源内可持续使用"},
-        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
         {"title":"暖气","desc":"中央暖气或房源内的暖气设备"},
+        {"title":"熨斗","desc":""},
+        {"title":"有线电视","desc":""},
         {"title":"书桌/工作区域","desc":"一张能放电脑的桌子或书桌，和一把舒适的椅子"},
-        {"title":"洗衣机","desc":"在建筑物内（免费或收费）"},
+        {"title":"生活必需品","desc":"毛巾、床单、香皂和卫生纸"},
         {"title":"空调","desc":""},
-        {"title":"电梯","desc":""},
-        {"title":"路边免费停车","desc":""},
-        {"title":"付费停车场","desc":""},
+        {"title":"电视","desc":""},
+        {"title":"热水","desc":""},
+        {"title":"免费停车位","desc":""},
+        {"title":"早餐","desc":"提供早餐"},
         {"title":"房东将会迎接您","desc":""},
-        {"title":"独立入口","desc":"独立的街道或建筑物入口"},
         {"title":"可以存放行李","desc":"为方便提前抵达或延迟退房的房客"},
-        {"title":"可预订长期住宿","desc":"可以连续住宿28天或以上"},
+        {"title":"吹风机","desc":""},
         {"title":"洗发水","desc":""},
-        {"title":"衣架","desc":""},
-        {"title":"带锁的卧室","desc":"出于安全和隐私的考虑，独立房间可以上锁"},
-        {"title":"灭火器","desc":""},
-        {"title":"急救包","desc":""}
+        {"title":"衣架","desc":""}
       ],
       "notHas":[
-        "厨房","吹风机","电视","一氧化碳报警器","烟雾报警器"
+        "厨房","洗衣机","独立入口","一氧化碳报警器","烟雾报警器"
       ],
-      "more":2,
+      "more":14,
       "iconClass":[
         "wifi","maojin","kafei","yigui","thermometer_icon"
       ]
