@@ -18,7 +18,7 @@
           }
       },
       components:{
-        orderHeader
+        orderHeader,
       }
     }
 </script>

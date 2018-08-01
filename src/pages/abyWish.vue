@@ -31,13 +31,18 @@
     <div class="footer">
       <a href="#">开始探索</a>
     </div>
+    <abyfooter></abyfooter>
   </div>
 </template>
 
 <script>
   import Swiper from "Swiper"
+  import abyfooter from '../components/common/abyfooter'
     export default {
         name: "abyWish",
+      components:{
+        abyfooter
+      },
       data(){
         return{
           houselist:[

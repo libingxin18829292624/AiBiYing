@@ -1,21 +1,21 @@
 <template>
 <div class="content_1">
-  <div class="content1"  v-for="(n,index) in xiangqing" :key="index">
-  <span class="biaoti">整套独户房间和独立房间</span>
-  <h1 class="mingcheng">{{n.mingcheng}}</h1>
-  <span class="dizhi">{{n.dizhi}}</span>
+  <div class="chuan">
+  <div class="content1" >
+  <span class="biaoti">{{cityData.desc}}</span>
+  <h1 class="mingcheng">{{cityData.houseTitle}}</h1>
+  <p class="dizhi" v-for="n in cityData.address">{{n}},</p>
   <br>
-  <span class="fangdong">{{n.fangdong}}</span>
-  <img class="touxiang" :src="n.img" alt="">
+  <span class="fangdong">房东:{{cityData.ownerName}}</span>
+  <img class="touxiang" :src="cityData.ownerImg" alt="">
   <div class="content_2">
       <div v-for="n in xinxi" class="content_2_1">
         <img class="tu" :src="n.img" alt="">
-        <span class="renshu">{{n.name}}</span>
+        <span class="renshu">{{cityData.rooms.bedroom}}{{n.name}}</span>
       </div>
   </div>
     <div class="jieshao" v-for="n in pinglun">
-      <span class="jieshao_1">{{n.jieshao_1}}</span>
-      <span class="jieshao_2">{{n.jieshao_2}}<a>阅读更多</a></span>
+      <span class="jieshao_2">{{cityData.ownerWords}}<a> 阅读更多</a></span>
     </div>
   </div>
   <div class="content_3">
@@ -27,40 +27,45 @@
     </div>
     <span class="zuishao">最少1晚</span>
   </div>
-  <router-link to="/housedetailBianlisheshi" class="Link">
+  <router-link @click="chuancan(index)" to="/housedetailBianlisheshi" class="Link">
     <div  class="content_4">
     <span class="bianli">便利设施</span>
-    <ul>
+    <ul class="bianli-ul">
       <li>
         <i v-for="n in viewArr" :class="icon(n)" class="iconfont"></i>
-        <span class="jiaer">+2</span>
+        <span class="jiaer">+{{cityData.more}}</span>
       </li>
     </ul>
 
-  </div></router-link>
-  <img v-for="n in imgs" class="daditu" :src="n.img" alt="">
+  </div>
+  </router-link>
+  <img class="daditu" :src="cityData.addressImg" alt="">
   <div class="content_5">
     <ul>
-      <li v-for="i in shijian"><span>{{i.date}}</span><span>{{i.time}}</span></li>
+      <li ><span>入住时间</span><span>{{cityData.inTime}}</span></li>
+      <li ><span>退房时间</span><span>{{cityData.outTime}}</span></li>
     </ul>
+  </div>
   </div>
 </div>
 </template>
 
 <script>
     export default {
+      props:['shuju'],
         name: "housedetailContent",
       data(){
           return{
-
+            allData:this.$store.state.allData,
+            cityData:"",
             kafei:true,
             wifi:true,
             thermometer_icon:true,
             xinxi:[
-              {img:require("../../assets/img/s_renshu.png"),name:"最多住2人"},
-              {img:require("../../assets/img/s_woshi.png"),name:"1间卧室"},
-              {img:require("../../assets/img/s_chuang.png"),name:"1张床"},
-              {img:require("../../assets/img/s_renshu.png"),name:"1个公共卫生间"}
+              {img:require("../../assets/img/s_renshu.png"),name:"人最多同住"},
+              {img:require("../../assets/img/s_woshi.png"),name:"间卧室"},
+              {img:require("../../assets/img/s_chuang.png"),name:"张床"},
+              {img:require("../../assets/img/s_renshu.png"),name:"个公共卫生间"}
             ],
             shijian:[
               { "date":"入住时间",
@@ -98,16 +103,22 @@
               ],
             pinglun:[
               {
-                jieshao_1:"点我头像进去还有另外两套房源",
                 jieshao_2:"我的房源位于西安老城区，又或者说我们位于所有景点的中间位置，公交直达各个景点楼.."
               }
             ],
           }
       },
+      created () {
+        this.cityData = this.allData[this.shuju.city][this.shuju.index];
+      },
       methods:{
         icon :  function (id){
           return "icon-"+id
-        }
+        },
+      },
+      mounted(){
+
+        console.log(this.cityData)
       }
     }
 </script>
@@ -144,20 +155,20 @@ body{
   .dizhi{
     font-size: 0.13rem;
     color: #242424;
-    padding-top: 0.32rem;
+    padding-top: 0.2rem;
     padding-left: 0.26rem;
-    width: 100%;
-    display: block;
-    font-weight: 600;
-
+    font-weight: 100;
+    height: 0.2rem;
+    margin-right: -.25rem;
   }
   .fangdong{
     font-size: 0.13rem;
     color: #242424;
-    padding-top: 0.08rem;
-    padding-left: 0.26rem;
-    font-weight: 600;
-
+    position: absolute;
+    top: 1.575rem;
+    display: block;
+    box-sizing: border-box;
+    left: 0.25rem;
   }
   .touxiang{
     width: 0.67rem;
@@ -183,6 +194,7 @@ body{
     width: 0.165rem;
     height: 0.145rem;
     padding-left: 0.25rem;
+    margin-right: .05rem;
   }
   .renshu{
     font-size: 0.13rem;
@@ -286,6 +298,9 @@ body{
     width: 100%;
     padding-top: 0.275rem;
     padding-bottom: 0.15rem;
+  }
+  .bianli-ul{
+    margin: 0;
   }
   .jiaer{
     font-size: 0.2rem;

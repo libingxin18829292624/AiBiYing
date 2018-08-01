@@ -1,5 +1,4 @@
 <template>
-       <aby-transtion-to-top>
            <div>
             <div class="checkall">
 
@@ -15,11 +14,11 @@
                       <a >美食</a>
                       <a >文化</a>
                       <a >活动</a>
-                      <a >店铺</a> 
-                    </div>   
+                      <a >店铺</a>
+                    </div>
                 </div>
-                
-                <div class="checktop"> 
+
+                <div class="checktop">
                 <h1>故事集</h1>
                 <p>查看全部  ></p>
                 </div>
@@ -38,7 +37,7 @@
                    <a >
                        <div class="picBox">
                        <img :src="x.img1" alt="">
-                        <span>{{x.span1}}</span>   
+                        <span>{{x.span1}}</span>
                         </div>
                         <h2>{{x.h2nr}}</h2>
                         <div class="pingjia">
@@ -46,23 +45,21 @@
                                 <img :src="x.logoimg" alt="">
                             </div>
                             <i class="iconfont icon-svgdamuzhi-copy"></i>
-                            <span>{{x.span2}}</span> 
+                            <span>{{x.span2}}</span>
                             <i class="iconfont icon-icon-test"></i>
                             <span>{{x.span3}}</span>
                         </div>
                     </a>
                 </li>
-                               
+
             </ul>
         </div>
         <abyfooter></abyfooter>
     </div>
-   </aby-transtion-to-top>
 </template>
 
 <script>
 import $ from 'jquery'
-import abyTranstionToTop from '../components/common/abyTranstionToTop'
 import abyfooter from '../components/common/abyfooter'
 export default {
     name:"abyStorys",
@@ -74,24 +71,21 @@ export default {
                 {"img":"/src/assets/img/story2.jpg","pcot":"城市合辑","h2cot":"如何躲避游人 | 体验真正的巴黎"},
             ],
          usersarr:[
-             {"img1":"/src/assets/img/storyuser1.jpg","span1":"美食","h2nr":"不吃会后悔，全球仅9家门店的泰国皇室料理","logoimg":"/src/assets/img/mylogo1.jpg","span2":"10","span3":"4"},   
-             {"img1":"/src/assets/img/storyuser2.jpg","span1":"美食","h2nr":"环游世界前，你可以先在胡同里喝环游世界手冲","logoimg":"/src/assets/img/mylogo2.jpg","span2":"2","span3":"0"},   
-             {"img1":"/src/assets/img/storyuser3.jpg","span1":"美食","h2nr":"糯言，有十个月亮的小酒馆。","logoimg":"/src/assets/img/mylogo3.jpg","span2":"6","span3":"1"},   
-             {"img1":"/src/assets/img/storyuser4.jpg","span1":"美食","h2nr":"街头巷尾，绕不开的一碗云吞面—宝华面店","logoimg":"/src/assets/img/mylogo4.jpg","span2":"8","span3":"9"},   
-             {"img1":"/src/assets/img/storyuser5.jpg","span1":"文化","h2nr":"baan kang wat 素帖山下的艺术村","logoimg":"/src/assets/img/mylogo5.jpg","span2":"22","span3":"2"},   
-             {"img1":"/src/assets/img/storyuser6.jpg","span1":"景点","h2nr":"当我的相机在德国科隆被偷…","logoimg":"/src/assets/img/mylogo6.jpg","span2":"3","span3":"2"},   
-             {"img1":"/src/assets/img/storyuser7.jpg","span1":"文化","h2nr":"私藏香港美食之最接地气港式大排档！","logoimg":"/src/assets/img/mylogo7.jpg","span2":"8","span3":"7"},   
-             {"img1":"/src/assets/img/storyuser8.jpg","span1":"景点","h2nr":"萌兔领域！京都堆满兔子的神社","logoimg":"/src/assets/img/mylogo8.jpg","span2":"9","span3":"2"},   
-             {"img1":"/src/assets/img/storyuser9.jpg","span1":"美食","h2nr":"为了这碗沙茶面，我才去了曾厝垵|闽南夏日","logoimg":"/src/assets/img/mylogo9.jpg","span2":"9","span3":"0"},   
-             {"img1":"/src/assets/img/storyuser10.jpg","span1":"景点","h2nr":"时与光之间遇见自己","logoimg":"/src/assets/img/mylogo10.jpg","span2":"17","span3":"4"},   
-
-
+             {"img1":"/src/assets/img/storyuser1.jpg","span1":"美食","h2nr":"不吃会后悔，全球仅9家门店的泰国皇室料理","logoimg":"/src/assets/img/mylogo1.jpg","span2":"10","span3":"4"},
+             {"img1":"/src/assets/img/storyuser2.jpg","span1":"美食","h2nr":"环游世界前，你可以先在胡同里喝环游世界手冲","logoimg":"/src/assets/img/mylogo2.jpg","span2":"2","span3":"0"},
+             {"img1":"/src/assets/img/storyuser3.jpg","span1":"美食","h2nr":"糯言，有十个月亮的小酒馆。","logoimg":"/src/assets/img/mylogo3.jpg","span2":"6","span3":"1"},
+             {"img1":"/src/assets/img/storyuser4.jpg","span1":"美食","h2nr":"街头巷尾，绕不开的一碗云吞面—宝华面店","logoimg":"/src/assets/img/mylogo4.jpg","span2":"8","span3":"9"},
+             {"img1":"/src/assets/img/storyuser5.jpg","span1":"文化","h2nr":"baan kang wat 素帖山下的艺术村","logoimg":"/src/assets/img/mylogo5.jpg","span2":"22","span3":"2"},
+             {"img1":"/src/assets/img/storyuser6.jpg","span1":"景点","h2nr":"当我的相机在德国科隆被偷…","logoimg":"/src/assets/img/mylogo6.jpg","span2":"3","span3":"2"},
+             {"img1":"/src/assets/img/storyuser7.jpg","span1":"文化","h2nr":"私藏香港美食之最接地气港式大排档！","logoimg":"/src/assets/img/mylogo7.jpg","span2":"8","span3":"7"},
+             {"img1":"/src/assets/img/storyuser8.jpg","span1":"景点","h2nr":"萌兔领域！京都堆满兔子的神社","logoimg":"/src/assets/img/mylogo8.jpg","span2":"9","span3":"2"},
+             {"img1":"/src/assets/img/storyuser9.jpg","span1":"美食","h2nr":"为了这碗沙茶面，我才去了曾厝垵|闽南夏日","logoimg":"/src/assets/img/mylogo9.jpg","span2":"9","span3":"0"},
+             {"img1":"/src/assets/img/storyuser10.jpg","span1":"景点","h2nr":"时与光之间遇见自己","logoimg":"/src/assets/img/mylogo10.jpg","span2":"17","span3":"4"},
             ]
         }
     },
     components:{
         abyfooter,
-        abyTranstionToTop
     },
     methods:{
         goIndex(){
@@ -105,8 +99,8 @@ export default {
         $(function(){
           $(".Navbox").children().click(function(){
               $(this).addClass("activeaaaaa").siblings().removeClass("activeaaaaa")
-          })      
-     
+          })
+
 
 
         })
@@ -114,7 +108,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .checkall{
     width: 100%;
     overflow: hidden;
@@ -124,7 +118,7 @@ export default {
     border-bottom: 1px solid #339d95;
     padding: 0.05rem;
     box-sizing: border-box;
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 .headNav{
     width: 100%;
@@ -132,7 +126,7 @@ export default {
 
     z-index: 10;
     background: #fff;
-   
+
 }
 .Navbox{
      margin-top: 0.2rem;
@@ -173,7 +167,7 @@ export default {
 }
 .checktop p{
     font-size: 0.12rem;
-    color: #848484; 
+    color: #848484;
      margin-right: 0.25rem;
 }
 .checkall ul li{
@@ -196,7 +190,7 @@ export default {
 }
 .checkall ul li p{
 font-size: 0.1rem;
-    color: #444444; 
+    color: #444444;
     padding: 0.05rem;
     background: #fff;
     position: absolute;
@@ -206,7 +200,7 @@ font-size: 0.1rem;
 }
 .checkall ul li h2{
 font-size: 0.2rem;
-    color: #fff; 
+    color: #fff;
         width: 47%;
     position: absolute;
     left: 0.2rem;
@@ -229,7 +223,7 @@ font-size: 0.2rem;
     padding: 0;
     height: 100%;
     margin: 0.25rem;
-}   
+}
 .jingxuan ul li{
 height: 2.45rem;
 }

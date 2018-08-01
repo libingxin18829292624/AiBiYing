@@ -3,9 +3,8 @@
   <aby-index-header></aby-index-header>
   <aby-index-part1></aby-index-part1>
   <aby-index-part2></aby-index-part2>
-   <aby-index-part3></aby-index-part3> 
+   <aby-index-part3></aby-index-part3>
   <abyfooter></abyfooter>
-
  </div>
 </template>
 

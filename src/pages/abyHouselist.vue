@@ -1,13 +1,12 @@
 <template>
-
+  <aby-transtion-to-top-fast>
     <div class="bodybox">
-
-      <houselist-header></houselist-header>
-      <houselist-body></houselist-body>
+      <houselist-header class="houselist-header" :city="address"></houselist-header>
+      <houselist-body :city="address" :data="cityData"></houselist-body>
       <abyfooter></abyfooter>
       <div class="guding"><i class="iconfont icon-dizhi"></i></div>
-</div>
-
+    </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
@@ -15,22 +14,39 @@
 import houselistHeader from "../components/houselist/houselistHeader"
 import houselistBody from "../components/houselist/houselistBody"
 import abyfooter from "../components/common/abyfooter"
+import abyTranstionToTopFast from '../components/common/abyTranstionToTopFast'
 export default {
     name:"abyHouselist",
+    data(){
+       return{
+        allData:this.$store.state.allData,
+        address:"",
+        cityData:"",
+       }
+
+    },
     components:{
         houselistHeader,
         houselistBody,
         abyfooter,
-
+      abyTranstionToTopFast
+    },
+    created(){
+        this.address = this.$route.query.address;
+        this.cityData = this.allData[this.address];
     }
 }
 </script>
 
-<style>
+<style scoped>
+
+  .houselist-header{
+    padding-bottom: .1rem;
+  }
 
 .bodybox{
     padding-bottom: 0.8rem;
-    padding-top: 1.27rem;
+    margin-top: 1.2rem;
 }
 
 .guding{

@@ -8,10 +8,6 @@
                 <a href="#"><h2>北京</h2><p>本周热搜</p></a>
             </div>
         </div>
-        
-
-
-
     </div>
 </template>
 
@@ -21,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .suggess{
     width: 100%;
     height: 2rem;
@@ -35,7 +31,7 @@ export default {
     display: flex;
     justify-content: space-around;
     padding: 0.25rem;
-    
+  margin-bottom: .5rem;
 }
 .searchBoxs a{
     display: flex;

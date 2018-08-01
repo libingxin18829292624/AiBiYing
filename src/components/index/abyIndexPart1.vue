@@ -7,7 +7,6 @@
             <li><a href="#"><img src="/src/assets/img/1.jpg" alt=""><p>房源</p></a></li>
             <li><a href="#"><img src="/src/assets/img/2.jpg" alt=""><p>餐馆</p></a></li>
             <li><a href="#"><img src="/src/assets/img/3.jpg" alt=""><p>体验</p></a></li>
-     
         </ul>
     </div>
 </div>
@@ -33,7 +32,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .tansuo{
     width: calc(100% - 0.3rem);
     height: 2.3rem;
@@ -46,13 +45,13 @@ export default {
     font-size: 0.2rem;
     color: #141414;
     margin-top: 0.8rem;
-    
+
     margin-bottom: 0.35rem;
 }
 .tansuoNav{
     width: 100%;
     height:1.31rem ;
-    
+
 }
 .tansuoNav ul{
     white-space: nowrap;
@@ -64,8 +63,8 @@ export default {
 .tansuoNav ul li{
     flex-shrink: 0;
     width: 1.29rem;
-    height: 1.31rem;
-    box-shadow: -1px 1px 12px -1px;
+    height: 1.28rem;
+    box-shadow: 1px 1px 10px -1px #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     margin-right: 0.2rem;
@@ -94,7 +93,7 @@ export default {
     width: 100%;
     height: 3.66rem;
 
-    
+
 }
 .piccont{
     margin: 0.13rem 0.16rem;
@@ -102,7 +101,7 @@ export default {
     width: 3.4rem;
     height: 3.4rem;
      position: relative;
-  
+
 }
 .piccont img{
  width: 3.4rem;

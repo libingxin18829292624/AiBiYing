@@ -4,13 +4,13 @@
   <div @click="goHouse" class="serchBox">
     <i class="iconfont icon-search3"></i>
     <input type="text" placeholder="搜索'瓦伦西亚海岸试试(Coast de Valencia)'试试">
-     </div>  
+     </div>
     <div class="yincang">
       <router-link to="/Rili"  id="myRili">{{this.$store.state.xdriqi}}</router-link><router-link to="/fangke">{{this.$store.state.num}}位访客</router-link>
   </div>
 </div>
-  
-  
+
+
 </template>
 
 <script>
@@ -18,39 +18,29 @@ import $ from 'jquery'
 
 export default {
     name:"abyIndexHeader",
-    methods:{
-
-    },
-
     mounted(){
         $(window).scroll(function(){
             var topp=$(document).scrollTop();
 
             if(topp>40){
-                $(".yincang").slideUp("10")
+              $(".yincang").slideUp('fast')
               } else{
-                 $(".yincang").slideDown("10") 
-                }
-
+              $(".yincang").slideDown('fast')
+            }
          })
-
-
-
-        },   
-
+        },
     methods:{
        goHouse(){
-           this.$router.push('/houselist')
+           this.$router.push('/serach')
        },
-      
     }
 }
 </script>
 
-<style>
+<style scoped>
 .header{
     width: 100%;
-    border-bottom: 2px solid #ecedf0;
+    border-bottom: 1px solid #ecedf0;
     position: fixed;
     top: 0;
     background: #fff;
@@ -60,7 +50,7 @@ export default {
     width: 3.25rem;
     height: 0.5rem;
     display: flex;
-    box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 5px #ccc;
     border-radius: 5px;
     z-index: 10;
     margin: 0.1rem auto;

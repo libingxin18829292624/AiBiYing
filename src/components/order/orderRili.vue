@@ -55,6 +55,8 @@
           "days":"",
           "riliData":[],
           "startDate":"",
+          "startWeek":"",
+          "endWeek":"",
           "endDate":"",
           "startIndex":"",
           "endIndex":"",
@@ -132,6 +134,7 @@
              this.endIndex = "";
              $(".end-date").html("退房日期");
              $(".start-date").html("<span>" + this.dayArr[new Date(this.startDate).getDay()] + "</span><br><span>" + this.startDate + "</span>")
+             this.startWeek = this.dayArr[new Date(this.startDate).getDay()];
            }else{
              this.endIndex = $('.day').index($event.target);
              for(let i = this.startIndex; i <= this.endIndex; i++){
@@ -141,13 +144,17 @@
              $('.day').eq(this.endIndex).removeClass('active').addClass('active-end');
              this.endDate = $event.target.firstElementChild.innerHTML;
              $(".end-date").html("<span>" + this.dayArr[new Date(this.endDate).getDay()] + "</span><br><span>" + this.endDate + "</span>")
+             this.endWeek = this.dayArr[new Date(this.endDate).getDay()];
            }
          }
        }
-
      },
      store(){
        this.$store.state.days = this.endIndex - this.startIndex;
+       this.$store.state.startDate = this.startDate;
+       this.$store.state.endDate = this.endDate;
+       this.$store.state.startWeek = this.startWeek;
+       this.$store.state.endWeek = this.endWeek;
        window.history.back();
      }
    },

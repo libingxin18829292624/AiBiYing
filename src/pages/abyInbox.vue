@@ -11,12 +11,17 @@
           <input type="button" value="开始探索">
         </div>
     </div>
+    <abyfooter></abyfooter>
   </div>
 </template>
 
 <script>
+  import abyfooter from '../components/common/abyfooter'
     export default {
-        name: "abyInbox"
+        name: "abyInbox",
+      components:{
+        abyfooter
+      }
     }
 </script>
 

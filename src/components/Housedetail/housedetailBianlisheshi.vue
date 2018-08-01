@@ -16,8 +16,8 @@
   <div class="wei">
     <h1 class="footer">未配备</h1>
     <ul>
-      <li class="da_2" v-for="h in Not">
-        <span class="weipi">{{h.pei}}</span>
+      <li class="da_2" v-for="n in Not">
+        <span class="weipi">{{n.pei}}</span>
       </li>
     </ul>
   </div>
@@ -159,6 +159,9 @@
     display: flex;
     padding-left: 0.25rem;
     border-bottom: 1px solid #e5e5e5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   .weipi{
     font-size: 0.125rem;

@@ -2,7 +2,7 @@
     <header>
         <div class="header-top">
             <i class="iconfont icon-houtui1" @click="goindex"></i>
-            <input type="text" value="西安">
+            <input type="text" :value="cityName">
         </div>
       <div class="yincang">
         <router-link to="/Rili"  id="myRili">{{this.$store.state.xdriqi}}</router-link><router-link to="/fangke">{{this.$store.state.num}}位访客</router-link>
@@ -19,9 +19,10 @@
 import $ from 'jquery'
 export default {
     name:"houselistHeader",
+  props:['city'],
     data(){
         return{
-
+          cityName:""
         }
     },
   mounted(){
@@ -29,25 +30,31 @@ export default {
       var topp=$(document).scrollTop();
 
       if(topp>40){
-        $(".yincang").slideUp(".5")
+        $(".yincang").slideUp('fast')
       } else{
-        $(".yincang").slideDown(".5")
+        $(".yincang").slideDown('fast')
       }
 
-    })
+    });
+    if(this.city === "Xian"){
+      this.cityName = "西安";
+    }else{
+      this.cityName = "曼谷";
+    }
   },
     methods:{
         goindex(){
-            this.$router.push("/index")
+            this.$router.push("/")
         },
 
     }
 }
 </script>
 
-<style>
+<style scoped="scoped">
   .yincang{
     font-size: 0.12rem;
+    margin-left: 0;
     width: 100%;
     display: flex;
     margin-bottom: 0.1rem;
@@ -59,7 +66,8 @@ export default {
     color: #3c3c3c;
     border: 1px solid #d3d3d4;
     border-radius: 5px;
-    margin-right: 0.075rem;
+    float: left;
+    margin-right: .1rem;
   }
 
 header{

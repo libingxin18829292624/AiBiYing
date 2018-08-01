@@ -1,17 +1,17 @@
 <template>
 <div class="footer">
   <div class="footer_1" v-for="n in close">
-    <p class="jiage">每晚￥<span class="jiage1">{{n.money}}</span></p>
+    <p class="jiage">每晚￥<span class="jiage1">{{cityData.price}}</span></p>
     <i class="iconfont icon-star"></i>
     <i class="iconfont icon-star"></i>
     <i class="iconfont icon-star"></i>
     <i class="iconfont icon-star"></i>
     <i class="iconfont icon-star"></i>
-    <span class="pingfen">146</span>
-    <p class="tuijian">优质房源94%房客推荐</p>
+    <span class="pingfen">{{cityData.rateNum}}</span>
+    <p class="tuijian">优质房源{{cityData.commandPercent}}房客推荐</p>
   </div>
   <div class="footer_2">
-    <input type="button" value="查看是否可定">
+    <input type="button" value="预定" @click="into">
   </div>
   <div class="footer1"></div>
 </div>
@@ -19,21 +19,34 @@
 
 <script>
     export default {
+      props:['shuju'],
       name: "housedetailFooter",
       data() {
         return {
+          allData:this.$store.state.allData,
+          cityData:"",
           close: [
             {money: "142"}
           ]
+        }
+      },
+      created () {
+        this.cityData = this.allData[this.shuju.city][this.shuju.index];
+      },
+      methods:{
+        into(){
+          this.$router.push({
+            path:'/order',
+            query:this.shuju
+          })
         }
       }
     }
 </script>
 
-<style scoped>
+<style scoped="scoped">
   body{
     height: 100%;
-
   }
 .footer{
   width: 100%;
@@ -76,7 +89,7 @@
 
   }
   .tuijian{
-    font-size: 0.15rem;
+    font-size: 0.1rem;
     color: #191919;
     float: left;
   }

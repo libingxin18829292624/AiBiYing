@@ -9,7 +9,7 @@
             <div></div>
         </div>
         <p>我们要求每一位爱彼迎用户在侣行或出租之前提供一些具体信息，现在就先来完成这一步吧</p>
-    </div>  
+    </div>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .banner{
     width:3.25rem;
     margin:0.67rem auto 0;

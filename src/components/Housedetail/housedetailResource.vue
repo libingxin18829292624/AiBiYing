@@ -24,29 +24,35 @@
 
 <script>
     export default {
+      props:['shuju'],
       name: "housedetailResource",
       data() {
         return {
+          allData:this.$store.state.allData,
+          cityData:"",
           message: [
             {
-              img:require("../../assets/img/s_header_bj.jpg"),
+              img:require("../../assets/img/s_header_bj4.jpg"),
               name: "（卧室A）市中心复试洋房带露台/公交直达机场兵马俑/15分钟到回民街",
               price: "130"
             },
             {
-              img:require("../../assets/img/s_header_bj.jpg"),
+              img:require("../../assets/img/s_header_bj3.jpg"),
               name: "（卧室B）地铁口复试洋房/公交直达机场兵马俑/15分钟到回民街",
               price: "129"
             },
             {
-              img:require("../../assets/img/s_header_bj.jpg"),
+              img:require("../../assets/img/s_header_bj2.jpg"),
               name: "「双囍和八两」♡♡♡远方的家-不赶路、只感受",
               price: "158"
             }
 
           ],
         }
-      }
+      },
+      created () {
+        this.cityData = this.allData[this.shuju.city][this.shuju.index];
+      },
     }
 </script>
 

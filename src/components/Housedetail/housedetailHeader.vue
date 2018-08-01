@@ -3,16 +3,13 @@
       <div class="lunbo">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../../assets/img/s_header_bj.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../../assets/img/s_header_bj2.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../../assets/img/s_header_bj3.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="../../assets/img/s_header_bj4.jpg" alt=""></div>
+            <div class="swiper-slide" v-for="h in cityData.imgs"><img :src="h" alt=""></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
       <div id="searchBar" class="header_2">
-      <i class="iconfont1 iconfont icon-houtui"></i>
+      <i  @click="goBack" class="iconfont1 iconfont icon-houtui"></i>
       <i @click="red();wei()" :class="{'icon-xin':isA,'icon-hongxin':!isA}" class="iconfont2 iconfont"></i>
       </div>
       <div class="box">已保存到Captain Cook中</div>
@@ -23,21 +20,27 @@
   import $ from "jquery"
   import Swiper from "swiper"
     export default {
+    props:['shuju'],
       name: "HousedetailHeader",
       data(){
         return{
-          isA:true
+          isA:true,
+          allData:this.$store.state.allData,
+          cityData:""
         }
       },
-      mounted () {
+      created () {
+        this.cityData = this.allData[this.shuju.city][this.shuju.index];
+        window.addEventListener('scroll', this.handleScroll)
+      },
+      mounted(){
         var mySwiper = new Swiper ('.swiper-container', {
           pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
             dynamicBullets: true,
           }
-        })
-        window.addEventListener('scroll', this.handleScroll)
+        });
       },
       methods: {
         red:function(){
@@ -48,6 +51,11 @@
             bottom:"0.9rem",
           },400)
         },
+          goBack:function (){
+            window.history.back()
+          },
+
+
         handleScroll () {
           var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
           var offsetTop = document.querySelector('#searchBar').offsetTop;
@@ -128,8 +136,8 @@ display: flex;
     width: 100%;
     position: fixed;
     bottom: 0.5rem;
-    background: #fffdef;
-    border-top: 1px solid #999999;
+    background: #fff;
+    border-top: 1px solid #ddd;
     font-size: 0.15rem;
     text-align: center;
     line-height: 0.4rem;

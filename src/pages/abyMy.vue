@@ -5,7 +5,7 @@
     <my-leg></my-leg>
     <abyfooter></abyfooter>
 </div>
-    
+
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .bodydiv{
     padding-bottom: 0.6rem;
 }

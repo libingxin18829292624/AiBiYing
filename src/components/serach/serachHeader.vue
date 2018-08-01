@@ -15,14 +15,14 @@
 export default {
     name:"serachHeader",
     data(){
-        return{ 
-            
+        return{
+
         }
     }
 }
 </script>
 
-<style>
+<style scoped="scoped">
 header{
     width:100%;
     height:1.39rem;
@@ -61,16 +61,16 @@ header{
     outline: none;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
-   color: #c7c5c5; 
-   } 
-input:-moz-placeholder, textarea:-moz-placeholder {   
-   color: #c7c5c5; 
-   } 
-input::-moz-placeholder, textarea::-moz-placeholder {    
-   color: #c7c5c5; 
-   } 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {   
-   color: #c7c5c5; 
-   } 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+   color: #c7c5c5;
+   }
+input:-moz-placeholder, textarea:-moz-placeholder {
+   color: #c7c5c5;
+   }
+input::-moz-placeholder, textarea::-moz-placeholder {
+   color: #c7c5c5;
+   }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+   color: #c7c5c5;
+   }
 </style>

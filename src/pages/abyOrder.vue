@@ -1,30 +1,31 @@
 <template>
+  <aby-transtion-to-top-fast>
     <div class="order-container">
       <div class="order-main">
         <header class="header">
-          <i class="iconfont icon-houtui1" @click=""></i>
+          <i class="iconfont icon-houtui1" @click="goback"></i>
         </header>
         <section class="main-info">
-          <h2 class="days">{{address}}{{days}}晚</h2>
-          <p class="has">{{rooms}}间卧室 · {{bathrooms}}间卫生间</p>
+          <h2 class="days">{{cityData.address.city}}{{days}}晚</h2>
+          <p class="has">{{cityData.rooms.bedroom}}间卧室 · {{cityData.rooms.bathroom}}间卫生间</p>
         </section>
         <article class="owner-words">
-          <p>{{ownerWords}}</p>
+          <p>{{cityData.ownerWords}}</p>
         </article>
         <article class="owner-info">
-          <p class="owner-name">房东：{{ownerName}}</p>
-          <img :src="this.$store.state.ownerImg" alt="">
+          <p class="owner-name">房东：{{cityData.ownerName}}</p>
+          <img :src="cityData.ownerImg" alt="">
         </article>
         <section class="live-info">
           <div class="start-end">
             <div class="start">
-              <span>{{startDay}}</span>
-              <span>{{startDate}}</span>
+              <span>{{this.startWeek}}</span>
+              <span>{{this.startDate}}</span>
             </div>
             <img src="/src/assets/img/l2.png" alt="">
             <div class="end">
-              <span>{{endDay}}</span>
-              <span>{{endDate}}</span>
+              <span>{{this.endWeek}}</span>
+              <span>{{this.endDate}}</span>
             </div>
           </div>
           <order-li @click.native="writeLiveInfo(index)" v-for="(n,index) in liveInfo" :key="index" :data="n"></order-li>
@@ -33,7 +34,7 @@
             <a href="#">查看价格明细</a>
           </div>
           <article class="mes">
-            <h3 class="mes-title">退订政策：{{duiDingZhengCe}}</h3>
+            <h3 class="mes-title">退订政策：{{cityData.role}}</h3>
             <p class="mes-content">{{mes}}</p>
           </article>
         </section>
@@ -44,32 +45,30 @@
       </div>
       <div class="btn" ref="btn" @click="toPay">您还差{{this.$store.state.finallyStepNums}}步</div>
     </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
   import orderLi from '../components/order/orderLi'
   import orderHeader from '../components/order/orderHeader'
+  import abyTranstionToTopFast from '../components/common/abyTranstionToTopFast'
     export default {
       name: "abyOrder",
       data() {
         return {
           "allData":this.$store.state.allData,
-          "address": "Xian",
+          "addressInfo":"",
+          "cityData":"",
           "days": this.$store.state.days,
-          "rooms": "1",
-          "bathrooms": "1",
-          "ownerWords": "「双囍和八两」♡旅行已经很累了，那就睡个好觉吧！",
-          "ownerName": "榕",
-          "startDay": "周日",
-          "startDate": "8月5日",
-          "endDay": "周四",
-          "endDate": "8月9日",
+          "startDate":this.$store.state.startDate,
+          "startWeek":this.$store.state.startWeek,
+          "endWeek":this.$store.state.endWeek,
+          "endDate":this.$store.state.endDate,
+          "members":"",
           "liveInfo": [
-            {"left": "住宿晚数", "right": this.$store.state.days},
+            {"left": "住宿晚数", "right": this.$store.state.days + "晚"},
             {"left": "房客", "right": this.members}
           ],
-          "totalMoney": "752.45",
-          "duiDingZhengCe": "中等",
           "mes": "距离入住日期至少5天按时取消预订可获全额退款（服务费除外）。距离入住日期不足5天时取消预订，首晚房费将不可退还，但剩余晚数可获50%退款。尚未入住、且在预定确认后48小时内取消的预定，将退还服务费。",
           "youHuiQuan": {"left": "礼金券", "right": "无"},
           "finallyStep": [
@@ -78,7 +77,6 @@
             {"left": "3.房屋守则", "right": "同意"},
             {"left": "4.房客信息", "right": "添加"}
           ],
-          "members":""
         }
       },
       watch:{
@@ -86,11 +84,20 @@
           this.liveInfo[1].right = this.members;
         }
       },
+      computed:{
+        totalMoney(){
+          return this.cityData.price * this.$store.state.days;
+        }
+      },
       components: {
         orderLi,
-        orderHeader
+        orderHeader,
+        abyTranstionToTopFast
       },
       methods: {
+        goback(){
+          window.history.back();
+        },
         attach(n) {
           switch(n){
             case 0:this.$router.push('/addPayMethod');break;
@@ -101,7 +108,12 @@
         },
         writeLiveInfo(index){
           if(index === 1){
-            this.$router.push('/addPersons');
+            this.$router.push({
+              path:'/addPersons',
+              query:{
+                data:this.addressInfo
+              }
+            });
           }else{
             this.$router.push('/orderRili');
           }
@@ -131,7 +143,14 @@
             this.members = (this.$store.state.members.person + this.$store.state.members.children) + "位";
           }
           if(this.$store.state.finallyStepNums === 0){
-            this.$refs.btn.innerHTML = this.$refs.money.innerHTML + "·确认预定"
+            this.$refs.btn.innerHTML = this.totalMoney + "·确认预定"
+          }
+
+          if(this.startDate === ""){
+            this.startDate = "入住日期";
+          }
+          if(this.endDate === ""){
+            this.endDate = "退房日期";
           }
         },
         toPay(){
@@ -141,21 +160,12 @@
         }
       },
       created(){
-        // fetch("http://localhost:3000/api").
-        //   then(response=>{
-        //     if(response.ok){
-        //       response.json().then(data=>{
-        //         this.orderData = data;
-        //         console.log(this.orderData);
-        //       })
-        //     }
-        // })
+        this.addressInfo = this.$route.query;
+        this.cityData = this.allData[this.addressInfo.city][this.addressInfo.index];
       },
       mounted(){
         this.initData();
-        console.log(this.allData);
       }
-
     }
 </script>
 <style scoped lang="scss" type="text/scss">
@@ -219,7 +229,7 @@
     justify-content: space-between;
     align-items: center;
     .owner-name{
-      font-size: .13rem;
+      font-size: .14rem;
     }
     img{
       width: .69rem;

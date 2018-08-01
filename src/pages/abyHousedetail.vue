@@ -1,17 +1,14 @@
 <template>
-  <div>
-    <housedetail-header></housedetail-header>
-    <housedetail-content></housedetail-content>
-      <housedetail-evaluate></housedetail-evaluate>
+  <aby-transtion-to-top-fast>
+    <div>
+      <housedetail-header :shuju="shuju"></housedetail-header>
+      <housedetail-content :shuju="shuju"></housedetail-content>
+      <housedetail-evaluate :shuju="shuju"></housedetail-evaluate>
       <housedetail-option></housedetail-option>
-      <housedetail-resource></housedetail-resource>
-      <housedetail-footer></housedetail-footer>
-    <!--<housedetail-ziye></housedetail-ziye>-->
-    <!--<housedetail-jubao></housedetail-jubao>-->
-    <!--<housedetail-bianlisheshi></housedetail-bianlisheshi>-->
-    <!--<housedetail-rili></housedetail-rili>-->
-
-  </div>
+      <housedetail-resource :shuju="shuju"></housedetail-resource>
+      <housedetail-footer :shuju="shuju"></housedetail-footer>
+    </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
@@ -21,11 +18,9 @@
   import housedetailOption from "../components/Housedetail/housedetailOption"
   import housedetailResource from "../components/Housedetail/housedetailResource"
   import housedetailFooter from "../components/Housedetail/housedetailFooter"
-  import housedetailZiye from "../components/Housedetail/housedetailZiye"
-  import housedetailJubao from "../components/Housedetail/housedetailJubao"
-  import housedetailBianlisheshi from "../components/Housedetail/housedetailBianlisheshi"
-  import housedetailRili from "../components/Housedetail/housedetailRili"
+  import abyTranstionToTopFast from '../components/common/abyTranstionToTopFast'
   export default {
+
         name: "abyHousedetail",
         components:{
           housedetailHeader,
@@ -34,12 +29,23 @@
           housedetailOption,
           housedetailResource,
           housedetailFooter,
-          housedetailZiye,
-          housedetailJubao,
-          housedetailBianlisheshi,
-          housedetailRili
+          abyTranstionToTopFast
+        },
+      data(){
+          return{
+              shuju:"",
+          }
+      },
+    created(){
+      this.shuju = {
+        city:this.$route.query.city,
+        index:this.$route.query.index
+      }
+    },
+    mounted(){
+          console.log(this.shuju)
+    }
 
-        }
     }
 </script>
 

@@ -9,7 +9,8 @@
       "address":{
         "country":"中国",
         "province":"陕西",
-        "city":"西安"
+        "city":"西安",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"榕",
@@ -74,7 +75,8 @@
       "address":{
         "country":"中国",
         "province":"陕西",
-        "city":"西安"
+        "city":"西安",
+        "qu":"莲湖"
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Li",
@@ -97,7 +99,7 @@
         "img":"/src/assets/img/hll-housetx.jpg",
         "name":"南",
         "time":"2018年7月",
-        "content":"房源的位置很好，步行到钟鼓楼和回民街都很方便，而且很靠近地铁站，为出行提供很大的便利。"
+        "content":"房源的位置很好，步行到钟鼓楼和回民街都很方便，而且很靠近地铁站，为出行提供很大的便利！房间干净整洁，设备齐全。"
       },
       "role":"中等",
       "inTime":"14:00后",
@@ -217,7 +219,8 @@
       "address":{
         "country":"泰国",
         "province":"曼谷",
-        "city":"帕特万"
+        "city":"帕特万",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Yanyong",
@@ -240,7 +243,7 @@
         "img":"/src/assets/img/s_touxiang1.png",
         "name":"Fang",
         "time":"2018年7月",
-        "content":"房间不大，但很干净，床品舒适，就是床太高了，喜欢他的装修风格，也很方便，出门就是城际轨道，就是离大皇宫有些远"
+        "content":"房间不大，但很干净，床品舒适，就是床太高了，喜欢他的装修风格，也很方便，出门就是城际轨道，就是离大皇宫有些远，但是去商场很方便"
       },
       "role":"灵活",
       "inTime":"14:00后",
@@ -283,7 +286,8 @@
       "address":{
         "country":"泰国",
         "province":"曼谷直辖市",
-        "city":"曼谷"
+        "city":"曼谷",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Ann",
@@ -352,7 +356,8 @@
       "address":{
         "country":"泰国",
         "province":"曼谷直辖市",
-        "city":"曼谷"
+        "city":"曼谷",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Themustang",
@@ -417,12 +422,13 @@
       "address":{
         "country":"希腊",
         "province":"南爱琴海大区",
-        "city":"伊亚"
+        "city":"伊亚",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Laskarina",
       "ownerImg":"/src/assets/img/l1.png",
-      "ownerWords":"This spacious,unparalleled cave house,hanging on the cliffs of the caldera in the center of Oia",
+      "ownerWords":"This spacious,unparalleled cave house,hanging on the cliffs of the caldera in the center of Oia,is part of a traditional complex of cav house,owned & renovatedby a family",
       "rooms":{
         "bedroom":2,
         "bathroom":1,
@@ -440,7 +446,7 @@
         "img":"/src/assets/img/s_touxiang1.png",
         "name":"Jason",
         "time":"2018年7月",
-        "content":"Great place.All that is promised and then some!The view says it all.We love to get out and see and go things"
+        "content":"Great place.All that is promised and then some!The view says it all.We love to get out and see and go things but this location and view invite you to hang and relax!"
       },
       "role":"严格（宽限期）",
       "inTime":"14:00后",
@@ -496,12 +502,13 @@
       "address":{
         "country":"美国",
         "province":"夏威夷",
-        "city":"费恩森林"
+        "city":"费恩森林",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Kayte",
       "ownerImg":"/src/assets/img/l1.png",
-      "ownerWords":"Red cinder leads you through the dense jungle to your secluded bamboo treehouse.Nestled on top of stilts 15' up",
+      "ownerWords":"Red cinder leads you through the dense jungle to your secluded bamboo treehouse.Nestled on top of stilts 15' up in the canopy of the local flora,ascend to your retreat via the trapdoor or...",
       "rooms":{
         "bedroom":1,
         "bathroom":1,
@@ -552,7 +559,8 @@
       "address":{
         "country":"葡萄牙",
         "province":"波尔图",
-        "city":"佩尼亚费尔"
+        "city":"佩尼亚费尔",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Maria Henriqueta",
@@ -620,12 +628,13 @@
       "address":{
         "country":"美国",
         "province":"加利福尼亚",
-        "city":"马里布"
+        "city":"马里布",
+        "qu":""
       },
       "addressImg":"/src/asstes/img/s_ditu.png",
       "ownerName":"Cassy",
       "ownerImg":"/src/assets/img/l1.png",
-      "ownerWords":"Escape civilization to this incredible and peaceful getaway!Reconnect with nature and disconnect...",
+      "ownerWords":"Escape civilization to this incredible and peaceful getaway!Reconnect with nature and disconnect from technology on your own private deck...",
       "rooms":{
         "bedroom":1,
         "bathroom":1,

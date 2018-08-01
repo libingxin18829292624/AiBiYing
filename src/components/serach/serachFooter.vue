@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped="scoped">
 footer{
     width:100%;
     position: relative;
@@ -100,11 +100,11 @@ footer{
 .moren-top ul li{
     color:#2e2e2e;
     display: block;
-  
+
     padding-left:0.25rem;
     padding-right:0.25rem;
     box-sizing: border-box;
-   
+
     font-size: 0.12rem;
     line-height: 0.66rem;
 }

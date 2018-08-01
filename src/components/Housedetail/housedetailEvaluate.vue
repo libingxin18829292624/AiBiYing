@@ -5,14 +5,12 @@
   </div>
   <div class="pingjia_1">
     <div class="pingjia-xinxi">
-      <img src="../../assets/img/s_touxiang1.png" alt="">
-    </div>
-    <div class="jieshao">
-      <span class="xingming">亚荣</span>
-      <span class="time">2018年7月</span>
+      <img :src="cityData.rate.img" alt="">
+      <span class="xingming">{{cityData.rate.name}}</span>
+      <p class="time">{{cityData.rate.time}}</p>
     </div>
     <div class="pinglun">
-      <span class="pinglun1"><a>翻译</a> 小姐姐说话特别温柔，房间里也很干净，我觉得这次入住还蛮不错的哦，姐姐家离市里景区都不远，很方便</span>
+      <span class="pinglun1"><a>翻译 </a>{{cityData.rate.content}}</span>
     </div>
   </div>
   <div class="gengduopingjia">
@@ -26,7 +24,7 @@
     </div>
   </div>
   <div class="pinglun2" v-for="n in fangdong">
-    <span>{{n.person}}是位超赞的房东.超赞房东经验丰富、评分很高，他们致力于为访客提供优质的住宿体验</span>
+    <span>{{cityData.ownerName}}是位超赞的房东.超赞房东经验丰富、评分很高，他们致力于为访客提供优质的住宿体验</span>
     <div class="imgs"><img src="../../assets/img/s_huizhang.png" alt=""></div>
   </div>
 </div>
@@ -35,9 +33,15 @@
 <script>
 
     export default {
+      props:['shuju'],
         name: "housedetailEvaluate",
+      created () {
+        this.cityData = this.allData[this.shuju.city][this.shuju.index];
+      },
       data(){
           return{
+            allData:this.$store.state.allData,
+            cityData:"",
             fangdong:[
               {person:"榕"}
             ]
@@ -66,35 +70,31 @@
     color: #2c2c2c;
   }
  .pingjia-xinxi{
-   width: 14%;
-   height: 0.5rem;
+   width:100%;
+   height: 0.8rem;
    display: flex;
-   margin-left: 0.25rem;
-   flex-wrap: wrap;
    align-items: center;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   margin-right: 0.25rem;
  }
   .pingjia-xinxi img{
     width: 0.51rem;
     height: 0.5rem;
+    padding-left: 0.25rem;
   }
   .xingming{
     font-size: 0.12rem;;
     color: #272727;
-    display: block;
-    width: 100%;
     font-weight: 600;
+    padding-left: 0.22rem;
   }
-  .jieshao{
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    float: right;
-    padding-left: 0.17rem;
-  }
+
   .time{
     font-size: 0.08rem;
     color: #272727;
-
+    padding-left: 0.22rem;
   }
   .pinglun{
     width: 100%;
