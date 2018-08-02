@@ -2,7 +2,7 @@
     <el-table
       :data="tableData"
       style="width: 100%"
-      max-height="480">
+      max-height="100%">
       <el-table-column
         prop="country"
         label="国家"

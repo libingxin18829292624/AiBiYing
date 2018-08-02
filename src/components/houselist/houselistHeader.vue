@@ -72,7 +72,7 @@ export default {
     display: block;
     padding: 0.05rem;
     color: #3c3c3c;
-    border: 1px solid #d3d3d4;
+    border: 1px solid #ddd;
     border-radius: 5px;
     float: left;
     margin-right: .1rem;
@@ -84,7 +84,7 @@ header{
     left:0;
     width:100%;
     box-shadow: 0px 1px 2px #e6e7e9;
-    background: #fcfdff;
+    background: #fff;
     padding-top: 0.16rem;
     z-index: 999;
     padding-left:0.25rem;
@@ -98,7 +98,7 @@ header{
     display: flex;
     background:white;
     align-items: center;
-    box-shadow: 0 1px 1px #cdcdcf;
+    box-shadow: 0 1px 1px #ddd;
   margin-bottom: .1rem;
 }
 .icon-houtui1{

@@ -5,7 +5,7 @@
         <span href="" @click="goindex">×</span>
       </div>
       <div class="header-jiao">
-        <input type="text" autofocus placeholder="想去哪里？" id="dizhi">
+        <input type="text" placeholder="想去哪里？" id="dizhi">
       </div>
     </header>
     <footer>

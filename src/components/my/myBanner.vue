@@ -20,9 +20,12 @@ export default {
 
 <style scoped>
 .banner{
-    width:3.25rem;
-    margin:0.67rem auto 0;
-    border-bottom: 2px solid #e5e5e5;
+    width:100%;
+    padding:0.67rem .25rem 0;
+    border-bottom: 1px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .banner h3{
     font-size: 0.14rem;

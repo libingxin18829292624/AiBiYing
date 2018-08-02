@@ -11,7 +11,9 @@ app.post('/writefile',(req,res)=>{
   res.header('Access-Control-Allow-Methods','PUT, POST, GET, DELETE, OPTIONS');
   console.log(req.body.storedData)
   res.send(req.body.storedData);
-  fs.writeFile('./json/index.json',req.body.storedData);
+  fs.writeFile('./json/index.json',req.body.storedData,()=>{
+    console.log("Write data over.")
+  });
 });
 
 app.listen(3000,()=>{

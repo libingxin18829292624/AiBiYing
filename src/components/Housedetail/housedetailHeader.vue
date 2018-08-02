@@ -87,7 +87,7 @@
     width: 100%;
     height: 2.2rem;
     background-size:100%;
-display: flex;
+    display: flex;
 
   }
   .header_2{

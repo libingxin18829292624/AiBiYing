@@ -60,13 +60,6 @@
     </el-container>
   </div>
 </template>
-<style>
-  *{
-    padding: 0;
-    margin: 0;
-  }
-
-</style>
 <style scoped lang="scss">
 
   $header-height:60px;
@@ -99,8 +92,6 @@
       .menu {
         width: 100%;
         border-right:0;
-
-
       }
 
     }
@@ -162,8 +153,8 @@
   .store{
     font-size: 14px;
     position: absolute;
-    right: 30px;
-    bottom: 60px;
+    right: 20px;
+    bottom: 10px;
     padding: 5px 8px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

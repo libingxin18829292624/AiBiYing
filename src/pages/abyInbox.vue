@@ -31,6 +31,11 @@
 </script>
 
 <style scoped>
+  .inbox{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 .header{
   width: 100%;
   height: 0.52rem;
@@ -46,22 +51,31 @@
     right: 0.13rem;
   }
   .content{
-    background: url("../assets/img/s_conent_bj2.jpg");
-    background-size: 100%;
+    background: url("../assets/img/s_conent_bj2.jpg") no-repeat;
+    background-size: cover;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     height:5.5rem;
+    flex: 1;
+    position: relative;
   }
   .xiaoxi{
-    width:3.45rem;
+    width:90%;
+    padding: 0 .25rem;
+    -webkit-box-sizing: border-box;
+    background-clip: padding-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     height: 1.90rem;
     background: #fff;
-    margin-top: 2.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: absolute;
+    left: 5%;
+    bottom: 1rem;
   }
   .xiaoxi1{
     height: 0.61rem;

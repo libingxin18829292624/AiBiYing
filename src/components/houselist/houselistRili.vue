@@ -57,6 +57,8 @@
           "riliData":[],
           "startDate":"",
           "endDate":"",
+          "startWeek":"",
+          "endWeek":"",
           "startIndex":"",
           "endIndex":"",
           "target":"",
@@ -148,25 +150,24 @@
        }
      },
      store(){
-       
+
        if($(".start-date").html()!="入住日期"&&$(".end-date").html()!="退房日期"){
          this.$store.state.xdriqi=$(".start-date span:last-child").html()+"-"+$(".end-date span:last-child").html()
        }else if($(".end-date").html()=="退房日期"&&$(".start-date").html()!="入住日期"){
           this.$store.state.xdriqi="入住时间："+$(".start-date span:last-child").html()
        }else{
          this.$store.state.xdriqi= "日期"
-         
+
          }
-       
+       this.$store.state.startDate = $(".start-date span:last-child").html()
+       this.$store.state.endDate = $(".end-date span:last-child").html()
+       this.$store.state.startWeek = this.dayArr[new Date(this.startDate).getDay()]
+       this.$store.state.endWeek = this.dayArr[new Date(this.endDate).getDay()]
        window.history.back();
      }
    },
     created(){
       this.initData();
-      console.log(this.months);
-      console.log(this.days);
-      console.log(this.startWeekday);
-      console.log(this.riliData);
     },
    mounted(){
      this.initUI();

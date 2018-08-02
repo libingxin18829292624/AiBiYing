@@ -34,9 +34,9 @@ export default {
 
 <style scoped>
 .tansuo{
-    width: calc(100% - 0.3rem);
+    width: 100%;
     height: 2.3rem;
-    padding-left: 0.3rem;
+    padding: 0 0.25rem;
     margin-top: 1.3rem;
      box-sizing: border-box;
 
@@ -92,20 +92,22 @@ export default {
 .picpart1{
     width: 100%;
     height: 3.66rem;
-
+  padding: 0 .25rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
 }
 .piccont{
-    margin: 0.13rem 0.16rem;
     font-size: 0.13rem;
-    width: 3.4rem;
-    height: 3.4rem;
+    width: 100%;
+    height: 3.25rem;
      position: relative;
 
 }
 .piccont img{
- width: 3.4rem;
- height: 3.4rem;
+ width: 100%;
+ height: 3.25rem;
 }
 .piccont h2{
     font-size: 0.2rem;

@@ -28,9 +28,6 @@
         </div>
       </div>
     </div>
-    <div class="footer">
-      <a @click="toIndex">开始探索</a>
-    </div>
     <abyfooter></abyfooter>
   </div>
 </template>
@@ -96,20 +93,10 @@
   }
   .content p{
     font-size: 0.13rem;
-
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     color: #373737;
-    padding-top:0.575rem ;
-  }
-  .footer{
-    width: 100%;
-  }
-  .footer a{
-    font-size:0.13rem;
-    color: #007479;
-    padding-top: 0.55rem;
-    padding-left: 0.25rem;
+    padding-top:0.4rem ;
   }
 .content{
   width: 100%;

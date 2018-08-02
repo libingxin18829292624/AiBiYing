@@ -18,7 +18,9 @@
                     </div>
                 </div>
 
+              <aby-index-part3 class="suggest"></aby-index-part3>
                 <div class="checktop">
+
                 <h1>故事集</h1>
                 <p>查看全部  ></p>
                 </div>
@@ -61,6 +63,7 @@
 <script>
 import $ from 'jquery'
 import abyfooter from '../components/common/abyfooter'
+import abyIndexPart3 from '../components/index/abyIndexPart3'
 export default {
     name:"abyStorys",
     data(){
@@ -86,6 +89,7 @@ export default {
     },
     components:{
         abyfooter,
+      abyIndexPart3
     },
     methods:{
         goIndex(){
@@ -100,15 +104,15 @@ export default {
           $(".Navbox").children().click(function(){
               $(this).addClass("activeaaaaa").siblings().removeClass("activeaaaaa")
           })
-
-
-
-        })
+        });
     }
 }
 </script>
 
 <style scoped>
+  .suggest{
+    margin-top: 1.1rem;
+  }
 .checkall{
     width: 100%;
     overflow: hidden;
@@ -158,7 +162,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1.2rem;
+    margin-top: -.5rem;
 }
 .checktop h1{
     font-size: 0.2rem;
@@ -175,7 +179,7 @@ export default {
     height: 1.5rem;
     position: relative;
       flex-shrink: 0;
-      margin-left: 0.1rem;
+      margin-right: 0.1rem;
       overflow: hidden;
 }
 .checkall ul{
@@ -214,18 +218,22 @@ font-size: 0.2rem;
       font-size: 0.2rem;
     color: #424242;
    margin-left: 0.25rem;
-   margin-bottom: 0.25rem;
+   margin-bottom: 0.2rem;
 }
 .jingxuan ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0;
     height: 100%;
-    margin: 0.25rem;
+  padding:0 0.25rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: .5rem;
 }
 .jingxuan ul li{
-height: 2.45rem;
+height: 49%;
+  margin-bottom: .2rem;
 }
 .picBox{
     width: 1.55rem;

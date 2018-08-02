@@ -6,7 +6,7 @@
         <p>品质和舒适性经过验证的精选房源</p>
         <div class="liulan">
           <div class="plusfont"></div>
-          <a href="#">浏览 Plus 房源 ></a>
+          <a>浏览 Plus 房源 ></a>
         </div>
       </div>
       <div class="globfangyuan">
@@ -33,7 +33,7 @@
           </ul>
         </div>
         <div class="showall">
-          <a href="#">显示全部(2000+)</a>
+          <a>显示全部(2000+)</a>
         </div>
       </div>
     </div>
@@ -167,7 +167,7 @@
   .fangyuan {
     width: calc(100% - 0.5rem);
     padding: 0 0.25rem;
-
+    margin-bottom: .5rem;
     overflow: hidden;
   }
 
@@ -239,15 +239,15 @@
   }
 
   .fangyuanBox ul li {
-    width: 1.55rem;
+    width: 48%;
     height: 2.5rem;
-    margin: 0.037rem;
+    margin: 0 1%;
     float: left;
 
   }
 
   .Fcontop {
-    width: 1.55rem;
+    width: 100%;
     height: 1.04rem;
 
     position: relative;
@@ -257,7 +257,7 @@
   }
 
   .Fcontop img {
-    width: 1.55rem;
+    width: 100%;
     height: 1.04rem;
   }
 
@@ -280,17 +280,20 @@
   }
 
   .fangyuanBox ul li p {
+    width: 100%;
     font-size: 0.1rem;
     color: #afafaf;
   }
 
   .fangyuanBox ul li h4 {
+    width: 100%;
     font-size: 0.12rem;
     color: #343434;
     margin: 0.06rem 0;
   }
 
   .fangyuanBox ul li h3 {
+    width: 100%;
     font-size: 0.13rem;
     color: #00868b;
     margin-bottom: 0.08rem;

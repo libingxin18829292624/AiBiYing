@@ -21,31 +21,39 @@ export default {
 .suggess{
     width: 100%;
     height: 2rem;
+  padding: 0 .25rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .suggess h1{
     font-size: 0.2rem;
     color: #424242;
-    margin-left: 0.25rem;
+  margin-bottom: .1rem;
 }
 .searchBoxs{
     display: flex;
-    justify-content: space-around;
-    padding: 0.25rem;
+    justify-content: space-between;
   margin-bottom: .5rem;
 }
 .searchBoxs a{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 1rem;
+    width: 32%;
     height: 1rem;
     text-align: center;
     border-radius: 5px;
     background: #339d95;
+  padding: .2rem 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .searchBoxs a h2{
     font-size: 0.2rem;
     color: #fff;
+
 }
 .searchBoxs a p{
     font-size: 0.12rem;

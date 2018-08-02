@@ -59,12 +59,13 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 .25rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   ul{
     width: 100%;
-
-    margin-right:0.25rem;
-    margin-left: 0.25rem;
   }
   li{
     display: flex;

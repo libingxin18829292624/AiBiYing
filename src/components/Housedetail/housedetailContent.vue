@@ -4,10 +4,15 @@
   <div class="content1" >
   <span class="biaoti">{{cityData.desc}}</span>
   <h1 class="mingcheng">{{cityData.houseTitle}}</h1>
-  <p class="dizhi" v-for="n in cityData.address">{{n}},</p>
-  <br>
-  <span class="fangdong">房东:{{cityData.ownerName}}</span>
-  <img class="touxiang" :src="cityData.ownerImg" alt="">
+  <div class="houseInfo">
+    <div class="ownerInfo">
+      <div class="info-left">
+        <p class="dizhi" v-for="n in cityData.address">{{n}},</p>
+      </div>
+      <span class="fangdong">房东:{{cityData.ownerName}}</span>
+    </div>
+    <img class="touxiang" :src="cityData.ownerImg" alt="">
+  </div>
   <div class="content_2">
       <div v-for="n in xinxi" class="content_2_1">
         <img class="tu" :src="n.img" alt="">
@@ -132,6 +137,10 @@ body{
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    padding: 0 .25rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
   }
   .content_1{
@@ -141,64 +150,72 @@ body{
     position: relative;
   }
   .biaoti{
+    width: 100%;
+    display: block;
     font-size: 0.11rem;
     color: #4b3d21;
     font-weight: 600;
     padding-top: 0.26rem;
-    padding-left: 0.25rem;
   }
   .mingcheng{
+    width: 100%;
     font-size: 0.24rem;
     color: #323232;
-    padding-left: 0.2rem;
   }
   .dizhi{
     font-size: 0.13rem;
     color: #242424;
     padding-top: 0.2rem;
-    padding-left: 0.26rem;
     font-weight: 100;
     height: 0.2rem;
-    margin-right: -.25rem;
   }
   .fangdong{
     font-size: 0.13rem;
     color: #242424;
-    position: absolute;
-    top: 1.575rem;
     display: block;
-    box-sizing: border-box;
-    left: 0.25rem;
+    margin: .4rem 0;
+  }
+  .houseInfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ownerInfo{
+    display: flex;
+    flex-direction: column;
+  }
+  .info-left{
+    display: flex;
   }
   .touxiang{
     width: 0.67rem;
     height: 0.67rem;
-    position: absolute;
-    right: 0.25rem;
-    top: 1.29rem;
+    display: block;
   }
   .content_2{
     width: 100%;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
   }
   .content_2_1{
     width: 50%;
     display: flex;
+    float: left;
     height: 0.3rem;
     align-items: center;
   }
   .tu{
     width: 0.165rem;
     height: 0.145rem;
-    padding-left: 0.25rem;
     margin-right: .05rem;
+    display: block;
   }
   .renshu{
     font-size: 0.13rem;
     color: #3f3f3f;
+    display: block;
   }
   .jieshao{
     width: 100%;
@@ -212,11 +229,11 @@ body{
     padding-left: 0.26rem;
   }
   .jieshao_2{
+    display: block;
+    width: 100%;
     font-size: 0.13rem;
     color: #272727;
     padding-top: 0.27rem;
-    margin-left: 0.26rem;
-    margin-right: 0.33rem;
     padding-bottom: 0.28rem;
     border-bottom: 1px solid #cccccc;
   }
@@ -227,6 +244,10 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding: 0 .25rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   .chuangxing{
     font-size: 0.15rem;
@@ -234,7 +255,6 @@ body{
     display: block;
     width: 100%;
     padding-top: 0.255rem;
-    padding-left: 0.25rem;
     font-weight: 600;
   }
   .xiangxixinxi{
@@ -245,7 +265,6 @@ body{
     width: 2.135rem;
     height: 1.025rem;
     margin-top: 0.28rem;
-    margin-left: 0.25rem;
   }
   .xiangxichuang{
     width: 0.27rem;
@@ -275,8 +294,6 @@ body{
     color: #2b2b2b;
     display: block;
     width: 100%;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
     border-bottom: 1px solid #e7e7e7;
     padding-top: 0.503rem;
     padding-bottom: 0.26rem;
@@ -319,12 +336,13 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 .25rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   ul{
     width: 100%;
-
-    margin-right:0.25rem;
-    margin-left: 0.25rem;
   }
   li{
     display: flex;

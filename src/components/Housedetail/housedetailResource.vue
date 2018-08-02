@@ -67,12 +67,19 @@ margin-bottom: 0.91rem;
     font-size: 0.2rem;
     font-weight: 900;
     color: #484848;
-    padding-left: 0.25rem;
+    padding: 0 0.25rem;
     padding-top: 0.28rem;
     padding-bottom: 0.28rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   .neirong{
+    padding: 0 .25rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     width: 100%;
     height: 3.04rem;
     overflow: auto;
@@ -104,15 +111,14 @@ margin-bottom: 0.91rem;
     float: left;
   }
   ul{
-    width: 8.9rem;
-    float: left;
-
+    width: 8.4rem;
+    display: flex;
+    justify-content: space-between;
     padding-right: 0.25rem;
   }
   li{
     float: left;
     width: 2.69rem;
-    margin-left: 0.25rem;
   }
   .shuzi{
     font-size: 0.09rem;

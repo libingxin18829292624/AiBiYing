@@ -6,8 +6,10 @@
   <div class="pingjia_1">
     <div class="pingjia-xinxi">
       <img :src="cityData.rate.img" alt="">
-      <span class="xingming">{{cityData.rate.name}}</span>
-      <p class="time">{{cityData.rate.time}}</p>
+      <div class="pingjia-right">
+        <span class="xingming">{{cityData.rate.name}}</span>
+        <p class="time">{{cityData.rate.time}}</p>
+      </div>
     </div>
     <div class="pinglun">
       <span class="pinglun1"><a>翻译 </a>{{cityData.rate.content}}</span>
@@ -55,13 +57,15 @@
    width: 100%;
    display: flex;
    flex-wrap: wrap;
+   padding: 0 .25rem;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
  }
  .pingjia1{
    width: 100%;
    height: 0.7rem;
    display: flex;
-   margin-left: 0.25rem;
-   margin-right: 0.25rem;
    line-height: 0.7rem;
    flex-wrap: wrap;
  }
@@ -77,12 +81,10 @@
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
-   margin-right: 0.25rem;
  }
   .pingjia-xinxi img{
     width: 0.51rem;
     height: 0.5rem;
-    padding-left: 0.25rem;
   }
   .xingming{
     font-size: 0.12rem;;
@@ -90,11 +92,16 @@
     font-weight: 600;
     padding-left: 0.22rem;
   }
+  .pingjia-right{
+    display: flex;
+    flex-direction: column;
+  }
 
   .time{
     font-size: 0.08rem;
     color: #272727;
     padding-left: 0.22rem;
+    margin-top: .1rem;
   }
   .pinglun{
     width: 100%;
@@ -106,8 +113,6 @@
     line-height: 0.27rem;
     padding-top: 0.19rem;
     padding-bottom: 0.38rem;
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
     box-sizing: border-box;
   }
   a{
@@ -116,7 +121,6 @@
  .gengduopingjia{
    width: 100%;
    height: 0.41rem;
-   margin: 0 0.25rem;
    border-bottom: 1px solid #e6e6e6;
    display: flex;
    justify-content: space-between;
@@ -141,7 +145,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0.25rem;
     border-bottom: 1px solid #e6e6e6;
 
   }

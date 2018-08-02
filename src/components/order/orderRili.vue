@@ -57,6 +57,8 @@
           "riliData":[],
           "startDate":"",
           "endDate":"",
+          "startWeek":"",
+          "endWeek":"",
           "startIndex":"",
           "endIndex":"",
           "target":"",
@@ -106,7 +108,6 @@
      },
      initUI(){
        for(let i = 0; i < 6; i++){
-         console.log($('.days')[i]);
          $('.days')[i].firstChild.style.marginLeft = (this.startWeekday[i] * 14.3) + "%";
        }
      },
@@ -157,19 +158,17 @@
         }
        this.$store.state.startDate = $(".start-date span:last-child").html()
        this.$store.state.endDate = $(".end-date span:last-child").html()
+       this.$store.state.startWeek = this.dayArr[new Date(this.startDate).getDay()]
+       this.$store.state.endWeek = this.dayArr[new Date(this.endDate).getDay()]
        this.$store.state.days = this.endIndex - this.startIndex;
        window.history.back();
      }
    },
     created(){
       this.initData();
-      console.log(this.months);
-      console.log(this.days);
-      console.log(this.startWeekday);
-      console.log(this.riliData);
     },
    mounted(){
-     this.initUI();
+       setTimeout(this.initUI,500)
    }
  }
  </script>
@@ -178,6 +177,9 @@
    .rili-container{
      background-color: #fff;
      z-index: 10000;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
    }
  .Notehead{
     width: 100%;
@@ -255,9 +257,11 @@
  .days{
    width: 100%;
    overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
  }
  .day{
-   width: .534rem;
+   width: .535rem;
    height: .534rem;
    float: left;
    font-size: .13rem;
@@ -272,6 +276,7 @@
     width: 100%;
     height: 3.85rem;
     overflow-y: scroll;
+    flex: 1;
 }
 
 .theday{

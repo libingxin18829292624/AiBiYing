@@ -2,18 +2,19 @@
 <div class="footer">
   <div class="footer_1" v-for="n in close">
     <p class="jiage">每晚￥<span class="jiage1">{{cityData.price}}</span></p>
-    <i class="iconfont icon-star"></i>
-    <i class="iconfont icon-star"></i>
-    <i class="iconfont icon-star"></i>
-    <i class="iconfont icon-star"></i>
-    <i class="iconfont icon-star"></i>
-    <span class="pingfen">{{cityData.rateNum}}</span>
+    <p>
+      <i class="iconfont icon-star"></i>
+      <i class="iconfont icon-star"></i>
+      <i class="iconfont icon-star"></i>
+      <i class="iconfont icon-star"></i>
+      <i class="iconfont icon-star"></i>
+      <span class="pingfen">{{cityData.rateNum}}</span>
+    </p>
     <p class="tuijian">优质房源{{cityData.commandPercent}}房客推荐</p>
   </div>
   <div class="footer_2">
     <input type="button" value="预定" @click="into">
   </div>
-  <div class="footer1"></div>
 </div>
 </template>
 
@@ -50,6 +51,10 @@
   }
 .footer{
   width: 100%;
+  padding: 0 .25rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   height: 0.91rem;
   display: flex;
   background: #fffdef;
@@ -57,13 +62,12 @@
   border-top: 1px solid #f4f4f4;
   bottom: 0;
   z-index: 1000;
-  box-sizing: border-box;
+  justify-content: space-between;
 }
 .footer_1{
-  margin-left: 0.25rem;
   width: 50%;
-  float: left;
-
+  display: flex;
+  flex-direction: column;
 }
   .jiage{
     font-size: 0.13rem;
@@ -77,26 +81,26 @@
     font-size: 0.1rem;
     color: #008489;
     display: block;
-    padding-top: 0.08rem;
+    padding-top: 0.03rem;
     float: left;
   }
   .pingfen{
     font-size: 0.1rem;
     font-weight: 900;
     color: #212121;
-    display: block;
-    padding-top: 0.07rem;
+    float: left;
+    padding-top: 0.03rem;
 
   }
   .tuijian{
     font-size: 0.1rem;
     color: #191919;
     float: left;
+    padding-top: 0.03rem;
   }
   .footer_2{
     width: 40%;
     float: left;
-    margin-right: 0.25rem;
     display: flex;
     align-items: center;
   }

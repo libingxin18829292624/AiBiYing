@@ -26,6 +26,10 @@ export default {
 <style scoped>
 .leg{
     width:100%;
+  padding: 0 .25rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .leg ul{
     width:100%;
@@ -36,9 +40,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     width:3.25rem;
-    margin:0 auto;
     font-size: 0.14rem;
-    border-bottom:2px solid #eaeaea;
+    border-bottom:1px solid #eaeaea;
     line-height: 0.66rem;
 }
 .leg ul li:last-child{

@@ -57,6 +57,8 @@
           "riliData":[],
           "startDate":"",
           "endDate":"",
+          "startWeek":"",
+          "endWeek":"",
           "startIndex":"",
           "endIndex":"",
           "target":"",
@@ -157,6 +159,8 @@
         }
        this.$store.state.startDate = $(".start-date span:last-child").html()
        this.$store.state.endDate = $(".end-date span:last-child").html()
+       this.$store.state.startWeek = this.dayArr[new Date(this.startDate).getDay()]
+       this.$store.state.endWeek = this.dayArr[new Date(this.endDate).getDay()]
        this.$store.state.days = this.endIndex - this.startIndex;
        window.history.back();
      }

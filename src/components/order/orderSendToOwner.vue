@@ -77,8 +77,6 @@
   .over{
     font-size: .12rem;
     margin-top: .4rem;
-    width: .3rem;
-    height: .3rem;
     line-height: .3rem;
     text-align: center;
     display: block;

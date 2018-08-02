@@ -19,12 +19,12 @@
         <section class="live-info">
           <div class="start-end">
             <div class="start">
-              <span></span>
+              <span>{{this.startWeek}}</span>
               <span>{{this.startDate}}</span>
             </div>
             <img src="/src/assets/img/l2.png" alt="">
             <div class="end">
-              <span></span>
+              <span>{{this.endWeek}}</span>
               <span>{{this.endDate}}</span>
             </div>
           </div>

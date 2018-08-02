@@ -32,22 +32,13 @@
     name: "abyfooter",
     methods: {
       writeIndex(index){
-        if(index !== 1){
-          this.$store.state.index = index;
-        }else{
-          this.$store.state.index = index + 1;
-        }
+        this.$store.state.index = index;
       }
     },
     mounted() {
-      // $('.footer').find("a").click(function () {
-      //   $(this).addClass("active").siblings().removeClass("active")
-      // })
       $('.footer').find("a").removeClass("active")
       $('.footer').find("a").eq(this.$store.state.index).addClass("active")
     },
-
-
   }
 </script>
 

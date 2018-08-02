@@ -57,9 +57,13 @@ export default {
     top: 0;
     background: #fff;
     z-index: 10;
+  padding: 0 .25rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .serchBox{
-    width: 3.25rem;
+    width: 100%;
     height: 0.5rem;
     display: flex;
     box-shadow: 1px 1px 5px #ccc;
@@ -86,7 +90,6 @@ export default {
 
 .yincang{
     font-size: 0.12rem;
-    margin-left: 0.25rem;
     width: 100%;
     display: flex;
     margin-bottom: 0.1rem;
