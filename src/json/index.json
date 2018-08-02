@@ -11,7 +11,7 @@
         "province":"陕西",
         "city":"西安"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"榕",
       "ownerImg":"/src/assets/img/l1.png",
       "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
@@ -70,13 +70,13 @@
       "houseTitle":"{素心禅隐}市中心地铁旁，10分钟内到达南门城墙/钟楼/回民街",
       "type":"独立房间",
       "desc":"公寓型住宅里的独立房间",
-      "imgs":["/src/assets/img/hll-house2.1.jpg","/src/assets/img/hll-house2.2.jpg","/src/assets/img/hll-house2.3.jpg","/src/assets/img/hll-house2.4.jpg","/src/assets/img/hll-house2.5.jpg"],
+      "imgs":["/src/assets/img/00776b21-3add-47f7-996d-bd9e599df044.jpg","/src/assets/img/hll-house2.2.jpg","/src/assets/img/hll-house2.3.jpg","/src/assets/img/hll-house2.4.jpg","/src/assets/img/hll-house2.5.jpg"],
       "address":{
         "country":"中国",
         "province":"陕西",
         "city":"西安"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Li",
       "ownerImg":"/src/assets/img/hll-housetx.jpg",
       "ownerWords":"钟楼/鼓楼/回民街/城墙步行到达精美公寓8，旅游度假首选，有阳光，008，晾衣服阳台",
@@ -94,7 +94,7 @@
       },
       "commandPercent":"90%",
       "rate":{
-        "img":"/src/assets/img/hll-housetx.jpg",
+        "img":"/src/assets/img/mylogo3.jpg",
         "name":"南",
         "time":"2018年7月",
         "content":"房源的位置很好，步行到钟鼓楼和回民街都很方便，而且很靠近地铁站，为出行提供很大的便利。"
@@ -133,15 +133,15 @@
       "houseTitle":"【One·night1】美式轻奢大床/市中心地铁口/钟楼回民街/超大私人影院/品质乳胶床垫",
       "type":"整套房子",
       "desc":"整套房子",
-      "imgs":["/src/assets/img/hll-house3.1.jpg","/src/assets/img/hll-house3.2.jpg","/src/assets/img/hll-house3.3.jpg","/src/assets/img/hll-house3.4.jpg","/src/assets/img/hll-house3.5.jpg"],
+      "imgs":["/src/assets/img/c0ac671c_original.jpg","/src/assets/img/hll-house3.2.jpg","/src/assets/img/hll-house3.3.jpg","/src/assets/img/hll-house3.4.jpg","/src/assets/img/hll-house3.5.jpg"],
       "address":{
         "country":"中国",
         "province":"陕西",
         "city":"西安"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"火锅小姐姐",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/mylogo1.jpg",
       "rooms":{
         "bedroom":1,
         "bathroom":1,
@@ -157,7 +157,7 @@
       "commandPercent":"98%",
       "role":"严格（宽限期）",
       "rate":{
-        "img":"/src/assets/img/hll-housetx.jpg",
+        "img":"/src/assets/img/mylogo5.jpg",
         "name":"Xiaoxiao",
         "time":"2018年7月",
         "content":"首先地理位置真的很好 小姐姐很贴心 给发图片告诉你咋走 但是我还是走错了 感觉离地铁口也就50m 不到200m 真真真的就在商场上面"
@@ -213,15 +213,15 @@
       "houseTitle":"地理位置便利，1分钟可达BTS空铁，提供WIFI",
       "type":"独立房间",
       "desc":"普通公寓里的独立房间",
-      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "imgs":["/src/assets/img/ca530915-fca8-4fd2-b50e-5bdc32faf1df.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"泰国",
         "province":"曼谷",
         "city":"帕特万"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Yanyong",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/mylogo8.jpg",
       "ownerWords":"地理位置便利，1分钟可达BTS空铁，提供WIFI",
       "rooms":{
         "bedroom":1,
@@ -237,7 +237,7 @@
       },
       "commandPercent":"94%",
       "rate":{
-        "img":"/src/assets/img/s_touxiang1.png",
+        "img":"/src/assets/img/storyuser4.jpg",
         "name":"Fang",
         "time":"2018年7月",
         "content":"房间不大，但很干净，床品舒适，就是床太高了，喜欢他的装修风格，也很方便，出门就是城际轨道，就是离大皇宫有些远"
@@ -279,15 +279,15 @@
       "houseTitle":"42平方米的游泳池，靠近BTS&河边",
       "type":"整套公寓",
       "desc":"整套公寓",
-      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "imgs":["/src/assets/img/e0a9317e_original.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"泰国",
         "province":"曼谷直辖市",
         "city":"曼谷"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Ann",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/mylogo9.jpg",
       "ownerWords":"42平方米的游泳池，靠近BTS&河边",
       "rooms":{
         "bedroom":1,
@@ -303,7 +303,7 @@
       },
       "commandPercent":"92%",
       "rate":{
-        "img":"/src/assets/img/s_touxiang1.png",
+        "img":"/src/assets/img/story2.jpg",
         "name":"韵儿",
         "time":"2018年7月",
         "content":"挺棒的公寓哦"
@@ -348,15 +348,15 @@
       "houseTitle":"慕斯唐尼禄酒店/7号 斑马之歌",
       "type":"酒店房间",
       "desc":"酒店内的房间",
-      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "imgs":["/src/assets/img/41ceb1e4_original.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"泰国",
         "province":"曼谷直辖市",
         "city":"曼谷"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Themustang",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/storyuser2.jpg",
       "ownerWords":"42平方米的游泳池，靠近BTS&河边",
       "rooms":{
         "bedroom":1,
@@ -372,7 +372,7 @@
       },
       "commandPercent":"92%",
       "rate":{
-        "img":"/src/assets/img/s_touxiang1.png",
+        "img":"/src/assets/img/story0.jpg",
         "name":"智敏",
         "time":"2018年7月",
         "content":"整体好评，唯一一点就是隔音有点差。还有最近楼上仿佛在装修，白天有点吵。"
@@ -413,15 +413,15 @@
       "houseTitle":"Unique Architecture Cave House",
       "type":"希腊风基克拉底住房·伊亚",
       "desc":"希腊风基克拉底住房",
-      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "imgs":["/src/assets/img/storyuser2.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"希腊",
         "province":"南爱琴海大区",
         "city":"伊亚"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Laskarina",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/storyuser8.jpg",
       "ownerWords":"This spacious,unparalleled cave house,hanging on the cliffs of the caldera in the center of Oia",
       "rooms":{
         "bedroom":2,
@@ -437,7 +437,7 @@
       },
       "commandPercent":"91%",
       "rate":{
-        "img":"/src/assets/img/s_touxiang1.png",
+        "img":"/src/assets/img/storyuser8.jpg",
         "name":"Jason",
         "time":"2018年7月",
         "content":"Great place.All that is promised and then some!The view says it all.We love to get out and see and go things"
@@ -492,15 +492,15 @@
       "houseTitle":"Dreamy Tropical Tree House",
       "type":"小岛·费恩森林",
       "desc":"小岛",
-      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "imgs":["/src/assets/img/692a84ee_original.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"美国",
         "province":"夏威夷",
         "city":"费恩森林"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Kayte",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/storyuser10.jpg",
       "ownerWords":"Red cinder leads you through the dense jungle to your secluded bamboo treehouse.Nestled on top of stilts 15' up",
       "rooms":{
         "bedroom":1,
@@ -516,7 +516,7 @@
       },
       "commandPercent":"91%",
       "rate":{
-        "img":"/src/assets/img/s_touxiang1.png",
+        "img":"/src/assets/img/storyuser7.jpg",
         "name":"Ying",
         "time":"2015年12月",
         "content":"超赞~！看得出房东是一个懂生活、有心的人，树屋内很多环保的设计，虽然是住在森林里，但是没有一点儿不方便，反而看到了城市里没有的风景..."
@@ -548,15 +548,15 @@
       "houseTitle":"Douro Villa with swimming pool,Penafiel,Portugal",
       "type":"整套房子·佩尼亚费尔",
       "desc":"整套房子",
-      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "imgs":["/src/assets/img/740a5202-1dc0-4aba-8be5-e8a14a78e64c.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"葡萄牙",
         "province":"波尔图",
         "city":"佩尼亚费尔"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Maria Henriqueta",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/storyuser7.jpg",
       "ownerWords":"We invite you to come and visit our beautiful countryside house on the shores of the Douro river.",
       "rooms":{
         "bedroom":4,
@@ -572,7 +572,7 @@
       },
       "commandPercent":"93%",
       "rate":{
-        "img":"/src/assets/img/s_touxiang1.png",
+        "img":"/src/assets/img/storyuser10.jpg",
         "name":"Samantha",
         "time":"2018年7月",
         "content":"Plus qu'un airbnb,cette villa est une authentique maison de famile.Lci vous sere aceUillis comme des amis,avec Une..."
@@ -616,15 +616,15 @@
       "houseTitle":"Malibu Dream Airstream",
       "type":"露营车/房车·马里布",
       "desc":"露营车/房车",
-      "imgs":["/src/assets/img/hll-house1.1.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
+      "imgs":["/src/assets/img/IndexFY4.jpg","/src/assets/img/hll-house1.2.jpg","/src/assets/img/hll-house1.3.jpg","/src/assets/img/hll-house1.4.jpg","/src/assets/img/hll-house1.5.jpg"],
       "address":{
         "country":"美国",
         "province":"加利福尼亚",
         "city":"马里布"
       },
-      "addressImg":"/src/asstes/img/s_ditu.png",
+      "addressImg":"/src/assets/img/s_ditu.png",
       "ownerName":"Cassy",
-      "ownerImg":"/src/assets/img/l1.png",
+      "ownerImg":"/src/assets/img/storyuser3.jpg",
       "ownerWords":"Escape civilization to this incredible and peaceful getaway!Reconnect with nature and disconnect...",
       "rooms":{
         "bedroom":1,
@@ -640,7 +640,7 @@
       },
       "commandPercent":"91%",
       "rate":{
-        "img":"/src/assets/img/s_touxiang1.png",
+        "img":"/src/assets/img/storyuser1.jpg",
         "name":"翠",
         "time":"2017年10月",
         "content":"很特别的体验，风景也很美，值得来"

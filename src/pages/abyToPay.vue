@@ -1,4 +1,5 @@
 <template>
+  <aby-transtion-to-top-fast>
     <div class="pay">
       <order-header></order-header>
       <div class="main">
@@ -6,11 +7,14 @@
         <p class="tip">请扫码完成支付</p>
       </div>
     </div>
+  </aby-transtion-to-top-fast>
 </template>
 
 <script>
   import orderHeader from "../components/order/orderHeader"
-    export default {
+  import abyTranstionToTopFast from '../components/common/abyTranstionToTopFast'
+
+  export default {
         name: "abyToPay",
       data(){
           return {
@@ -19,6 +23,7 @@
       },
       components:{
         orderHeader,
+        abyTranstionToTopFast
       }
     }
 </script>
@@ -29,16 +34,16 @@
     height: 100%;
     padding: 0 .25rem;
     box-sizing:border-box;
+    background-color: #fff;
   }
   .main{
-    width: 60%;
+    width: 100%;
     height: 50%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
     img{
       width: 2rem;
       height: 2rem;

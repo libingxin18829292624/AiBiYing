@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="serach">
     <header>
       <div class="header-tou">
-        <a href="" @click="back">×</a>
+        <span href="" @click="goindex">×</span>
       </div>
       <div class="header-jiao">
-        <input type="text" placeholder="想去哪里？" id="dizhi">
+        <input type="text" autofocus placeholder="想去哪里？" id="dizhi">
       </div>
     </header>
     <footer>
@@ -104,6 +104,9 @@
 </script>
 
 <style scoped="scoped">
+  .serach{
+    background-color: #fff;
+  }
   header {
     width: 100%;
     height: 1.39rem;
@@ -117,17 +120,11 @@
     align-items: center;
   }
 
-  .header-tou a:nth-child(1) {
+  .header-tou span:nth-child(1) {
     color: #4b4b4b;
     font-size: 0.3rem;
     margin-left: 0.24rem;
     /* font-weight: 600; */
-  }
-
-  .header-tou a:nth-child(2) {
-    color: #4b4b4b;
-    font-size: 0.12rem;
-    margin-right: 0.19rem;
   }
 
   .header-jiao {

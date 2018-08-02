@@ -19,12 +19,12 @@
         <section class="live-info">
           <div class="start-end">
             <div class="start">
-              <span>{{this.startWeek}}</span>
+              <span></span>
               <span>{{this.startDate}}</span>
             </div>
             <img src="/src/assets/img/l2.png" alt="">
             <div class="end">
-              <span>{{this.endWeek}}</span>
+              <span></span>
               <span>{{this.endDate}}</span>
             </div>
           </div>
@@ -101,7 +101,13 @@
         attach(n) {
           switch(n){
             case 0:this.$router.push('/addPayMethod');break;
-            case 1:this.$router.push('/sendToOwner');break;
+            case 1:this.$router.push({
+              path:'/sendToOwner',
+              query:{
+                ownerName : this.cityData.ownerName,
+                ownerImg:this.cityData.ownerImg
+              }
+            });break;
             case 2:this.$router.push('/agree');break;
             case 3:this.$router.push('/addPersonInfo');break;
           }

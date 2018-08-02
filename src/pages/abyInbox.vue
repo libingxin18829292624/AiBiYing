@@ -8,7 +8,7 @@
         <div class="xiaoxi">
           <p>没有消息</p>
           <span>找到喜欢的房源后，和房东取得联系。简单介绍一下自己，并告诉他们您此行的目的。</span>
-          <input type="button" value="开始探索">
+          <input type="button" @click="toIndex" value="开始探索">
         </div>
     </div>
     <abyfooter></abyfooter>
@@ -21,6 +21,11 @@
         name: "abyInbox",
       components:{
         abyfooter
+      },
+      methods:{
+        toIndex(){
+          // this.$router.push('/');
+        }
       }
     }
 </script>

@@ -30,7 +30,6 @@
         name: "orderPersons",
       data(){
           return{
-
             "persons":[
               {"person":"成人","detail":"","num":1,"max":21,"min":1},
               {"person":"儿童","detail":"2到12岁","num":0,"max":5,"min":0},
@@ -60,18 +59,13 @@
           }
         },
         back(){
-       window.history.back();
-     },
-     store(){
-       window.history.back();
-     },
-      },
-      computed:{
-
-      },
-      mounted(){
-
-      },
+           window.history.back();
+        },
+        store(){
+          this.$store.state.members = {"person":this.persons[0].num,"children":this.persons[1].num,"kid":this.persons[2].num,"pets":this.pets};
+          window.history.back();
+        }
+      }
     }
 </script>
 

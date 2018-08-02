@@ -155,8 +155,9 @@
         }else {
           this.$store.state.xdriqi="日期"
         }
-        
-
+       this.$store.state.startDate = $(".start-date span:last-child").html()
+       this.$store.state.endDate = $(".end-date span:last-child").html()
+       this.$store.state.days = this.endIndex - this.startIndex;
        window.history.back();
      }
    },

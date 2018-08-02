@@ -60,7 +60,6 @@
           type: 'bullets',
           dynamicBullets: true,
         },
-
       })
 
 

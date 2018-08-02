@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="footer">
-      <a href="#">开始探索</a>
+      <a @click="toIndex">开始探索</a>
     </div>
     <abyfooter></abyfooter>
   </div>
@@ -58,6 +58,11 @@
               star:"146",
             },
           ]
+        }
+      },
+      methods:{
+        toIndex(){
+          // this.$router.push('/');
         }
       },
       mounted(){

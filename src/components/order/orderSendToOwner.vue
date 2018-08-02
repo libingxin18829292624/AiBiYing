@@ -9,9 +9,9 @@
         <article class="toOwner">
           <div class="content">
             <p>自我介绍</p>
-            <p>向{{this.$store.state.ownerName}}简单地介绍一下您自己和您的旅程。</p>
+            <p>向{{this.$route.query.ownerName}}简单地介绍一下您自己和您的旅程。</p>
           </div>
-          <img class="ownerImg" :src="this.$store.state.ownerImg" alt="">
+          <img class="ownerImg" :src="ownerImg" alt="">
         </article>
         <textarea ref="userInput" class="userWords" rows="20"></textarea>
       </section>
@@ -24,6 +24,11 @@
   import $ from "jquery"
     export default {
         name: "orderSendToOwner",
+      data(){
+          return {
+            ownerImg:this.$route.query.ownerImg
+          }
+      },
       methods:{
         sendOver(){
           if(this.$refs.userInput.value !== ""){

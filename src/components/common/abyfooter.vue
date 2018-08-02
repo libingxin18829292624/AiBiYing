@@ -32,7 +32,11 @@
     name: "abyfooter",
     methods: {
       writeIndex(index){
-        this.$store.state.index = index;
+        if(index !== 1){
+          this.$store.state.index = index;
+        }else{
+          this.$store.state.index = index + 1;
+        }
       }
     },
     mounted() {
@@ -67,6 +71,7 @@
     text-align: center;
     align-items: center;
     color: #4f4f4f;
+    z-index: 10000;
   }
 
   .footer a p {

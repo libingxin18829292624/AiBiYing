@@ -185,12 +185,11 @@
         isCollapse: false,
         tabWidth: 200,
         test1: 1,
-        intelval: null,
+        intelval: null
       };
     },
     methods:{
       store(){
-        // const fs = require('../../node_modules/fs');
         let storedData = this.$store.state.storedData;
         let storedDataJson = this.$store.state.allData;
         let citys = ["Xian","Bangkok","Index"];
@@ -210,15 +209,9 @@
             index++;
           }
         }
-        $.get({
-          url:'http://localhost:3000/writefile',
-          data:{
-            storedData:storedDataJson
-          },
-          function(data){
+        $.post('http://localhost:3000/writefile',{storedData:JSON.stringify(storedDataJson)}, function(data){
             console.log(data)
-          }
-        })
+          },'json');
       },
     }
   }

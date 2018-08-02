@@ -5,7 +5,7 @@
             <input type="text" :value="cityName">
         </div>
       <div class="yincang">
-        <router-link to="/Rili"  id="myRili">{{this.$store.state.xdriqi}}</router-link><router-link to="/fangke">{{this.$store.state.num}}位访客</router-link>
+        <router-link to="/Rili"  id="myRili">{{this.$store.state.xdriqi}}</router-link><router-link to="/fangke">{{this.members}}</router-link>
       </div>
         <!--<div class="header-bottom">-->
             <!--<router-link to="/toriqi" style="transition:all 1s" id="changebg">{{this.$store.state.xdriqi}}</router-link>-->
@@ -22,7 +22,8 @@ export default {
   props:['city'],
     data(){
         return{
-          cityName:""
+          cityName:"",
+          "members":"",
         }
     },
   mounted(){
@@ -40,6 +41,13 @@ export default {
       this.cityName = "西安";
     }else{
       this.cityName = "曼谷";
+    }
+
+
+    if(this.$store.state.members.kid !== 0){
+      this.members = (this.$store.state.members.person + this.$store.state.members.children) + "位，" + this.$store.state.members.kid + "名婴幼儿";
+    }else{
+      this.members = (this.$store.state.members.person + this.$store.state.members.children) + "位";
     }
   },
     methods:{

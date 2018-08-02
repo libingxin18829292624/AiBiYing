@@ -1,24 +1,19 @@
 const express = require('express')
 const app = express();
-const Data = require('./json/index')
+const bodyParser = require('body-parser')
 const fs = require('fs')
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
-app.use('/api',(req,res)=>{
+app.post('/writefile',(req,res)=>{
   res.header('Access-Control-Allow-Origin','*');
   res.header('Access-Control-Allow-Headers','Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
   res.header('Access-Control-Allow-Methods','PUT, POST, GET, DELETE, OPTIONS');
-  res.json(Data)
-});
-
-app.use('/writefile',(req,res)=>{
-  res.header('Access-Control-Allow-Origin','*');
-  res.header('Access-Control-Allow-Headers','Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
-  res.header('Access-Control-Allow-Methods','PUT, POST, GET, DELETE, OPTIONS');
-  // let data = new Buffer(req.storedData);
-  // fs.writeFile('./json/index.json',data);
-  res.send('success')
+  console.log(req.body.storedData)
+  res.send(req.body.storedData);
+  fs.writeFile('./json/index.json',req.body.storedData);
 });
 
 app.listen(3000,()=>{
-  console.log('server is ready on port 3000.')
+  console.log('Server is ready on port 3000.')
 })
